@@ -184,10 +184,40 @@ function tryAgain(idx) {
   questionStates[idx].showIncorrectMessage = false;
 }
 
+
+const showCongratsModal = ref(false);
+
+function handleButtonClick() {
+  if (currentIndex.value === questions.value.length - 1) {
+    showCongratsModal.value = true;
+  } else {
+    goToNextQuestion();
+  }
+}
+
 function goToNextQuestion() {
   if (currentIndex.value < questions.value.length - 1) {
     currentIndex.value++;
   }
+}
+
+function closeModal() {
+  showCongratsModal.value = false;
+}
+
+function restartQuiz() {
+  currentIndex.value = 0;
+  score.value = 0;
+  totalAnswered.value = 0;
+  showCongratsModal.value = false;
+
+  // Reset all question states
+  questions.value.forEach((_, idx) => {
+    questionStates[idx].selectedOption = null;
+    questionStates[idx].answeredCorrectly = false;
+    questionStates[idx].showIncorrectMessage = false;
+    questionStates[idx].attempted = false;
+  });
 }
 
 function goToQuestion(idx) {
@@ -318,7 +348,7 @@ function shuffleQuestions() {
                     Incorrect. Try again!
                   </div>
 
-                  <div class="flex justify-center flex justify-center items-center w-full self-center mt-4">
+                  <div class="flex justify-center items-center w-full self-center mt-4">
                     <button v-if="questionStates[idx].showIncorrectMessage" @click="tryAgain(idx)"
                       class="bg-[#FFD93D] flex justify-center items-center w-[200px] hover:bg-[#f57c00]">
                       Try Again
@@ -333,10 +363,11 @@ function shuffleQuestions() {
                   <div class="p-4 bg-[#37474f] rounded">
                     <div class="text-[20px] mb-4">Explanation:</div> {{ question.explanation }}
                   </div>
-                  <button @click="goToNextQuestion" :disabled="currentIndex === questions.length - 1"
+                  <button @click="handleButtonClick"
                     class="mt-4 bg-[#2196f3] text-white px-6 py-2 rounded disabled:bg-[#cccccc] disabled:cursor-not-allowed"
                     :style="{ backgroundColor: question.bgColor }">
-                    {{ currentIndex === questions.length - 1 ? 'Finish Quiz' : 'Next Question' }}
+                    {{ currentIndex === questions.length - 1 ? 'Finish Quiz' : 'Next Question'
+                    }}
                     <font-awesome-icon v-if="currentIndex !== questions.length - 1" icon="fa-solid fa-arrow-right"
                       class="ml-2" />
                   </button>
@@ -347,6 +378,27 @@ function shuffleQuestions() {
         </div>
       </div>
 
+      <Transition name="fade">
+        <div v-if="showCongratsModal"
+          class="fixed inset-0 bg-inherit bg-opacity-50 flex items-center justify-center z-[99999]"
+          @click.self="closeModal">
+          <div class="bg-[#20232A] p-8 rounded-lg max-w-md w-full mx-4 shadow-xl">
+            <h2 class="text-2xl font-bold mb-4 text-center">🎉 Congratulations! 🎉
+            </h2>
+            <p class="mb-6 text-center">You've successfully completed the quiz!</p>
+            <div class="flex justify-center gap-4">
+              <button @click="closeModal"
+                class="bg-[#2196f3] hover:bg-[#0c7cd5] text-white px-6 py-2 rounded transition-colors">
+                Close
+              </button>
+              <button @click="restartQuiz"
+                class="bg-[#37474f] border-2 hover:bg-gray-300 hover:text-[#37474f] px-6 py-2 rounded transition-colors">
+                Restart Quiz
+              </button>
+            </div>
+          </div>
+        </div>
+      </Transition>
       <!-- Swipe Instructions -->
       <!-- <div class="swipe-instructions flex justify-between w-full px-8 absolute bottom-4 text-white opacity-70">
         <div class="flex items-center">
