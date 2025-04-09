@@ -7,356 +7,183 @@ const score = ref(0);
 const totalAnswered = ref(0);
 
 const questions = ref([
+    // Ben 10 Questions
     {
-        question: "What is the real name of Batman?",
-        options: ["Clark Kent", "Bruce Wayne"],
-        correctIndex: 1,
-        explanation: "Batman's secret identity is Bruce Wayne, a billionaire who witnessed his parents' murder as a child, inspiring his crusade against crime. Clark Kent is Superman's alter ego.",
-        bgColor: "#4D96FF" // Blue
-    },
-    {
-        question: "Which superhero is called the 'Man of Steel'?",
-        options: ["Superman", "The Flash"],
+        question: "What is the name of Ben Tennyson's alien device?",
+        options: ["Omnitrix", "Ultimatrix"],
         correctIndex: 0,
-        explanation: "Superman is nicknamed the 'Man of Steel' due to his invulnerability and Kryptonian biology, which grants him superhuman strength under Earth's yellow sun.",
-        bgColor: "#8E44AD" // Purple
-    },
-    {
-        question: "What is Wonder Woman's signature weapon?",
-        options: ["Lasso of Truth", "Magic Hammer"],
-        correctIndex: 0,
-        explanation: "The Lasso of Truth compels anyone bound by it to speak honestly. (Magic Hammer is associated with Thor from Marvel, not DC.)",
-        bgColor: "#2ECC71" // Green
-    },
-    {
-        question: "Who is the fastest DC superhero?",
-        options: ["Green Arrow", "The Flash"],
-        correctIndex: 1,
-        explanation: "The Flash (Barry Allen or Wally West) taps into the Speed Force, making him capable of moving at light speed and even breaking time barriers.",
-        bgColor: "#E67E22" // Orange
-    },
-    {
-        question: "What is my name?",
-        options: ["Alfred Pennyworth", "James Gordon"],
-        correctIndex: 0,
-        explanation: "I am Alfred Pennyworth and I serve as Bruce Wayne's loyal butler, surrogate father, and occasional field medic. James Gordon is Gotham City's police commissioner.",
-        bgColor: "#E74C3C" // Red
-    },
-    {
-        question: "Which villain is known as the 'Clown Prince of Crime'?",
-        options: ["The Joker", "Bane"],
-        correctIndex: 0,
-        explanation: "The Joker is Batman's arch-nemesis, a psychopathic criminal with a clown motif and a twisted sense of humor. Bane is a physical powerhouse who broke Batman's back.",
-        bgColor: "#3498DB" // Light Blue
-    },
-    {
-        question: "What planet is Superman originally from?",
-        options: ["Mars", "Krypton"],
-        correctIndex: 1,
-        explanation: "Superman (Kal-El) was born on Krypton, which was destroyed. His parents sent him to Earth, where he gained powers under our yellow sun.",
-        bgColor: "#1ABC9C" // Turquoise
-    },
-    {
-        question: "Which hero is nicknamed the 'Dark Knight'?",
-        options: ["Batman", "Nightwing"],
-        correctIndex: 0,
-        explanation: "Batman is called the 'Dark Knight' for his brooding vigilante persona. Nightwing is Dick Grayson (the first Robin) after he outgrew being Batman's sidekick.",
-        bgColor: "#9B59B6" // Dark Purple
-    },
-    {
-        question: "What powers Green Lantern's abilities?",
-        options: ["Power Ring", "Infinity Gauntlet"],
-        correctIndex: 0,
-        explanation: "Green Lanterns wield Power Rings that channel willpower to create hard-light constructs. (The Infinity Gauntlet is a Marvel artifact.)",
-        bgColor: "#F1C40F" // Yellow
-    },
-    {
-        question: "Who is Batman's iconic teenage sidekick?",
-        options: ["Robin", "Kid Flash"],
-        correctIndex: 0,
-        explanation: "Robin (Dick Grayson, Jason Todd, Tim Drake, or Damian Wayne) is Batman's crime-fighting partner. Kid Flash is The Flash's sidekick.",
-        bgColor: "#34495E" // Gray Blue
-    }, {
-        question: "What is Aquaman's Atlantean name?",
-        options: ["Arthur Curry", "Orin"],
-        correctIndex: 1,
-        explanation: "Aquaman's birth name in Atlantis is Orin, but he is raised on land as Arthur Curry.",
-        bgColor: "#16A085"
-    },
-    {
-        question: "Which DC hero is known for wielding a bow and arrow?",
-        options: ["Green Arrow", "Cyborg"],
-        correctIndex: 0,
-        explanation: "Green Arrow, aka Oliver Queen, is a vigilante archer inspired by Robin Hood.",
-        bgColor: "#27AE60"
-    },
-    {
-        question: "What is the source of Shazam's powers?",
-        options: ["Greek gods", "Alien technology"],
-        correctIndex: 0,
-        explanation: "Shazam's powers come from ancient gods: Solomon, Hercules, Atlas, Zeus, Achilles, and Mercury.",
-        bgColor: "#D35400"
-    },
-    {
-        question: "Which villain broke Batman's back?",
-        options: ["Bane", "Joker"],
-        correctIndex: 0,
-        explanation: "Bane broke Batman's back in the iconic 'Knightfall' storyline.",
-        bgColor: "#C0392B"
-    },
-    {
-        question: "What is the name of the speed force user from the future?",
-        options: ["Reverse-Flash", "Black Adam"],
-        correctIndex: 0,
-        explanation: "Reverse-Flash (Eobard Thawne) is a time-traveling villain obsessed with ruining The Flash’s life.",
-        bgColor: "#F39C12"
-    },
-    {
-        question: "Who leads the Suicide Squad?",
-        options: ["Amanda Waller", "Harley Quinn"],
-        correctIndex: 0,
-        explanation: "Amanda Waller oversees the Suicide Squad, using villains for covert missions.",
-        bgColor: "#7F8C8D"
-    },
-    {
-        question: "Which hero is Victor Stone better known as?",
-        options: ["Cyborg", "Red Tornado"],
-        correctIndex: 0,
-        explanation: "Victor Stone becomes Cyborg after a lab accident, merging with advanced technology.",
-        bgColor: "#2980B9"
-    },
-    {
-        question: "What is the name of Batman's city?",
-        options: ["Gotham", "Metropolis"],
-        correctIndex: 0,
-        explanation: "Gotham City is the dark, crime-ridden city that Batman protects.",
-        bgColor: "#2C3E50"
-    },
-    {
-        question: "Who is the Amazon Queen and Wonder Woman's mother?",
-        options: ["Hippolyta", "Artemis"],
-        correctIndex: 0,
-        explanation: "Queen Hippolyta rules Themyscira and is Wonder Woman's mother.",
-        bgColor: "#AF7AC5"
-    },
-    {
-        question: "Which Lantern Corps uses fear as a power source?",
-        options: ["Yellow Lanterns", "Red Lanterns"],
-        correctIndex: 0,
-        explanation: "The Yellow Lantern Corps (Sinestro Corps) uses fear to fuel their power.",
-        bgColor: "#F4D03F"
-    },
-    {
-        question: "What metal is used in Wonder Woman’s bracelets?",
-        options: ["Amazonium", "Vibranium"],
-        correctIndex: 0,
-        explanation: "Wonder Woman's indestructible bracelets are made of Amazonium (fictional DC metal).",
-        bgColor: "#D0BFFF"
-    },
-    {
-        question: "Who founded the Justice League?",
-        options: ["Martian Manhunter", "Superman"],
-        correctIndex: 0,
-        explanation: "Martian Manhunter was one of the founding members of the original Justice League lineup.",
-        bgColor: "#6C5CE7"
-    },
-    {
-        question: "Which Flash is known as the 'Fastest Man Alive'?",
-        options: ["Barry Allen", "Jay Garrick"],
-        correctIndex: 0,
-        explanation: "Barry Allen is the most widely recognized Flash and often called the 'Fastest Man Alive.'",
-        bgColor: "#F9A825"
-    },
-    {
-        question: "What’s the name of Superman’s dog?",
-        options: ["Krypto", "Ace"],
-        correctIndex: 0,
-        explanation: "Krypto the Superdog is Superman’s loyal Kryptonian pet with similar powers.",
-        bgColor: "#AED6F1"
-    },
-    {
-        question: "Which DC character was a psychiatrist before turning villain?",
-        options: ["Harley Quinn", "Poison Ivy"],
-        correctIndex: 0,
-        explanation: "Dr. Harleen Quinzel was a psychiatrist who fell in love with the Joker and became Harley Quinn.",
-        bgColor: "#F06292"
-    },
-    {
-        question: "Who is the ruler of Apokolips?",
-        options: ["Darkseid", "Brainiac"],
-        correctIndex: 0,
-        explanation: "Darkseid is a powerful tyrant from Apokolips, seeking to conquer all life with the Anti-Life Equation.",
-        bgColor: "#5D6D7E"
-    },
-    {
-        question: "What is Zatanna known for?",
-        options: ["Magic spells", "Sword fighting"],
-        correctIndex: 0,
-        explanation: "Zatanna is a magician who casts spells by speaking backwards.",
-        bgColor: "#BB8FCE"
-    },
-    {
-        question: "Which villain is obsessed with riddles?",
-        options: ["Riddler", "Penguin"],
-        correctIndex: 0,
-        explanation: "The Riddler is known for leaving cryptic clues and riddles at crime scenes.",
-        bgColor: "#27AE60"
-    },
-    {
-        question: "What does Lex Luthor often use to weaken Superman?",
-        options: ["Kryptonite", "Lead"],
-        correctIndex: 0,
-        explanation: "Kryptonite, a radioactive fragment of Superman’s home planet, weakens and can kill him.",
-        bgColor: "#52BE80"
-    },
-    {
-        question: "What does the Bat-Signal represent?",
-        options: ["Call for Batman", "City blackout"],
-        correctIndex: 0,
-        explanation: "The Bat-Signal is projected into the sky to summon Batman during emergencies.",
-        bgColor: "#616A6B"
-    },
-    {
-        question: "What is the real name of The Flash (most known version)?",
-        options: ["Barry Allen", "Wally West"],
-        correctIndex: 0,
-        explanation: "Barry Allen is the most well-known incarnation of The Flash, a forensic scientist turned speedster.",
-        bgColor: "#FF5733"
-    },
-    {
-        question: "Which Justice League member is from Mars?",
-        options: ["Martian Manhunter", "Hawkman"],
-        correctIndex: 0,
-        explanation: "Martian Manhunter (J'onn J'onzz) is a shapeshifting telepath from Mars and a founding Justice League member.",
-        bgColor: "#229954"
-    },
-    {
-        question: "What is the name of Batman's computer system?",
-        options: ["Batcomputer", "Oracle"],
-        correctIndex: 0,
-        explanation: "The Batcomputer is Batman’s highly advanced computer system located in the Batcave.",
-        bgColor: "#1F618D"
-    },
-    {
-        question: "Which DC villain uses cold-based weapons?",
-        options: ["Captain Cold", "Heat Wave"],
-        correctIndex: 0,
-        explanation: "Captain Cold, a Flash villain, wields a cold gun that can freeze anything instantly.",
-        bgColor: "#85C1E9"
-    },
-    {
-        question: "Who becomes Red Hood after dying and being resurrected?",
-        options: ["Jason Todd", "Tim Drake"],
-        correctIndex: 0,
-        explanation: "Jason Todd, the second Robin, returns as the anti-hero Red Hood after being killed by the Joker.",
-        bgColor: "#C0392B"
-    },
-    {
-        question: "What is Superman’s Earth father's name?",
-        options: ["Jonathan Kent", "Thomas Wayne"],
-        correctIndex: 0,
-        explanation: "Jonathan Kent, along with his wife Martha, raised Superman as Clark Kent in Smallville.",
-        bgColor: "#F7DC6F"
-    },
-    {
-        question: "Which member of the Bat-family uses a bo staff?",
-        options: ["Tim Drake", "Damian Wayne"],
-        correctIndex: 0,
-        explanation: "Tim Drake, the third Robin, is known for his intelligence and skilled use of the bo staff.",
-        bgColor: "#2E86C1"
-    },
-    {
-        question: "Who is the magical antihero with a trench coat and British accent?",
-        options: ["John Constantine", "Doctor Fate"],
-        correctIndex: 0,
-        explanation: "John Constantine is a cunning sorcerer and occult detective, often battling dark forces.",
-        bgColor: "#7DCEA0"
-    },
-    {
-        question: "What is the name of Batman’s crime-fighting vehicle?",
-        options: ["Batmobile", "Wayne Cruiser"],
-        correctIndex: 0,
-        explanation: "The Batmobile is Batman’s custom-built vehicle packed with technology and weaponry.",
-        bgColor: "#1C2833"
-    },
-    {
-        question: "Who is known as the God of War in Wonder Woman's stories?",
-        options: ["Ares", "Hades"],
-        correctIndex: 0,
-        explanation: "Ares, the Greek God of War, is often depicted as Wonder Woman’s archenemy.",
-        bgColor: "#9B59B6"
-    },
-    {
-        question: "Which superhero team does Starfire belong to?",
-        options: ["Teen Titans", "Justice League"],
-        correctIndex: 0,
-        explanation: "Starfire is a powerful alien princess and a member of the Teen Titans.",
-        bgColor: "#E59866"
-    },
-    {
-        question: "What species is Beast Boy able to transform into?",
-        options: ["Any animal", "Robots"],
-        correctIndex: 0,
-        explanation: "Beast Boy can shapeshift into any animal, past or present, gaining its abilities.",
-        bgColor: "#27AE60"
-    },
-    {
-        question: "Who is the primary antagonist in the 'Flashpoint' storyline?",
-        options: ["Reverse-Flash", "Darkseid"],
-        correctIndex: 0,
-        explanation: "Reverse-Flash manipulates time and causes the alternate reality events of 'Flashpoint.'",
-        bgColor: "#E74C3C"
-    },
-    {
-        question: "What is Raven's source of power?",
-        options: ["Dark magic and emotions", "Technology"],
-        correctIndex: 0,
-        explanation: "Raven draws power from dark magic and emotional control, being the daughter of the demon Trigon.",
-        bgColor: "#5B2C6F"
-    },
-    {
-        question: "What does Booster Gold use to time travel?",
-        options: ["Time Sphere", "Boom Tube"],
-        correctIndex: 0,
-        explanation: "Booster Gold uses a Time Sphere, a device that lets him move across timelines.",
-        bgColor: "#F8C471"
-    },
-    {
-        question: "Which superhero is known for his green hoodie?",
-        options: ["Green Arrow", "Green Lantern"],
-        correctIndex: 0,
-        explanation: "Green Arrow wears a hood and shoots arrows, often in a green outfit inspired by Robin Hood.",
-        bgColor: "#239B56"
-    },
-    {
-        question: "Which DC character is a powerful telepath and telekinetic?",
-        options: ["Martian Manhunter", "Blue Beetle"],
-        correctIndex: 0,
-        explanation: "Martian Manhunter has strong telepathic and telekinetic abilities, along with shapeshifting.",
-        bgColor: "#48C9B0"
-    },
-    {
-        question: "What alien race are the Green Lantern Corps associated with?",
-        options: ["Guardians of the Universe", "Kryptonians"],
-        correctIndex: 0,
-        explanation: "The Guardians of the Universe, ancient aliens from Oa, founded and oversee the Green Lantern Corps.",
+        category: "Ben 10",
+        explanation: "The Omnitrix is a powerful device that allows Ben Tennyson to transform into various alien species by using their DNA.",
         bgColor: "#1ABC9C"
     },
     {
-        question: "Which DC hero has an alter ego named Billy Batson?",
-        options: ["Shazam", "Atom"],
+        question: "Who is Ben's cousin?",
+        options: ["Gwen", "Katie"],
         correctIndex: 0,
-        explanation: "Billy Batson transforms into the adult superhero Shazam by saying the magic word 'Shazam!'",
-        bgColor: "#F4D03F"
+        category: "Ben 10",
+        explanation: "Gwen Tennyson is Ben's cousin, a skilled magic user and fighter who is an important ally in his adventures.",
+        bgColor: "#E74C3C"
     },
     {
-        question: "What is the name of the prison that holds DC’s worst villains?",
-        options: ["Arkham Asylum", "Belle Reve"],
+        question: "What is the name of Ben's best friend who is often his sidekick?",
+        options: ["Kevin Levin", "Rook Blonko"],
+        correctIndex: 1,
+        category: "Ben 10",
+        explanation: "Rook Blonko is Ben's partner in 'Ben 10: Omniverse,' a young and talented Plumber who assists Ben in his adventures.",
+        bgColor: "#9B59B6"
+    },
+    {
+        question: "What is the name of the main antagonist in 'Ben 10: Alien Force'?",
+        options: ["Vilgax", "Kevin Levin"],
         correctIndex: 0,
-        explanation: "Arkham Asylum is the psychiatric hospital where Gotham's most dangerous villains are confined.",
-        bgColor: "#566573"
+        category: "Ben 10",
+        explanation: "Vilgax is one of Ben's most dangerous foes, a ruthless alien warlord who seeks to acquire the Omnitrix for himself.",
+        bgColor: "#F39C12"
+    },
+    {
+        question: "Which alien is Ben's most frequently used transformation?",
+        options: ["Heatblast", "XLR8"],
+        correctIndex: 0,
+        category: "Ben 10",
+        explanation: "Heatblast is one of Ben's most frequently used aliens, a fire-based creature with the ability to control and produce fire.",
+        bgColor: "#E67E22"
+    },
+    {
+        question: "What is the name of the hero group Ben Tennyson joins in 'Ben 10: Alien Force'?",
+        options: ["The Plumbers", "The Ultimatrix Team"],
+        correctIndex: 0,
+        category: "Ben 10",
+        explanation: "In 'Ben 10: Alien Force,' Ben joins the Plumbers, a secret organization tasked with protecting Earth from alien threats.",
+        bgColor: "#34495E"
+    },
+    {
+        question: "What color is Ben Tennyson's Omnitrix?",
+        options: ["Green", "Red"],
+        correctIndex: 0,
+        category: "Ben 10",
+        explanation: "The Omnitrix is green in color and is a wrist-worn device that allows Ben to transform into various alien species.",
+        bgColor: "#1ABC9C"
+    },
+    {
+        question: "Which alien has the ability to stretch their body?",
+        options: ["Stretchy", "Elastic", "Mr. Fantastic", "Four Arms"],
+        correctIndex: 0,
+        category: "Ben 10",
+        explanation: "Stretchy has the ability to stretch and manipulate its limbs, making it a versatile alien for combat and exploration.",
+        bgColor: "#8E44AD"
+    },
+    {
+        question: "Which alien can Ben transform into that has the ability to absorb energy?",
+        options: ["Swampfire", "Waybig", "Kevin Levin"],
+        correctIndex: 2,
+        category: "Ben 10",
+        explanation: "Kevin Levin can absorb and manipulate any form of energy, making him one of Ben's most powerful alien forms.",
+        bgColor: "#F1C40F"
+    },
+    {
+        question: "What is the name of Ben's sister in the 'Ben 10' franchise?",
+        options: ["Gwen", "Lucy"],
+        correctIndex: 0,
+        category: "Ben 10",
+        explanation: "Gwen Tennyson is Ben's cousin, a brilliant young girl who is skilled in magic and is an invaluable member of the team.",
+        bgColor: "#2ECC71"
+    },
+    {
+        question: "Who is the leader of the alien group known as the Forever Knights?",
+        options: ["Dr. Animo", "Hex"],
+        correctIndex: 1,
+        category: "Ben 10",
+        explanation: "Hex is the leader of the Forever Knights, a group of evil aliens who seek to collect powerful artifacts to dominate the universe.",
+        bgColor: "#9B59B6"
+    },
+    {
+        question: "What is the name of the evil alien warlord who is constantly trying to steal the Omnitrix?",
+        options: ["Vilgax", "Zs'Skayr"],
+        correctIndex: 0,
+        category: "Ben 10",
+        explanation: "Vilgax is a powerful alien warlord who wants to obtain the Omnitrix in order to use its power to conquer the universe.",
+        bgColor: "#F39C12"
+    },
+    {
+        question: "Which alien has the ability to manipulate plants and fire?",
+        options: ["Swampfire", "Heatblast"],
+        correctIndex: 0,
+        category: "Ben 10",
+        explanation: "Swampfire has the ability to control plants, create fire, and regenerate, making it a powerful alien for Ben.",
+        bgColor: "#1ABC9C"
+    },
+    {
+        question: "Which alien has the ability to transform into a giant, powerful creature known as Waybig?",
+        options: ["Ben", "Gwen", "Kevin Levin"],
+        correctIndex: 0,
+        category: "Ben 10",
+        explanation: "Waybig is a giant, powerful alien that Ben can transform into, providing immense strength and combat ability.",
+        bgColor: "#E74C3C"
+    },
+    {
+        question: "What is the name of Ben's ally who is a Plumber and later becomes his partner?",
+        options: ["Rook Blonko", "Kenny"], 
+        correctIndex: 0,
+        category: "Ben 10",
+        explanation: "Rook Blonko is a skilled Plumber who becomes Ben's partner and assists him in his adventures in 'Ben 10: Omniverse.'",
+        bgColor: "#9B59B6"
+    },
+    {
+        question: "Which alien has the ability to manipulate ice and cold?",
+        options: ["Frostfire", "Icefire"],
+        correctIndex: 0,
+        category: "Ben 10",
+        explanation: "Frostfire has the ability to manipulate ice and cold, making it a powerful alien for freezing enemies and controlling the environment.",
+        bgColor: "#8E44AD"
+    },
+    {
+        question: "Which alien can turn Ben's body into pure energy?",
+        options: ["Energy", "XLR8", "Ghostfreak"],
+        correctIndex: 0,
+        category: "Ben 10",
+        explanation: "Energy is an alien form Ben can turn into, which allows him to manipulate and convert his body into pure energy.",
+        bgColor: "#F39C12"
+    },
+    {
+        question: "Who is the main villain in 'Ben 10: Omniverse'?",
+        options: ["Dr. Animo", "Khyber", "Hex"],
+        correctIndex: 1,
+        category: "Ben 10",
+        explanation: "Khyber is a dangerous hunter who becomes one of Ben's main adversaries in 'Ben 10: Omniverse,' hunting him and his allies.",
+        bgColor: "#1ABC9C"
+    },
+    {
+        question: "What is the name of the alien that Ben becomes in order to transform into a super-fast being?",
+        options: ["XLR8", "Big Chill"],
+        correctIndex: 0,
+        category: "Ben 10",
+        explanation: "XLR8 is an alien Ben transforms into that allows him to move at superhuman speeds, making him one of the fastest aliens in Ben's arsenal.",
+        bgColor: "#8E44AD"
+    },
+    {
+        question: "What is the name of the alien that has the ability to become invisible?",
+        options: ["Ghostfreak", "Wildvine"],
+        correctIndex: 0,
+        category: "Ben 10",
+        explanation: "Ghostfreak is an alien with the ability to turn invisible and phase through walls, making it a stealthy and tricky form for Ben.",
+        bgColor: "#F39C12"
+    },
+    {
+        question: "Which alien has the power to manipulate gravity and fly?",
+        options: ["Gravattack", "Jetray"],
+        correctIndex: 0,
+        category: "Ben 10",
+        explanation: "Gravattack has the ability to manipulate gravity and is capable of flying, making it a powerful form for Ben to control the battlefield.",
+        bgColor: "#2ECC71"
     }
 ]);
+
+
+
+
+
+
+
 
 // sound effects ==========================================================================
 
@@ -630,7 +457,8 @@ onMounted(() => {
 // play music =========================================================================
 
 const playlist = [
-    '../../../public/music/DCTheme.mp3',
+    '../../../public/music/ben10Theme1.mp3',
+    '../../../public/music/ben10Theme2.mp3',
 ]
 
 const currentTrackIndex = ref(0)

@@ -29,7 +29,7 @@
             <div class="font-bold opacity-[0.7]">Cartoons</div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-32 ml-[8vw]">
 
-                <div @click="navigateToDc"
+                <div @click="navigateToAvatar"
                     class="bg-[#9E3629] animate-pulse flex flex-row relative rounded-md w-[80vw] justify-end md:w-[30vw] justify-between cursor-pointer p-4 shadow-[0_10px_20px_rgba(0,0,0,0.3)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.4)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                     <img src="/img/aang.png" class="h-[200px] w-[200px] absolute bottom-0 left-[-15%] z-[99]" />
                     <div class="w-[40vw] ml-32 md:w-[15vw] z-[999]">
@@ -50,7 +50,7 @@
                     </div>
                 </div>
 
-                <div @click="navigateToInvin"
+                <div @click="navigateToBen10"
                     class="bg-[#567744] animate-pulse flex flex-row relative rounded-md w-[80vw] justify-end md:w-[30vw] justify-between cursor-pointer p-4 shadow-[0_10px_20px_rgba(0,0,0,0.3)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.4)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                     <img src="/img/Ben10.png" class="h-[200px] w-[200px] absolute bottom-0 left-[-15%] z-[99]" />
                     <div class="w-[40vw] ml-32 md:w-[15vw] z-[999]">
@@ -71,7 +71,7 @@
                     </div>
                 </div>
 
-                <div @click="navigateToMarvel"
+                <div @click="navigateToArcane"
                     class="bg-[#261321] animate-pulse flex flex-row relative rounded-md w-[80vw] justify-end md:w-[30vw] justify-between cursor-pointer p-4 shadow-[0_10px_20px_rgba(0,0,0,0.3)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.4)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                     <img src="/img/jinx.png" class="h-[200px] w-[200px] absolute bottom-0 left-[-15%] z-[99]" />
                     <div class="w-[40vw] ml-32 md:w-[15vw] z-[999]">
@@ -103,17 +103,17 @@
 <script>
 export default {
     methods: {
-        navigateToDc() {
-            console.log("Navigating to /dc");
-            this.$router.push('/dc');
+        navigateToAvatar() {
+            console.log("Navigating to /avatar");
+            this.$router.push('/avatar');
         },
-        navigateToInvin() {
-            console.log("Navigating to /invincible");
-            this.$router.push('/invincible');
+        navigateToBen10() {
+            console.log("Navigating to /ben10");
+            this.$router.push('/ben10');
         },
-        navigateToMarvel() {
-            console.log("Navigating to /marvel");
-            this.$router.push('/marvel');
+        navigateToArcane() {
+            console.log("Navigating to /arcane");
+            this.$router.push('/arcane');
         },
         navigateToSuperheroes() {
             console.log("Navigating to /home");

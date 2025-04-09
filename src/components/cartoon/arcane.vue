@@ -7,356 +7,208 @@ const score = ref(0);
 const totalAnswered = ref(0);
 
 const questions = ref([
+    // Arcane Questions
     {
-        question: "What is the real name of Batman?",
-        options: ["Clark Kent", "Bruce Wayne"],
-        correctIndex: 1,
-        explanation: "Batman's secret identity is Bruce Wayne, a billionaire who witnessed his parents' murder as a child, inspiring his crusade against crime. Clark Kent is Superman's alter ego.",
-        bgColor: "#4D96FF" // Blue
-    },
-    {
-        question: "Which superhero is called the 'Man of Steel'?",
-        options: ["Superman", "The Flash"],
+        question: "Who are the main protagonists of 'Arcane'?",
+        options: ["Vi and Jinx", "Jinx and Caitlyn"],
         correctIndex: 0,
-        explanation: "Superman is nicknamed the 'Man of Steel' due to his invulnerability and Kryptonian biology, which grants him superhuman strength under Earth's yellow sun.",
-        bgColor: "#8E44AD" // Purple
-    },
-    {
-        question: "What is Wonder Woman's signature weapon?",
-        options: ["Lasso of Truth", "Magic Hammer"],
-        correctIndex: 0,
-        explanation: "The Lasso of Truth compels anyone bound by it to speak honestly. (Magic Hammer is associated with Thor from Marvel, not DC.)",
-        bgColor: "#2ECC71" // Green
-    },
-    {
-        question: "Who is the fastest DC superhero?",
-        options: ["Green Arrow", "The Flash"],
-        correctIndex: 1,
-        explanation: "The Flash (Barry Allen or Wally West) taps into the Speed Force, making him capable of moving at light speed and even breaking time barriers.",
-        bgColor: "#E67E22" // Orange
-    },
-    {
-        question: "What is my name?",
-        options: ["Alfred Pennyworth", "James Gordon"],
-        correctIndex: 0,
-        explanation: "I am Alfred Pennyworth and I serve as Bruce Wayne's loyal butler, surrogate father, and occasional field medic. James Gordon is Gotham City's police commissioner.",
-        bgColor: "#E74C3C" // Red
-    },
-    {
-        question: "Which villain is known as the 'Clown Prince of Crime'?",
-        options: ["The Joker", "Bane"],
-        correctIndex: 0,
-        explanation: "The Joker is Batman's arch-nemesis, a psychopathic criminal with a clown motif and a twisted sense of humor. Bane is a physical powerhouse who broke Batman's back.",
-        bgColor: "#3498DB" // Light Blue
-    },
-    {
-        question: "What planet is Superman originally from?",
-        options: ["Mars", "Krypton"],
-        correctIndex: 1,
-        explanation: "Superman (Kal-El) was born on Krypton, which was destroyed. His parents sent him to Earth, where he gained powers under our yellow sun.",
-        bgColor: "#1ABC9C" // Turquoise
-    },
-    {
-        question: "Which hero is nicknamed the 'Dark Knight'?",
-        options: ["Batman", "Nightwing"],
-        correctIndex: 0,
-        explanation: "Batman is called the 'Dark Knight' for his brooding vigilante persona. Nightwing is Dick Grayson (the first Robin) after he outgrew being Batman's sidekick.",
-        bgColor: "#9B59B6" // Dark Purple
-    },
-    {
-        question: "What powers Green Lantern's abilities?",
-        options: ["Power Ring", "Infinity Gauntlet"],
-        correctIndex: 0,
-        explanation: "Green Lanterns wield Power Rings that channel willpower to create hard-light constructs. (The Infinity Gauntlet is a Marvel artifact.)",
-        bgColor: "#F1C40F" // Yellow
-    },
-    {
-        question: "Who is Batman's iconic teenage sidekick?",
-        options: ["Robin", "Kid Flash"],
-        correctIndex: 0,
-        explanation: "Robin (Dick Grayson, Jason Todd, Tim Drake, or Damian Wayne) is Batman's crime-fighting partner. Kid Flash is The Flash's sidekick.",
-        bgColor: "#34495E" // Gray Blue
-    }, {
-        question: "What is Aquaman's Atlantean name?",
-        options: ["Arthur Curry", "Orin"],
-        correctIndex: 1,
-        explanation: "Aquaman's birth name in Atlantis is Orin, but he is raised on land as Arthur Curry.",
-        bgColor: "#16A085"
-    },
-    {
-        question: "Which DC hero is known for wielding a bow and arrow?",
-        options: ["Green Arrow", "Cyborg"],
-        correctIndex: 0,
-        explanation: "Green Arrow, aka Oliver Queen, is a vigilante archer inspired by Robin Hood.",
-        bgColor: "#27AE60"
-    },
-    {
-        question: "What is the source of Shazam's powers?",
-        options: ["Greek gods", "Alien technology"],
-        correctIndex: 0,
-        explanation: "Shazam's powers come from ancient gods: Solomon, Hercules, Atlas, Zeus, Achilles, and Mercury.",
-        bgColor: "#D35400"
-    },
-    {
-        question: "Which villain broke Batman's back?",
-        options: ["Bane", "Joker"],
-        correctIndex: 0,
-        explanation: "Bane broke Batman's back in the iconic 'Knightfall' storyline.",
-        bgColor: "#C0392B"
-    },
-    {
-        question: "What is the name of the speed force user from the future?",
-        options: ["Reverse-Flash", "Black Adam"],
-        correctIndex: 0,
-        explanation: "Reverse-Flash (Eobard Thawne) is a time-traveling villain obsessed with ruining The Flash’s life.",
-        bgColor: "#F39C12"
-    },
-    {
-        question: "Who leads the Suicide Squad?",
-        options: ["Amanda Waller", "Harley Quinn"],
-        correctIndex: 0,
-        explanation: "Amanda Waller oversees the Suicide Squad, using villains for covert missions.",
-        bgColor: "#7F8C8D"
-    },
-    {
-        question: "Which hero is Victor Stone better known as?",
-        options: ["Cyborg", "Red Tornado"],
-        correctIndex: 0,
-        explanation: "Victor Stone becomes Cyborg after a lab accident, merging with advanced technology.",
-        bgColor: "#2980B9"
-    },
-    {
-        question: "What is the name of Batman's city?",
-        options: ["Gotham", "Metropolis"],
-        correctIndex: 0,
-        explanation: "Gotham City is the dark, crime-ridden city that Batman protects.",
-        bgColor: "#2C3E50"
-    },
-    {
-        question: "Who is the Amazon Queen and Wonder Woman's mother?",
-        options: ["Hippolyta", "Artemis"],
-        correctIndex: 0,
-        explanation: "Queen Hippolyta rules Themyscira and is Wonder Woman's mother.",
-        bgColor: "#AF7AC5"
-    },
-    {
-        question: "Which Lantern Corps uses fear as a power source?",
-        options: ["Yellow Lanterns", "Red Lanterns"],
-        correctIndex: 0,
-        explanation: "The Yellow Lantern Corps (Sinestro Corps) uses fear to fuel their power.",
-        bgColor: "#F4D03F"
-    },
-    {
-        question: "What metal is used in Wonder Woman’s bracelets?",
-        options: ["Amazonium", "Vibranium"],
-        correctIndex: 0,
-        explanation: "Wonder Woman's indestructible bracelets are made of Amazonium (fictional DC metal).",
-        bgColor: "#D0BFFF"
-    },
-    {
-        question: "Who founded the Justice League?",
-        options: ["Martian Manhunter", "Superman"],
-        correctIndex: 0,
-        explanation: "Martian Manhunter was one of the founding members of the original Justice League lineup.",
-        bgColor: "#6C5CE7"
-    },
-    {
-        question: "Which Flash is known as the 'Fastest Man Alive'?",
-        options: ["Barry Allen", "Jay Garrick"],
-        correctIndex: 0,
-        explanation: "Barry Allen is the most widely recognized Flash and often called the 'Fastest Man Alive.'",
-        bgColor: "#F9A825"
-    },
-    {
-        question: "What’s the name of Superman’s dog?",
-        options: ["Krypto", "Ace"],
-        correctIndex: 0,
-        explanation: "Krypto the Superdog is Superman’s loyal Kryptonian pet with similar powers.",
-        bgColor: "#AED6F1"
-    },
-    {
-        question: "Which DC character was a psychiatrist before turning villain?",
-        options: ["Harley Quinn", "Poison Ivy"],
-        correctIndex: 0,
-        explanation: "Dr. Harleen Quinzel was a psychiatrist who fell in love with the Joker and became Harley Quinn.",
-        bgColor: "#F06292"
-    },
-    {
-        question: "Who is the ruler of Apokolips?",
-        options: ["Darkseid", "Brainiac"],
-        correctIndex: 0,
-        explanation: "Darkseid is a powerful tyrant from Apokolips, seeking to conquer all life with the Anti-Life Equation.",
-        bgColor: "#5D6D7E"
-    },
-    {
-        question: "What is Zatanna known for?",
-        options: ["Magic spells", "Sword fighting"],
-        correctIndex: 0,
-        explanation: "Zatanna is a magician who casts spells by speaking backwards.",
-        bgColor: "#BB8FCE"
-    },
-    {
-        question: "Which villain is obsessed with riddles?",
-        options: ["Riddler", "Penguin"],
-        correctIndex: 0,
-        explanation: "The Riddler is known for leaving cryptic clues and riddles at crime scenes.",
-        bgColor: "#27AE60"
-    },
-    {
-        question: "What does Lex Luthor often use to weaken Superman?",
-        options: ["Kryptonite", "Lead"],
-        correctIndex: 0,
-        explanation: "Kryptonite, a radioactive fragment of Superman’s home planet, weakens and can kill him.",
-        bgColor: "#52BE80"
-    },
-    {
-        question: "What does the Bat-Signal represent?",
-        options: ["Call for Batman", "City blackout"],
-        correctIndex: 0,
-        explanation: "The Bat-Signal is projected into the sky to summon Batman during emergencies.",
-        bgColor: "#616A6B"
-    },
-    {
-        question: "What is the real name of The Flash (most known version)?",
-        options: ["Barry Allen", "Wally West"],
-        correctIndex: 0,
-        explanation: "Barry Allen is the most well-known incarnation of The Flash, a forensic scientist turned speedster.",
-        bgColor: "#FF5733"
-    },
-    {
-        question: "Which Justice League member is from Mars?",
-        options: ["Martian Manhunter", "Hawkman"],
-        correctIndex: 0,
-        explanation: "Martian Manhunter (J'onn J'onzz) is a shapeshifting telepath from Mars and a founding Justice League member.",
-        bgColor: "#229954"
-    },
-    {
-        question: "What is the name of Batman's computer system?",
-        options: ["Batcomputer", "Oracle"],
-        correctIndex: 0,
-        explanation: "The Batcomputer is Batman’s highly advanced computer system located in the Batcave.",
-        bgColor: "#1F618D"
-    },
-    {
-        question: "Which DC villain uses cold-based weapons?",
-        options: ["Captain Cold", "Heat Wave"],
-        correctIndex: 0,
-        explanation: "Captain Cold, a Flash villain, wields a cold gun that can freeze anything instantly.",
-        bgColor: "#85C1E9"
-    },
-    {
-        question: "Who becomes Red Hood after dying and being resurrected?",
-        options: ["Jason Todd", "Tim Drake"],
-        correctIndex: 0,
-        explanation: "Jason Todd, the second Robin, returns as the anti-hero Red Hood after being killed by the Joker.",
-        bgColor: "#C0392B"
-    },
-    {
-        question: "What is Superman’s Earth father's name?",
-        options: ["Jonathan Kent", "Thomas Wayne"],
-        correctIndex: 0,
-        explanation: "Jonathan Kent, along with his wife Martha, raised Superman as Clark Kent in Smallville.",
-        bgColor: "#F7DC6F"
-    },
-    {
-        question: "Which member of the Bat-family uses a bo staff?",
-        options: ["Tim Drake", "Damian Wayne"],
-        correctIndex: 0,
-        explanation: "Tim Drake, the third Robin, is known for his intelligence and skilled use of the bo staff.",
-        bgColor: "#2E86C1"
-    },
-    {
-        question: "Who is the magical antihero with a trench coat and British accent?",
-        options: ["John Constantine", "Doctor Fate"],
-        correctIndex: 0,
-        explanation: "John Constantine is a cunning sorcerer and occult detective, often battling dark forces.",
-        bgColor: "#7DCEA0"
-    },
-    {
-        question: "What is the name of Batman’s crime-fighting vehicle?",
-        options: ["Batmobile", "Wayne Cruiser"],
-        correctIndex: 0,
-        explanation: "The Batmobile is Batman’s custom-built vehicle packed with technology and weaponry.",
-        bgColor: "#1C2833"
-    },
-    {
-        question: "Who is known as the God of War in Wonder Woman's stories?",
-        options: ["Ares", "Hades"],
-        correctIndex: 0,
-        explanation: "Ares, the Greek God of War, is often depicted as Wonder Woman’s archenemy.",
-        bgColor: "#9B59B6"
-    },
-    {
-        question: "Which superhero team does Starfire belong to?",
-        options: ["Teen Titans", "Justice League"],
-        correctIndex: 0,
-        explanation: "Starfire is a powerful alien princess and a member of the Teen Titans.",
-        bgColor: "#E59866"
-    },
-    {
-        question: "What species is Beast Boy able to transform into?",
-        options: ["Any animal", "Robots"],
-        correctIndex: 0,
-        explanation: "Beast Boy can shapeshift into any animal, past or present, gaining its abilities.",
-        bgColor: "#27AE60"
-    },
-    {
-        question: "Who is the primary antagonist in the 'Flashpoint' storyline?",
-        options: ["Reverse-Flash", "Darkseid"],
-        correctIndex: 0,
-        explanation: "Reverse-Flash manipulates time and causes the alternate reality events of 'Flashpoint.'",
-        bgColor: "#E74C3C"
-    },
-    {
-        question: "What is Raven's source of power?",
-        options: ["Dark magic and emotions", "Technology"],
-        correctIndex: 0,
-        explanation: "Raven draws power from dark magic and emotional control, being the daughter of the demon Trigon.",
-        bgColor: "#5B2C6F"
-    },
-    {
-        question: "What does Booster Gold use to time travel?",
-        options: ["Time Sphere", "Boom Tube"],
-        correctIndex: 0,
-        explanation: "Booster Gold uses a Time Sphere, a device that lets him move across timelines.",
-        bgColor: "#F8C471"
-    },
-    {
-        question: "Which superhero is known for his green hoodie?",
-        options: ["Green Arrow", "Green Lantern"],
-        correctIndex: 0,
-        explanation: "Green Arrow wears a hood and shoots arrows, often in a green outfit inspired by Robin Hood.",
-        bgColor: "#239B56"
-    },
-    {
-        question: "Which DC character is a powerful telepath and telekinetic?",
-        options: ["Martian Manhunter", "Blue Beetle"],
-        correctIndex: 0,
-        explanation: "Martian Manhunter has strong telepathic and telekinetic abilities, along with shapeshifting.",
-        bgColor: "#48C9B0"
-    },
-    {
-        question: "What alien race are the Green Lantern Corps associated with?",
-        options: ["Guardians of the Universe", "Kryptonians"],
-        correctIndex: 0,
-        explanation: "The Guardians of the Universe, ancient aliens from Oa, founded and oversee the Green Lantern Corps.",
+        category: "Arcane",
+        explanation: "Vi and Jinx are the main protagonists, with Vi being the older sister trying to protect Jinx, who becomes a chaotic force.",
         bgColor: "#1ABC9C"
     },
     {
-        question: "Which DC hero has an alter ego named Billy Batson?",
-        options: ["Shazam", "Atom"],
+        question: "What city is the setting of most of 'Arcane'?",
+        options: ["Piltover", "Zaun"],
         correctIndex: 0,
-        explanation: "Billy Batson transforms into the adult superhero Shazam by saying the magic word 'Shazam!'",
-        bgColor: "#F4D03F"
+        category: "Arcane",
+        explanation: "Piltover is a prosperous city built above Zaun, the dangerous and polluted undercity. The series explores both areas.",
+        bgColor: "#E74C3C"
     },
     {
-        question: "What is the name of the prison that holds DC’s worst villains?",
-        options: ["Arkham Asylum", "Belle Reve"],
+        question: "Who is the character that serves as the main antagonist for most of the show?",
+        options: ["Silco", "Vander"],
         correctIndex: 0,
-        explanation: "Arkham Asylum is the psychiatric hospital where Gotham's most dangerous villains are confined.",
-        bgColor: "#566573"
+        category: "Arcane",
+        explanation: "Silco is the main antagonist in 'Arcane,' the leader of the undercity who seeks to bring chaos and independence to Zaun.",
+        bgColor: "#9B59B6"
+    },
+    {
+        question: "What is Vi's signature weapon?",
+        options: ["Gloves", "Gun"],
+        correctIndex: 0,
+        category: "Arcane",
+        explanation: "Vi wields large, powerful gauntlets that she uses to punch through obstacles and enemies.",
+        bgColor: "#8E44AD"
+    },
+    {
+        question: "Who is Jinx's older sister?",
+        options: ["Vi", "Caitlyn"],
+        correctIndex: 0,
+        category: "Arcane",
+        explanation: "Vi is Jinx's older sister, and their relationship is a central aspect of 'Arcane,' with Vi trying to bring Jinx back from her chaotic path.",
+        bgColor: "#F39C12"
+    },
+    {
+        question: "What is the name of the undercity in 'Arcane'?",
+        options: ["Zaun", "Demacia"],
+        correctIndex: 0,
+        category: "Arcane",
+        explanation: "Zaun is the dangerous, polluted undercity beneath Piltover, a central location in 'Arcane' where much of the conflict occurs.",
+        bgColor: "#2ECC71"
+    },
+    {
+        question: "Who is the inventor responsible for creating the Hextech technology?",
+        options: ["Heimerdinger", "Jace"],
+        correctIndex: 1,
+        category: "Arcane",
+        explanation: "Jace, a scientist and inventor from Piltover, is responsible for creating Hextech, a powerful form of magic-tech that plays a key role in the series.",
+        bgColor: "#E67E22"
+    },
+    {
+        question: "What is the relationship between Caitlyn and Vi?",
+        options: ["Allies", "Sisters"],
+        correctIndex: 0,
+        category: "Arcane",
+        explanation: "Caitlyn and Vi become allies in the fight against the criminals of Zaun, with Caitlyn being a sheriff from Piltover and Vi a vigilante.",
+        bgColor: "#34495E"
+    },
+    {
+        question: "Who is the leader of the council in Piltover?",
+        options: ["Heimerdinger", "Mel Medarda"],
+        correctIndex: 1,
+        category: "Arcane",
+        explanation: "Mel Medarda is a prominent figure in Piltover's council, and she plays a role in the political maneuvering of the city.",
+        bgColor: "#1ABC9C"
+    },
+    {
+        question: "What is the name of Jinx's previous identity?",
+        options: ["Powder", "Violet"],
+        correctIndex: 0,
+        category: "Arcane",
+        explanation: "Jinx's real name is Powder, and she goes through a transformation into Jinx after a series of tragic events.",
+        bgColor: "#F39C12"
+    },
+    {
+        question: "Who is the leader of the enforcers in Piltover?",
+        options: ["Marcus", "Caitlyn"],
+        correctIndex: 0,
+        category: "Arcane",
+        explanation: "Marcus is the leader of Piltover's enforcers, tasked with maintaining law and order in the city, but his morality is questionable.",
+        bgColor: "#E74C3C"
+    },
+    {
+        question: "Which character is a former enforcer who later becomes part of the undercity rebellion?",
+        options: ["Vander", "Jace"],
+        correctIndex: 0,
+        category: "Arcane",
+        explanation: "Vander was a former enforcer who later became the leader of the undercity rebellion in Zaun, trying to keep peace among the people.",
+        bgColor: "#8E44AD"
+    },
+    {
+        question: "Which character is known for their advanced knowledge of magic and Hextech technology?",
+        options: ["Heimerdinger", "Jace"],
+        correctIndex: 0,
+        category: "Arcane",
+        explanation: "Heimerdinger is an inventor and scientist who is highly knowledgeable about Hextech technology and the magical properties behind it.",
+        bgColor: "#9B59B6"
+    },
+    {
+        question: "Who is Jinx's mentor in 'Arcane'?",
+        options: ["Silco", "Vander"],
+        correctIndex: 0,
+        category: "Arcane",
+        explanation: "Silco becomes Jinx's mentor and father figure, though his guidance leads her down a dark and dangerous path.",
+        bgColor: "#34495E"
+    },
+    {
+        question: "Who is Vi's close ally and friend throughout the series?",
+        options: ["Caitlyn", "Vander"],
+        correctIndex: 0,
+        category: "Arcane",
+        explanation: "Caitlyn becomes one of Vi's closest allies and a partner in their investigation against the criminal activities in Zaun.",
+        bgColor: "#F39C12"
+    },
+    {
+        question: "Which character is often depicted as the 'heart' of the show, trying to hold things together?",
+        options: ["Vander", "Heimerdinger"],
+        correctIndex: 0,
+        category: "Arcane",
+        explanation: "Vander is depicted as the protector and heart of Zaun, trying to protect both the people of Zaun and his adopted family.",
+        bgColor: "#1ABC9C"
+    },
+    {
+        question: "What causes the downfall of Powder into becoming Jinx?",
+        options: ["The betrayal of her sister", "The death of her father figure"],
+        correctIndex: 1,
+        category: "Arcane",
+        explanation: "The loss of her father figure, Vander, and the intense betrayal she feels from her sister Vi contribute heavily to Powder's transformation into Jinx.",
+        bgColor: "#E74C3C"
+    },
+    {
+        question: "What is the name of the magical substance that powers Hextech technology?",
+        options: ["Shimmer", "Hexite"],
+        correctIndex: 1,
+        category: "Arcane",
+        explanation: "Hexite is the magical substance that powers Hextech, a technology capable of harnessing magic to create powerful devices.",
+        bgColor: "#9B59B6"
+    },
+    {
+        question: "Who was the first character to discover Hextech?",
+        options: ["Jace", "Heimerdinger"],
+        correctIndex: 0,
+        category: "Arcane",
+        explanation: "Jace was the first character to discover Hextech, creating a breakthrough in combining magic and technology.",
+        bgColor: "#2ECC71"
+    },
+    {
+        question: "Which character undergoes a tragic transformation and becomes an infamous criminal mastermind?",
+        options: ["Silco", "Marcus"],
+        correctIndex: 0,
+        category: "Arcane",
+        explanation: "Silco, initially a decent man, becomes a criminal mastermind in his quest for control over Zaun and the power to challenge Piltover.",
+        bgColor: "#F39C12"
+    },
+    {
+        question: "Who is the morally conflicted enforcer in 'Arcane'?",
+        options: ["Marcus", "Caitlyn"],
+        correctIndex: 0,
+        category: "Arcane",
+        explanation: "Marcus is the morally conflicted enforcer, torn between his duty and his loyalty to Silco, ultimately betraying his former values.",
+        bgColor: "#8E44AD"
+    },
+    {
+        question: "Who is Vi's rival throughout the series?",
+        options: ["Caitlyn", "Jinx"],
+        correctIndex: 1,
+        category: "Arcane",
+        explanation: "Vi's main rival is her sister, Jinx, as their contrasting personalities and conflicting goals put them at odds.",
+        bgColor: "#E67E22"
+    },
+    {
+        question: "What is the goal of Silco throughout 'Arcane'?",
+        options: ["To unite Zaun and Piltover", "To gain independence for Zaun"],
+        correctIndex: 1,
+        category: "Arcane",
+        explanation: "Silco seeks to gain independence for Zaun from Piltover, aiming to create a city free from Piltover's control and influence.",
+        bgColor: "#1ABC9C"
+    },
+    {
+        question: "What is the name of Vi's gauntlet weapons?",
+        options: ["Powder Punch", "Pummel Gloves"],
+        correctIndex: 0,
+        category: "Arcane",
+        explanation: "Vi uses gauntlets named Powder Punch, which were crafted for her to pack immense power and deliver crushing blows.",
+        bgColor: "#E74C3C"
     }
 ]);
+
+
+
+
+
+
+
+
 
 // sound effects ==========================================================================
 
@@ -630,7 +482,7 @@ onMounted(() => {
 // play music =========================================================================
 
 const playlist = [
-    '../../../public/music/DCTheme.mp3',
+    '../../../public/music/arcaneTheme.mp3',
 ]
 
 const currentTrackIndex = ref(0)

@@ -141,6 +141,40 @@ const questions = ref([
 
 
 
+// sound effects ==========================================================================
+
+// on swipe===================================================
+const swipeSound = ref(null)
+const swipeSoundFile = '../../../public/music/swipeAudio.mp3'
+
+onMounted(() => {
+    swipeSound.value = new Audio(swipeSoundFile)
+    swipeSound.value.volume = 0.3 // Adjust volume (0-1)
+})
+
+onBeforeUnmount(() => {
+    if (swipeSound.value) {
+        swipeSound.value.pause()
+        swipeSound.value = null
+    }
+})
+
+//on click===================================================
+
+const clickSound = ref(null)
+const clickSoundFile = '../../../public/music/clickAudio2.mp3'
+
+onMounted(() => {
+    clickSound.value = new Audio(clickSoundFile)
+    clickSound.value.volume = 0.3 // Adjust volume (0-1)
+})
+
+onBeforeUnmount(() => {
+    if (clickSound.value) {
+        clickSound.value.pause()
+        clickSound.value = null
+    }
+})
 
 
 // Initialize question states
@@ -158,6 +192,11 @@ const currentQuestion = computed(() => {
 });
 
 function selectOption(questionIdx, optionIdx) {
+    clickSound.value.currentTime = 0
+
+    clickSound.value.play().catch(error => {
+        console.log('Audio play failed:', error)
+    })
     if (questionStates[questionIdx].selectedOption !== null && !questionStates[questionIdx].showIncorrectMessage) return;
 
     questionStates[questionIdx].selectedOption = optionIdx;
@@ -200,6 +239,11 @@ function handleButtonClick() {
 
 function goToNextQuestion() {
     if (currentIndex.value < questions.value.length - 1) {
+        clickSound.value.currentTime = 0
+
+        clickSound.value.play().catch(error => {
+            console.log('Audio play failed:', error)
+        })
         currentIndex.value++;
     }
 }
@@ -278,6 +322,49 @@ function shuffleQuestions() {
     score.value = 0;
     totalAnswered.value = 0;
 }
+
+
+
+// play music =========================================================================
+
+const playlist = [
+    '../../../public/music/cinderellaTheme.mp3',
+]
+
+const currentTrackIndex = ref(0)
+const audioElement = ref(null)
+
+const playCurrentTrack = async () => {
+    if (!audioElement.value) return
+
+    audioElement.value.src = playlist[currentTrackIndex.value]
+    try {
+        await audioElement.value.play()
+    } catch (err) {
+        console.log('Autoplay blocked:', err)
+        // Handle autoplay restriction (e.g., show play button)
+    }
+}
+
+const playNextTrack = () => {
+    currentTrackIndex.value = (currentTrackIndex.value + 1) % playlist.length
+    playCurrentTrack()
+}
+
+onMounted(() => {
+    audioElement.value = new Audio()
+    audioElement.value.volume = 0.5
+    audioElement.value.addEventListener('ended', playNextTrack)
+    playCurrentTrack()
+})
+
+onBeforeUnmount(() => {
+    if (audioElement.value) {
+        audioElement.value.pause()
+        audioElement.value.removeEventListener('ended', playNextTrack)
+        audioElement.value = null
+    }
+})
 </script>
 
 
