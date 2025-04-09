@@ -650,17 +650,7 @@ onBeforeUnmount(() => {
                     </div>
                 </div>
             </Transition>
-            <!-- Swipe Instructions -->
-            <!-- <div class="swipe-instructions flex justify-between w-full px-8 absolute bottom-4 text-white opacity-70">
-        <div class="flex items-center">
-          <font-awesome-icon icon="fa-solid fa-arrow-left" class="mr-2" />
-          Swipe left for: {{ currentQuestion.options[0] }}
-        </div>
-        <div class="flex items-center">
-          Swipe right for: {{ currentQuestion.options[1] }}
-          <font-awesome-icon icon="fa-solid fa-arrow-right" class="ml-2" />
-        </div>
-      </div> -->
+            
 
             <div class="flex justify-center gap-2 mt-4 px-4">
                 <div v-for="(_, idx) in questions" :key="idx" class="w-2 h-2 rounded-full bg-[#bdbdbd] cursor-pointer"

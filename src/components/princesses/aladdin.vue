@@ -544,8 +544,8 @@ onBeforeUnmount(() => {
                                 <!-- Back Face -->
                                 <div class="absolute h-[55vh] w-[90%] lg:w-[50%] my-4 rounded-md text-xl flex flex-col justify-center items-center left-[5%] top-10 [backface-visibility:hidden] rotate-y-180 p-2"
                                     :style="{ backgroundColor: question.bgColor }">
-                                    <!-- <div class="text-5xl mb-4">🎉</div>
-                                    <h2 class="text-2xl mb-4">Correct!</h2> -->
+                                    <!-- <!-- <div class="text-5xl mb-4">🎉</div> -->
+                                    <h2 class="text-4xl mb-4 absolute top-[-10%] font-bold animate-pulse">Correct!</h2>
                                     <div class=" rounded pt-12">
                                         <!-- <div class="text-[20px] mb-4">Explanation:</div>   -->
                                         <div class="grid grid-cols-2 gap-x-4 md:gap-32">
@@ -580,10 +580,13 @@ onBeforeUnmount(() => {
                 <div v-if="showCongratsModal"
                     class="fixed inset-0 bg-inherit bg-opacity-50 flex items-center justify-center z-[99999]"
                     @click.self="closeModal">
-                    <div class="bg-[#20232A] p-8 rounded-lg max-w-md w-full mx-4 shadow-xl">
-                        <h2 class="text-2xl font-bold mb-4 text-center">🎉 Congratulations! 🎉
+                    <div class="bg-[#20232A] border-amber-50 border p-8 rounded-lg max-w-md w-full mx-4 shadow-xl">
+                        <h2 class="text-2xl font-bold mb-4 text-center"> Congratulations!
                         </h2>
-                        <p class="mb-6 text-center">You've successfully completed the quiz!</p>
+                        <p class="text-center">You've successfully completed the quiz!</p>
+                        <div class="text-[60px] font-bolder my-6">
+                            {{ Math.round((score / totalAnswered) * 100) || 0 }}%
+                        </div>
                         <div class="flex justify-center gap-4">
                             <button @click="closeModal"
                                 class="bg-[#2196f3] hover:bg-[#0c7cd5] text-white px-6 py-2 rounded transition-colors">
@@ -600,8 +603,8 @@ onBeforeUnmount(() => {
 
 
             <div class="flex justify-center gap-2 mt-4">
-                <div v-for="(_, idx) in questions" :key="idx" class="w-3 h-3 rounded-full bg-[#bdbdbd] cursor-pointer"
-                    :class="{ 'bg-[#2196f3] scale-110': currentIndex === idx }" @click="goToQuestion(idx)"></div>
+                <div v-for="(_, idx) in questions" :key="idx" class="w-2 h-2 rounded-full bg-[#bdbdbd] cursor-pointer"
+                    :class="{ 'bg-[#2196f3] scale-130': currentIndex === idx }" @click="goToQuestion(idx)"></div>
             </div>
 
             <div class="flex justify-center mt-4 gap-4">

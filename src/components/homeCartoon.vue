@@ -27,7 +27,7 @@
                 <div class="logo text-4xl animate-pulse text-[#FFD93D]">App </div>
             </div>
             <div class="font-bold opacity-[0.7]">Cartoons</div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-32 ml-[8vw]">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-32 ml-[5vw]">
 
                 <div @click="navigateToAvatar"
                     class="bg-[#9E3629] animate-pulse flex flex-row relative rounded-md w-[80vw] justify-end md:w-[30vw] justify-between cursor-pointer p-4 shadow-[0_10px_20px_rgba(0,0,0,0.3)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.4)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
