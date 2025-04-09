@@ -4,7 +4,7 @@
     <div
         class=" absolute top-0 right-0 items-center  w-screen bg-[#20242A] text-white flex flex-row justify-start">
         <div
-            class="absolute top-70 md:top-auto md:text-left md:justify-start md:items-start left-[-18vw] z-[9999] text-white flex flex-row md:flex-col items-center rotate-90 md:rotate-0 w-[50%] md:w-auto md:left-0 md:my-auto md:p-8 gap-16">
+            class="fixed top-70 md:top-auto md:text-left md:justify-start md:items-start left-[-18vw] z-[9999] text-white flex flex-row md:flex-col items-center rotate-90 md:rotate-0 w-[50%] md:w-auto md:left-0 md:my-auto md:p-8 gap-16">
             <div class="cursor-pointer flex flex-col items-center justify-center text-[#FBCD00]">
                 <div class=" opacity-[0.7] h-[10px] w-[10px] bg-[#FBCD00] rounded-full cursor-pointer"></div>
                 <h2 class="md:text-4xl font-semibold opacity-[0.7] text-left writing-mode-vertical"> Superheroes
@@ -21,7 +21,7 @@
             </div>
         </div>
         <div
-            class="text-white mx-auto z-[999] py-4 flex flex-col gap-[20px] h-screen w-[80%] md:w-[60%] md:ml-[25%] justify-around justify-start">
+            class="text-white mx-auto z-[999] py-4 flex flex-col gap-[20px] w-[80%] md:w-[60%] md:ml-[25%] justify-around justify-start">
             <div
                 class="flex items-center justify-center flex-row">
                 <div class="logo text-4xl animate-pulse text-[#4D96FF]">Learnly </div>
