@@ -482,7 +482,7 @@ onMounted(() => {
 // play music =========================================================================
 
 const playlist = [
-    '../../../public/music/arcaneTheme.mp3',
+    new URL('../../../public/music/arcaneTheme.mp3', import.meta.url).href,
 ]
 
 const currentTrackIndex = ref(0)

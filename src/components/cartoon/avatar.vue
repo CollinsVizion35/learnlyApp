@@ -472,9 +472,9 @@ onMounted(() => {
 // play music =========================================================================
 
 const playlist = [
-    '../../../public/music/avatarTheme1.mp3',
-    '../../../public/music/avatarTheme2.mp3',
-    '../../../public/music/avatarTheme3.mp3',
+    new URL('../../../public/music/avatarTheme1.mp3', import.meta.url).href,
+    new URL('../../../public/music/avatarTheme2.mp3', import.meta.url).href,
+    new URL('../../../public/music/avatarTheme3.mp3', import.meta.url).href,
 ]
 
 const currentTrackIndex = ref(0)

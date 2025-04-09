@@ -395,7 +395,7 @@ function shuffleQuestions() {
 // play music =========================================================================
 
 const playlist = [
-    '../../../public/music/snowWhiteTheme.mp3',
+    new URL('../../../public/music/snowWhiteTheme.mp3', import.meta.url).href,
 ]
 
 const currentTrackIndex = ref(0)

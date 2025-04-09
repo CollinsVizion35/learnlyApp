@@ -433,7 +433,7 @@ function shuffleQuestions() {
 // play music =========================================================================
 
 const playlist = [
-    '../../../public/music/aladdinTheme.mp3',
+    new URL('../../../public/music/aladdinTheme.mp3', import.meta.url).href,
 ]
 
 const currentTrackIndex = ref(0)

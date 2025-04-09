@@ -328,7 +328,7 @@ function shuffleQuestions() {
 // play music =========================================================================
 
 const playlist = [
-    '../../../public/music/cinderellaTheme.mp3',
+    new URL('../../../public/music/cinderellaTheme.mp3', import.meta.url).href,
 ]
 
 const currentTrackIndex = ref(0)
