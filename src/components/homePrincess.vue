@@ -23,7 +23,7 @@
         <div
             class="text-white mx-auto z-[999] pt-1 pb-4 flex flex-col gap-[20px] w-[80%] md:w-[60%] md:ml-[25%] justify-around justify-start">
             <div
-                class="flex items-center justify-center flex-row border-b py-2 border-[#FBCD00] border-solid opacity-[0.7] w-screen absolute top-0 left-0">
+                class="flex items-center justify-center flex-row border-b py-4 border-[#FBCD00] border-solid opacity-[0.7] w-screen absolute top-0 left-0">
                 <div class="logo text-4xl animate-pulse text-[#4D96FF]">Learnly </div>
                 <div class="logo text-4xl animate-pulse text-[#FFD93D]">App </div>
             </div>
