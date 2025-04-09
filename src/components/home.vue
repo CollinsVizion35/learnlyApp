@@ -1,10 +1,47 @@
 <!-- -->
+<script setup>
+import { ref, onMounted } from 'vue'
+
+const showModal = ref(false)
+
+onMounted(() => {
+    const hasVisited = localStorage.getItem('hasVisited')
+    if (!hasVisited) {
+        showModal.value = true
+        localStorage.setItem('hasVisited', 'true')
+    }
+})
+
+function closeModal() {
+    showModal.value = false
+}
+</script>
 
 <template>
     <div
         class=" absolute top-0 right-0 items-center min-h-screen  w-screen bg-[#20242A] text-white flex flex-row justify-start">
+
+        <div v-if="showModal"
+            class=" fixed inset-0 bg-transparent bg-opacity-60 flex items-center justify-center z-[9999]">
+            <div
+                class="bg-[#20242A] border-amber-50 border text-white rounded-2xl p-6 w-11/12 max-w-md shadow-lg text-center z-[9999]">
+                <p class="text-2xl font-bold mb-4">Welcome to learnlyApp</p>
+
+                <img src="/public/img/alfred1.png"
+                    class="flex items-center justify-center mx-auto h-[100px] w-[100px] rotate-y-[180deg]" />
+
+                <p class="text-lg mb-4 p-2">I am Alfred Pennyworth and I and my friends would be taking you on some easy
+                    quizzes</p>
+                <button @click="closeModal"
+                    class="bg-[#FFD93D] text-[#20242A] font-semibold px-6 py-2 rounded-md hover:bg-gray-200 transition">
+                    Okay
+                </button>
+            </div>
+        </div>
+
+
         <div
-            class="fixed top-70 md:top-auto md:text-left md:justify-start md:items-start left-[-18vw] z-[9999] text-white flex flex-row md:flex-col items-center rotate-90 md:rotate-0 w-[50%] md:w-auto md:left-0 md:my-auto md:p-8 gap-16">
+            class="fixed top-70 md:top-auto md:text-left md:justify-start md:items-start left-[-18vw] z-[999] text-white flex flex-row md:flex-col items-center rotate-90 md:rotate-0 w-[50%] md:w-auto md:left-0 md:my-auto md:p-8 gap-16">
             <div class="cursor-pointer flex flex-col items-center justify-center text-[#FBCD00]">
                 <div class=" opacity-[0.7] h-[10px] w-[10px] bg-[#FBCD00] rounded-full cursor-pointer"></div>
                 <h2 class="md:text-4xl font-semibold opacity-[0.7] text-left writing-mode-vertical"> Superheroes
@@ -21,9 +58,9 @@
             </div>
         </div>
         <div
-            class="text-white mx-auto z-[999] pt-1 pb-4 flex flex-col gap-[20px] w-[80%] md:w-[60%] md:ml-[25%] justify-around justify-start">
+            class="text-white mx-auto z-[99] pt-1 pb-4 flex flex-col gap-[20px] w-[80%] md:w-[60%] md:ml-[25%] justify-around justify-start">
             <div
-                class="flex items-center justify-center flex-row border-b py-2 border-[#FBCD00] border-solid opacity-[0.7] w-screen absolute left-0">
+                class="flex items-center justify-center flex-row border-b py-2 border-[#FBCD00] border-solid opacity-[0.7] w-screen absolute top-0 left-0">
                 <div class="logo text-4xl animate-pulse text-[#4D96FF]">Learnly </div>
                 <div class="logo text-4xl animate-pulse text-[#FFD93D]">App </div>
             </div>
@@ -97,7 +134,7 @@
 
             </div>
         </div>
-        
+
     </div>
 </template>
 
