@@ -476,18 +476,28 @@ onBeforeUnmount(() => {
 <template>
     <div class="min-h-screen w-full absolute top-0 right-0  overflow-hidden m-0 flex flex-row bg-[#20232A] text-white">
         <!-- Category Sidebar -->
-        <div class="md:flex flex-col w-[20%] my-auto p-8 gap-16 text-left hidden">
-            <h2 class="text-4xl font-semibold opacity-70 text-[blue]">Superheroes</h2>
-            <h2 class="text-4xl font-semibold opacity-70">Princesses</h2>
-            <h2 class="text-4xl font-semibold opacity-70">Cartoon</h2>
+        <div
+            class="absolute top-70 md:top-[25vh] md:text-left md:justify-start md:items-start left-[-18vw] z-[9999] text-white hidden md:flex flex-row md:flex-col items-center rotate-90 md:rotate-0 w-[50%] md:w-auto md:left-0 md:my-auto md:p-8 gap-16">
+            <div @click="navigateToSuperheroes" class="cursor-pointer flex flex-col items-center justify-center">
+                <div class=" bg-transparent opacity-[0.7] h-[10px] w-[10px] rounded-full cursor-pointer"></div>
+                <h2 class="md:text-4xl font-semibold opacity-[0.7] text-left writing-mode-vertical"> Superheroes
+                </h2>
+            </div>
+            <div class="cursor-pointer flex flex-col items-center justify-center text-[#FBCD00]">
+                <div class=" opacity-[0.7] h-[10px] bg-[#FBCD00] w-[10px] rounded-full cursor-pointer"></div>
+                <h2 class="md:text-4xl font-semibold opacity-[0.7] text-left writing-mode-vertical">Princesses
+                </h2>
+            </div>
+            <div @click="navigateToCartoon" class="cursor-pointer flex flex-col items-center justify-center">
+                <div class=" bg-transparent opacity-[0.7] h-[10px] w-[10px] rounded-full cursor-pointer"></div>
+                <h2 class="md:text-4xl font-semibold opacity-[0.7] text-left writing-mode-vertical">Cartoon</h2>
+            </div>
         </div>
 
         <!-- Main Quiz Area -->
-        <div class="w-[100vw] lg:w-[80%] h-screen max-w-screen mx-auto my-2">
-            <!-- <h1 class="text-center text-white mb-8">{{ quizTitle }}</h1> -->
-
+        <div class="w-[100vw] lg:w-[80%] md:ml-[20%] h-screen max-w-screen mx-auto my-5">
             <div class="flex justify-between items-center py-4 px-8">
-                <div class="text-left text-[#cfd8dc] font-medium">Question {{ currentIndex + 1 }} of {{
+                <div class="text-left text-[#cfd8dc] font-medium">{{ currentIndex + 1 }} of {{
                     questions.length }}</div>
                 <div class="text-right font-medium text-white">Score: {{ score }}/{{ totalAnswered }}</div>
             </div>
@@ -509,13 +519,13 @@ onBeforeUnmount(() => {
                                 <!-- Front Face -->
 
                                 <img v-if="questionStates[idx].answeredCorrectly" src="/public/img/alfred1.png"
-                                    class="absolute left-10 top-0 h-[100px] w-[100px] rotate-y-[180deg]" />
+                                    class="absolute left-10 md:left-50 top-0 h-[100px] w-[100px] rotate-y-[180deg]" />
                                 <img v-if="!questionStates[idx].answeredCorrectly" src="/public/img/alfred2.png"
-                                    class="absolute right-10 top-0 h-[100px] w-[100px]" />
+                                    class="absolute right-10 md:right-50 top-0 h-[100px] w-[100px]" />
 
                                 <div
                                     class="absolute h-[80vh] w-[80%] justify-center items-center right-[10%] top-10 [backface-visibility:hidden]">
-                                    <div class="grid grid-cols-2 gap-x-8 md:gap-32">
+                                    <div class="grid grid-cols-2 gap-x-8 md:gap-8">
                                         <div v-for="(option, optIdx) in question.options" class="mb-4" :key="optIdx"
                                             @click="selectOption(idx, optIdx)">
 
@@ -542,17 +552,17 @@ onBeforeUnmount(() => {
                                 </div>
 
                                 <!-- Back Face -->
-                                <div class="absolute h-[55vh] w-[90%] lg:w-[50%] my-4 rounded-md text-xl flex flex-col justify-center items-center left-[5%] top-10 [backface-visibility:hidden] rotate-y-180 p-2"
+                                <div class="absolute h-[55vh] w-[90%] lg:w-[80%] my-4 rounded-md text-xl flex flex-col justify-center items-center md:left-[10%] left-[5%] top-10 [backface-visibility:hidden] rotate-y-180 p-2"
                                     :style="{ backgroundColor: question.bgColor }">
                                     <!-- <!-- <div class="text-5xl mb-4">🎉</div> -->
                                     <h2 class="text-4xl mb-4 absolute top-[-10%] font-bold animate-pulse">Correct!</h2>
                                     <div class=" rounded pt-12">
                                         <!-- <div class="text-[20px] mb-4">Explanation:</div>   -->
-                                        <div class="grid grid-cols-2 gap-x-4 md:gap-32">
+                                        <div class="grid grid-cols-2 gap-x-4 md:gap-8">
                                             <div v-for="(option, optIdx) in question.explanation" class="mb-4"
                                                 :key="optIdx" @click="selectOption(idx, optIdx)">
 
-                                                <div class="h-[150px] w-[150px] rounded-md text-[16px] flex justify-center items-center shadow-md p-2"
+                                                <div class="h-[150px] w-[150px] md:w-[100%] rounded-md text-[16px] flex justify-center items-center shadow-md p-2"
                                                     :style="{ backgroundColor: '#37474f' }">
                                                     <span>{{ option }}</span>
                                                 </div>
@@ -617,3 +627,23 @@ onBeforeUnmount(() => {
         </div>
     </div>
 </template>
+
+
+<script>
+export default {
+    methods: {
+        navigateToSuperheroes() {
+            console.log("Navigating to /home");
+            this.$router.push('/home');
+        },
+        navigateToPrincess() {
+            console.log("Navigating to /princess");
+            this.$router.push('/princess');
+        },
+        navigateToCartoon() {
+            console.log("Navigating to /cartoon");
+            this.$router.push('/cartoon');
+        },
+    },
+};
+</script>
