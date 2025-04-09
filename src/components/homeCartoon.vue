@@ -22,11 +22,13 @@
         </div>
         <div
             class="text-white mx-auto z-[999] pt-1 pb-4 flex flex-col gap-[20px] w-[80%] md:w-[60%] md:ml-[25%] justify-around justify-start">
-            <div class="flex items-center justify-center flex-row">
+            <div
+                class="flex items-center justify-center flex-row border-b py-2 border-[#FBCD00] border-solid opacity-[0.7] w-screen absolute left-0">
                 <div class="logo text-4xl animate-pulse text-[#4D96FF]">Learnly </div>
                 <div class="logo text-4xl animate-pulse text-[#FFD93D]">App </div>
             </div>
-            <div class="font-bold opacity-[0.7]">Cartoons</div>
+
+            <div class="font-bold opacity-[0.7] mt-18">Cartoons</div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-x-32 my-auto ml-[5vw]">
 
                 <div @click="navigateToAvatar"
