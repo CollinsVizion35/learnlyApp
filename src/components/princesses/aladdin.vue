@@ -282,7 +282,7 @@ onBeforeUnmount(() => {
 })
 
 
-// Initialize question states
+// Initialize question states==========================================================
 const questionStates = reactive(
     questions.value.map(() => ({
         selectedOption: null,
@@ -373,7 +373,7 @@ function restartQuiz() {
 }
 
 function goToQuestion(idx) {
-    // Only allow navigation to questions that haven't been answered correctly
+    
     if (!questionStates[idx].answeredCorrectly) {
         currentIndex.value = idx;
     }
@@ -394,16 +394,16 @@ function resetQuiz() {
 }
 
 function shuffleQuestions() {
-    // Create array of indices
+   
     const indices = [...Array(questions.value.length).keys()];
 
-    // Shuffle indices using Fisher-Yates algorithm
+    
     for (let i = indices.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [indices[i], indices[j]] = [indices[j], indices[i]];
     }
 
-    // Create new arrays based on shuffled indices
+    
     const shuffledQuestions = indices.map(i => questions.value[i]);
     const shuffledStates = indices.map(i => ({
         selectedOption: null,
@@ -412,10 +412,10 @@ function shuffleQuestions() {
         attempted: false
     }));
 
-    // Update reactive references
+    
     questions.value = shuffledQuestions;
 
-    // Reset states and indices
+    // Reset
     indices.forEach((_, idx) => {
         questionStates[idx].selectedOption = null;
         questionStates[idx].answeredCorrectly = false;
@@ -447,7 +447,7 @@ const playCurrentTrack = async () => {
         await audioElement.value.play()
     } catch (err) {
         console.log('Autoplay blocked:', err)
-        // Handle autoplay restriction (e.g., show play button)
+        
     }
 }
 
@@ -475,7 +475,7 @@ onBeforeUnmount(() => {
 
 <template>
     <div class="min-h-screen w-full absolute top-[-5%] right-0  overflow-hidden m-0 flex flex-row bg-[#20232A] text-white">
-        <!-- Category Sidebar -->
+        <!-- Sidebar -->
         <div
             class="absolute top-70 md:top-[25vh] md:text-left md:justify-start md:items-start left-[-18vw] z-[9999] text-white hidden md:flex flex-row md:flex-col items-center rotate-90 md:rotate-0 w-[50%] md:w-auto md:left-0 md:my-auto md:p-8 gap-16">
             <div @click="navigateToSuperheroes" class="cursor-pointer flex flex-col items-center justify-center">
@@ -516,7 +516,7 @@ onBeforeUnmount(() => {
                             <div class="relative w-full h-full transition-transform duration-[0.8s] [transform-style:preserve-3d]"
                                 :class="{ 'rotate-y-180': questionStates[idx].answeredCorrectly }">
 
-                                <!-- Front Face -->
+                                <!-- Front, the questions -->
 
                                 <img v-if="questionStates[idx].answeredCorrectly" src="/public/img/genie.png"
                                     class="absolute left-10 md:left-50 top-[-5%] z-[9999] h-[100px] w-[100px]" />
@@ -551,7 +551,7 @@ onBeforeUnmount(() => {
                                     </div>
                                 </div>
 
-                                <!-- Back Face -->
+                                 <!-- Back, the answers-->
                                 <div class="absolute h-[55vh] w-[90%] lg:w-[80%] my-4 rounded-md text-xl flex flex-col justify-center items-center md:left-[10%] left-[5%] top-10 [backface-visibility:hidden] rotate-y-180 p-2"
                                     :style="{ backgroundColor: question.bgColor }">
                                     <!-- <!-- <div class="text-5xl mb-4">🎉</div> -->
@@ -585,7 +585,7 @@ onBeforeUnmount(() => {
                     </div>
                 </div>
             </div>
-
+<!-- The finish modal part -->
             <Transition name="fade">
                 <div v-if="showCongratsModal"
                     class="fixed inset-0 bg-inherit bg-opacity-50 flex items-center justify-center z-[99999]"

@@ -264,7 +264,7 @@ const swipeState = reactive({
     currentOffset: 0
 });
 
-// Initialize question states
+// Initialize question states==========================================================
 const questionStates = reactive(
     questions.value.map(() => ({
         selectedOption: null,
@@ -317,16 +317,16 @@ function handleTouchEnd(idx) {
     swipeState.endX = 0;
     swipeState.currentOffset = 0;
 
-    // Only proceed if swipe distance meets threshold
+    
     if (Math.abs(deltaX) < swipeState.swipeThreshold) return;
 
-    // Determine swipe direction and select corresponding option
+    
     if (deltaX < 0) {
-        // Swiped left - select first option (index 0)
+        
         selectOption(currentIndex.value, 0);
         questionStates[currentIndex.value].showIncorrectMessage = true;
     } else {
-        // Swiped right - select second option (index 1)
+        
         selectOption(currentIndex.value, 1);
         questionStates[currentIndex.value].showIncorrectMessage = true;
     }
@@ -407,7 +407,7 @@ function restartQuiz() {
 }
 
 function goToQuestion(idx) {
-    // Only allow navigation to questions that haven't been answered correctly
+    
     if (!questionStates[idx].answeredCorrectly) {
         currentIndex.value = idx;
     }
@@ -428,13 +428,13 @@ function resetQuiz() {
 }
 
 function initializeQuestionStates() {
-    // 1. Shuffle all questions and take first 20
+    
     questions.value = [...questions.value]
         .sort(() => Math.random() - 0.5)
         .slice(0, 20)
 
-    // 2. Initialize states for just these 20 questions
-    questionStates.splice(0) // Clear existing
+    
+    questionStates.splice(0) 
     questions.value.forEach(() => {
         questionStates.push({
             selectedOption: null,
@@ -446,16 +446,16 @@ function initializeQuestionStates() {
 }
 
 function shuffleQuestions() {
-    // Create array of indices
+   
     const indices = [...Array(questions.value.length).keys()];
 
-    // Shuffle indices using Fisher-Yates algorithm
+    
     for (let i = indices.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [indices[i], indices[j]] = [indices[j], indices[i]];
     }
 
-    // Create new arrays based on shuffled indices
+    
     const shuffledQuestions = indices.map(i => questions.value[i]);
     const shuffledStates = indices.map(i => ({
         selectedOption: null,
@@ -464,10 +464,10 @@ function shuffleQuestions() {
         attempted: false
     }));
 
-    // Update reactive references
+    
     questions.value = shuffledQuestions;
 
-    // Reset states and indices
+    // Reset
     indices.forEach((_, idx) => {
         questionStates[idx].selectedOption = null;
         questionStates[idx].answeredCorrectly = false;
@@ -506,7 +506,7 @@ const playCurrentTrack = async () => {
         await audioElement.value.play()
     } catch (err) {
         console.log('Autoplay blocked:', err)
-        // Handle autoplay restriction (e.g., show play button)
+        
     }
 }
 
@@ -535,7 +535,7 @@ onBeforeUnmount(() => {
 
 <template>
     <div class="min-h-screen w-full absolute top-0 right-0 overflow-hidden m-0 flex flex-row bg-[#20232A] text-white">
-        <!-- Category Sidebar -->
+        <!-- Sidebar -->
         <div
             class="absolute top-70 md:top-[25vh] md:text-left md:justify-start md:items-start left-[-18vw] z-[9999] text-white hidden md:flex flex-row md:flex-col items-center rotate-90 md:rotate-0 w-[50%] md:w-auto md:left-0 md:my-auto md:p-8 gap-16">
             <div class="cursor-pointer flex flex-col items-center justify-center text-[#FBCD00]">
@@ -578,12 +578,12 @@ onBeforeUnmount(() => {
                                     'bg-[#2e7d32] border-[#4caf50]': questionStates[idx].answeredCorrectly && optIdx === question.correctIndex,
                                     'bg-[#c62828] border-[#f44336]': questionStates[idx].showIncorrectMessage && questionStates[idx].selectedOption === optIdx
                                 }">
-                                <!-- Left Arrow for First Option -->
+                                <!-- Arrows -->
                                 <font-awesome-icon v-if="optIdx === 0" icon="fa-solid fa-arrow-left" class="mr-2" />
 
                                 <span>{{ option }}</span>
 
-                                <!-- Right Arrow for Second Option -->
+                                
                                 <font-awesome-icon v-if="optIdx === 1" icon="fa-solid fa-arrow-right" class="ml-2" />
                             </div>
                         </div>
@@ -593,7 +593,7 @@ onBeforeUnmount(() => {
                             <div class="relative w-full h-full transition-transform duration-[0.8s] [transform-style:preserve-3d]"
                                 :class="{ 'rotate-y-180': questionStates[idx].answeredCorrectly }">
 
-                                <!-- Front Face -->
+                                <!-- Front, the questions -->
 
                                 <img v-if="questionStates[idx].answeredCorrectly" src="/public/img/fury.png"
                                     class="absolute left-10 md:left-50 top-[-10%] h-[100px] w-[100px] rotate-y-[180deg]" />
@@ -627,7 +627,7 @@ onBeforeUnmount(() => {
                                     </div>
                                 </div>
 
-                                <!-- Back Face -->
+                                 <!-- Back, the answers-->
                                 <div class="absolute h-[350px] w-[80%] lg:w-[50%] my-4 rounded-md bg-[#4D96FF] text-2xl flex flex-col justify-center items-center left-[10%] top-10 [backface-visibility:hidden] rotate-y-180"
                                     :style="{ backgroundColor: question.bgColor }">
                                     <div class=" p-4 bg-[#37474f] rounded">
@@ -647,7 +647,7 @@ onBeforeUnmount(() => {
                     </div>
                 </div>
             </div>
-
+<!-- The finish modal part -->
             <Transition name="fade">
                 <div v-if="showCongratsModal"
                     class="fixed inset-0 bg-inherit bg-opacity-50 flex items-center justify-center z-[99999]"
@@ -673,7 +673,7 @@ onBeforeUnmount(() => {
                 </div>
             </Transition>
 
-
+<!-- indicator below questions -->
             <div class="flex justify-center gap-2 mt-4 px-4">
                 <div v-for="(_, idx) in questions" :key="idx" class="w-2 h-2 rounded-full bg-[#bdbdbd] cursor-pointer"
                     :class="{ 'bg-[#2196f3] scale-130': currentIndex === idx }" @click="goToQuestion(idx)"></div>
