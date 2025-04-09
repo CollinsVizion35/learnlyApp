@@ -95,7 +95,6 @@ button:focus-visible {
 .logo {
   font-family: "Butterfly Kids", cursive;
   font-weight: bolder;
-  font-size: 120px;
 }
 
 @media (prefers-color-scheme: light) {

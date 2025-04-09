@@ -5,28 +5,34 @@
         class=" absolute top-0 right-0 items-center  h-screen  w-screen bg-[#20242A] text-white flex flex-row justify-start">
         <div
             class="absolute top-70 left-[-18vw] z-[9999] text-white flex flex-row items-center rotate-90 w-[50%] md:my-auto md:p-8 gap-16 md:justify-around">
-            <div @click="navigateToSuperheroes" class="flex flex-col items-center justify-center">
+            <div @click="navigateToSuperheroes" class="cursor-pointer flex flex-col items-center justify-center">
                 <div class=" bg-transparent opacity-[0.7] h-[10px] w-[10px] rounded-full cursor-pointer"></div>
                 <h2 class="md:text-4xl font-semibold opacity-[0.7] text-left writing-mode-vertical"> Superheroes
                 </h2>
             </div>
-            <div class="flex flex-col items-center justify-center text-[#FBCD00]">
+            <div class="cursor-pointer flex flex-col items-center justify-center text-[#FBCD00]">
                 <div class=" opacity-[0.7] h-[10px] bg-[#FBCD00] w-[10px] rounded-full cursor-pointer"></div>
                 <h2 class="md:text-4xl font-semibold opacity-[0.7] text-left writing-mode-vertical">Princesses
                 </h2>
             </div>
-            <div @click="navigateToCartoon" class="flex flex-col items-center justify-center">
+            <div @click="navigateToCartoon" class="cursor-pointer flex flex-col items-center justify-center">
                 <div class=" bg-transparent opacity-[0.7] h-[10px] w-[10px] rounded-full cursor-pointer"></div>
                 <h2 class="md:text-4xl font-semibold opacity-[0.7] text-left writing-mode-vertical">Cartoon</h2>
             </div>
         </div>
-        <div class="text-white mx-auto z-[999] py-4 flex flex-col gap-[20px] h-screen w-[80%] justify-around justify-start">
+        <div
+            class="text-white mx-auto z-[999] py-4 flex flex-col gap-[20px] h-screen w-[80%] justify-around justify-start">
+            <div class="flex items-center justify-center flex-row">
+                <div class="logo text-4xl animate-pulse text-[#4D96FF]">Learnly </div>
+                <div class="logo text-4xl animate-pulse text-[#FFD93D]">App </div>
+            </div>
             <div class="font-bold opacity-[0.7]">Princesses</div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-32 ml-[8vw]">
 
                 <div @click="navigateToCinderella"
-                    class="bg-[#4385BE] flex flex-row relative rounded-md w-[80vw] justify-end md:w-[30vw] justify-between cursor-pointer p-4 shadow-[0_10px_20px_rgba(0,0,0,0.3)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.4)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
-                    <img src="/img/cinderella.png" class="h-[200px] w-[200px] absolute bottom-0 left-[-15%] z-[99] rotate-y-[180deg]" />
+                    class="bg-[#4385BE] animate-pulse flex flex-row relative rounded-md w-[80vw] justify-end md:w-[30vw] justify-between cursor-pointer p-4 shadow-[0_10px_20px_rgba(0,0,0,0.3)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.4)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                    <img src="/img/cinderella.png"
+                        class="h-[200px] w-[200px] absolute bottom-0 left-[-15%] z-[99] rotate-y-[180deg]" />
                     <div class="w-[40vw] ml-32 md:w-[15vw] z-[999]">
                         <div class="absolute top-0 right-0 flex flex-row gap-sm justify-end mx-8 items-center">
                             <font-awesome-icon icon="fa-solid fa-bookmark" style="color: #edeff2;" />
@@ -46,7 +52,7 @@
                 </div>
 
                 <div @click="navigateToAladdin"
-                    class="bg-[#75A89C] flex flex-row relative rounded-md w-[80vw] justify-end md:w-[30vw] justify-between cursor-pointer p-4 shadow-[0_10px_20px_rgba(0,0,0,0.3)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.4)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                    class="bg-[#75A89C] animate-pulse flex flex-row relative rounded-md w-[80vw] justify-end md:w-[30vw] justify-between cursor-pointer p-4 shadow-[0_10px_20px_rgba(0,0,0,0.3)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.4)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                     <img src="/img/jasmine.png" class="h-[200px] w-[200px] absolute bottom-0 left-[-15%] z-[99]" />
                     <div class="w-[40vw] ml-32 md:w-[15vw] z-[999]">
                         <div class="absolute top-0 right-0 flex flex-row gap-sm justify-end mx-8 items-center">
@@ -67,7 +73,7 @@
                 </div>
 
                 <div @click="navigateToSnowWhite"
-                    class="bg-[#E4C75F] flex flex-row relative rounded-md w-[80vw] justify-end md:w-[30vw] justify-between cursor-pointer p-4 shadow-[0_10px_20px_rgba(0,0,0,0.3)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.4)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+                    class="bg-[#E4C75F] animate-pulse flex flex-row relative rounded-md w-[80vw] justify-end md:w-[30vw] justify-between cursor-pointer p-4 shadow-[0_10px_20px_rgba(0,0,0,0.3)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.4)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                     <img src="/img/snowWhite.png" class="h-[200px] w-[200px] absolute bottom-0 left-[-15%] z-[99]" />
                     <div class="w-[40vw] ml-32 md:w-[15vw] z-[999]">
                         <div class="absolute top-0 right-0 flex flex-row gap-sm justify-end mx-8 items-center">
@@ -109,6 +115,18 @@ export default {
         navigateToSnowWhite() {
             console.log("Navigating to /snowWhite");
             this.$router.push('/snowWhite');
+        },
+        navigateToSuperheroes() {
+            console.log("Navigating to /home");
+            this.$router.push('/home');
+        },
+        navigateToPrincess() {
+            console.log("Navigating to /princess");
+            this.$router.push('/princess');
+        },
+        navigateToCartoon() {
+            console.log("Navigating to /cartoon");
+            this.$router.push('/cartoon');
         },
     },
 };
