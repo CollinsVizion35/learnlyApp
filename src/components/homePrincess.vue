@@ -17,7 +17,7 @@
             </div>
             <div @click="navigateToCartoon" class="cursor-pointer flex flex-col items-center justify-center">
                 <div class=" bg-transparent opacity-[0.7] h-[10px] w-[10px] rounded-full cursor-pointer"></div>
-                <h2 class="md:text-4xl font-semibold opacity-[0.7] text-left writing-mode-vertical">Cartoon</h2>
+                <h2 class="md:text-4xl font-semibold opacity-[0.7] text-left writing-mode-vertical">Cartoons</h2>
             </div>
         </div>
         <div

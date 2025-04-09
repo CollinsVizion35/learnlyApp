@@ -516,7 +516,7 @@ onBeforeUnmount(() => {
             </div>
             <div class="cursor-pointer flex flex-col items-center justify-center text-[#FBCD00]">
                 <div class="  opacity-[0.7] h-[10px] w-[10px] rounded-full bg-[#FBCD00] cursor-pointer"></div>
-                <h2 class="md:text-4xl font-semibold opacity-[0.7] text-left writing-mode-vertical">Cartoon</h2>
+                <h2 class="md:text-4xl font-semibold opacity-[0.7] text-left writing-mode-vertical">Cartoons</h2>
             </div>
         </div>
 
@@ -561,10 +561,10 @@ onBeforeUnmount(() => {
 
                                 <!-- Front Face -->
 
-                                <img v-if="questionStates[idx].answeredCorrectly" src="/public/img/alfred1.png"
-                                    class="absolute left-10 md:left-50 top-0 h-[100px] w-[100px] rotate-y-[180deg]" />
-                                <img v-if="!questionStates[idx].answeredCorrectly" src="/public/img/alfred2.png"
-                                    class="absolute right-10 md:right-50 top-0 h-[100px] w-[100px]" />
+                                <img v-if="questionStates[idx].answeredCorrectly" src="/public/img/max10.png"
+                                    class="absolute left-10 md:left-50 top-[-5%] h-[100px] w-[100px]" />
+                                <img v-if="!questionStates[idx].answeredCorrectly" src="/public/img/max10.png"
+                                    class="absolute right-10 md:right-50 top-[-5%] h-[100px] w-[100px] rotate-y-[180deg]" />
 
 
                                 <div class="absolute h-[400px] w-[80%] justify-center items-center right-[10%] top-10 [backface-visibility:hidden]"
