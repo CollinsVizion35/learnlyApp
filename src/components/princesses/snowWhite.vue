@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, reactive } from 'vue';
+import { ref, computed, reactive, onMounted, onUnmounted, onBeforeUnmount } from 'vue';
 
 const quizTitle = ref('Carousel Quiz Game');
 const currentIndex = ref(0);
