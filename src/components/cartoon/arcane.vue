@@ -562,7 +562,7 @@ onBeforeUnmount(() => {
                         :style="{ left: `${idx * 100}%` }">
                         <div class="flex flex-row justify-center items-center w-full max-w-screen px-4 py-2">
                             <div v-for="(option, optIdx) in question.options" :key="optIdx"
-                                class="flex flex-row items-center justify-center text-[14px] mx-4 bg-[#37474f] text-white px-4 py-2 rounded cursor-pointer transition-all duration-300"
+                                class="flex flex-row items-center justify-center text-[14px] mx-4 bg-[#37474f] z-[99] text-white px-4 py-2 rounded cursor-pointer transition-all duration-300"
                                 :class="{
                                     'border-[#2196f3]': questionStates[idx].selectedOption === optIdx,
                                     'bg-[#2e7d32] border-[#4caf50]': questionStates[idx].answeredCorrectly && optIdx === question.correctIndex,
@@ -586,9 +586,9 @@ onBeforeUnmount(() => {
                                 <!-- Front, the questions -->
 
                                 <img v-if="questionStates[idx].answeredCorrectly" src="/public/img/heid.png"
-                                    class="absolute left-10 md:left-50 top-[-10%] h-[100px] w-[100px]" />
+                                    class="absolute left-10 md:left-50 top-[-7%] top-0 h-[100px] w-[100px]" />
                                 <img v-if="!questionStates[idx].answeredCorrectly" src="/public/img/heid.png"
-                                    class="absolute right-10 md:right-50 top-[-10%] h-[100px] w-[100px] rotate-y-[180deg]" />
+                                    class="absolute right-10 md:right-50 top-[-10%] top-0 h-[100px] w-[100px] rotate-y-[180deg]" />
 
 
                                 <div class="absolute h-[400px] w-[80%] justify-center items-center right-[10%] top-10 [backface-visibility:hidden]"

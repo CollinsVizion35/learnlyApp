@@ -414,7 +414,7 @@ onBeforeUnmount(() => {
                                 <!-- Front, the questions -->
 
                                 <img v-if="questionStates[idx].answeredCorrectly" src="/public/img/fairy.png"
-                                    class="absolute left-10 md:left-50 top-[-10%] h-[100px] w-[100px] rotate-y-[180deg]" />
+                                    class="absolute left-10 md:left-50 top-[-7%] h-[100px] w-[100px] rotate-y-[180deg]" />
                                 <img v-if="!questionStates[idx].answeredCorrectly" src="/public/img/fairy.png"
                                     class="absolute right-10 md:right-50 top-[-10%] h-[100px] w-[100px]" />
 
