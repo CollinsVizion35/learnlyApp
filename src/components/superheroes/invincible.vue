@@ -27,7 +27,7 @@ const questions = ref([
     question: "What is Wonder Woman's signature weapon?",
     options: ["Lasso of Truth", "Magic Hammer"],
     correctIndex: 0,
-    category: "DC Comics", 
+    category: "DC Comics",
     explanation: "The Lasso of Truth compels anyone bound by it to speak honestly. (Magic Hammer is associated with Thor from Marvel, not DC.)",
     bgColor: "#2ECC71" // Green
   },
@@ -114,7 +114,7 @@ const currentQuestion = computed(() => {
 
 function handleTouchStart(e) {
   if (questionStates[currentIndex.value].answeredCorrectly) return;
-  
+
   swipeState.startX = e.touches[0].clientX;
   swipeState.isSwiping = true;
   swipeState.currentOffset = 0;
@@ -122,28 +122,28 @@ function handleTouchStart(e) {
 
 function handleTouchMove(e) {
   if (!swipeState.isSwiping || questionStates[currentIndex.value].answeredCorrectly) return;
-  
+
   swipeState.endX = e.touches[0].clientX;
   swipeState.currentOffset = swipeState.endX - swipeState.startX;
-  
+
   // Prevent page scrolling while swiping
   e.preventDefault();
 }
 
 function handleTouchEnd() {
   if (!swipeState.isSwiping || questionStates[currentIndex.value].answeredCorrectly) return;
-  
+
   const deltaX = swipeState.endX - swipeState.startX;
-  
+
   // Reset swipe state
   swipeState.isSwiping = false;
   swipeState.startX = 0;
   swipeState.endX = 0;
   swipeState.currentOffset = 0;
-  
+
   // Only proceed if swipe distance meets threshold
   if (Math.abs(deltaX) < swipeState.swipeThreshold) return;
-  
+
   // Determine swipe direction and select corresponding option
   if (deltaX < 0) {
     // Swiped left - select first option (index 0)
@@ -259,7 +259,8 @@ function shuffleQuestions() {
     <!-- Main Quiz Area -->
     <div class="w-[100vw] lg:w-[80%] h-screen max-w-screen mx-auto my-5">
       <div class="flex justify-between items-center py-4 px-8">
-        <div class="text-left text-[#cfd8dc] font-medium">Question {{ currentIndex + 1 }} of {{ questions.length }}</div>
+        <div class="text-left text-[#cfd8dc] font-medium">Question {{ currentIndex + 1 }} of {{ questions.length }}
+        </div>
         <div class="text-right font-medium text-white">Score: {{ score }}/{{ totalAnswered }}</div>
       </div>
 
@@ -294,23 +295,21 @@ function shuffleQuestions() {
                 :class="{ 'rotate-y-180': questionStates[idx].answeredCorrectly }">
 
                 <!-- Front Face -->
-                                 
-                                 <img v-if="questionStates[idx].answeredCorrectly" src="/public/img/alfred1.png" class="absolute left-10 md:left-30 top-0 h-[100px] w-[100px] rotate-y-[180deg]"/>
-                                 <img v-if="!questionStates[idx].answeredCorrectly" src="/public/img/alfred2.png" class="absolute right-10 md:Right-30 top-0 h-[100px] w-[100px]"/>
+
+                <img v-if="questionStates[idx].answeredCorrectly" src="/public/img/alfred1.png"
+                  class="absolute left-10 md:left-30 top-0 h-[100px] w-[100px] rotate-y-[180deg]" />
+                <img v-if="!questionStates[idx].answeredCorrectly" src="/public/img/alfred2.png"
+                  class="absolute right-10 md:Right-30 top-0 h-[100px] w-[100px]" />
 
 
-                <div 
+                <div
                   class="absolute h-[400px] w-[80%] justify-center items-center right-[10%] top-10 [backface-visibility:hidden]"
-                  @touchstart="handleTouchStart"
-                  @touchmove="handleTouchMove"
-                  @touchend="handleTouchEnd"
-                >
-                  <div class="h-[300px] w-full rounded-md text-2xl flex justify-center items-center shadow-md"
-                    :style="{ 
-                      backgroundColor: question.bgColor,
-                      transform: swipeState.isSwiping ? `translateX(${swipeState.currentOffset}px)` : 'none',
-                      transition: swipeState.isSwiping ? 'none' : 'transform 0.3s ease'
-                    }">
+                  @touchstart="handleTouchStart" @touchmove="handleTouchMove" @touchend="handleTouchEnd">
+                  <div class="h-[300px] w-full rounded-md text-2xl flex justify-center items-center shadow-md" :style="{
+                    backgroundColor: question.bgColor,
+                    transform: swipeState.isSwiping ? `translateX(${swipeState.currentOffset}px)` : 'none',
+                    transition: swipeState.isSwiping ? 'none' : 'transform 0.3s ease'
+                  }">
                     {{ question.question }}
                   </div>
 
@@ -328,7 +327,8 @@ function shuffleQuestions() {
                 </div>
 
                 <!-- Back Face -->
-                <div class="absolute h-[350px] w-[80%] lg:w-[50%] my-4 rounded-md bg-[#4D96FF] text-2xl flex flex-col justify-center items-center left-[10%] top-10 [backface-visibility:hidden] rotate-y-180"
+                <div
+                  class="absolute h-[350px] w-[80%] lg:w-[50%] my-4 rounded-md bg-[#4D96FF] text-2xl flex flex-col justify-center items-center left-[10%] top-10 [backface-visibility:hidden] rotate-y-180"
                   :style="{ backgroundColor: question.bgColor }">
                   <div class="p-4 bg-[#37474f] rounded">
                     <div class="text-[20px] mb-4">Explanation:</div> {{ question.explanation }}
@@ -337,8 +337,8 @@ function shuffleQuestions() {
                     class="mt-4 bg-[#2196f3] text-white px-6 py-2 rounded disabled:bg-[#cccccc] disabled:cursor-not-allowed"
                     :style="{ backgroundColor: question.bgColor }">
                     {{ currentIndex === questions.length - 1 ? 'Finish Quiz' : 'Next Question' }}
-                    <font-awesome-icon v-if="currentIndex !== questions.length - 1"
-                      icon="fa-solid fa-arrow-right" class="ml-2" />
+                    <font-awesome-icon v-if="currentIndex !== questions.length - 1" icon="fa-solid fa-arrow-right"
+                      class="ml-2" />
                   </button>
                 </div>
               </div>
@@ -365,10 +365,11 @@ function shuffleQuestions() {
       </div>
 
       <div class="flex justify-center mt-4 gap-4">
-        <button @click="resetQuiz" class="bg-[#f44336] text-white px-6 py-2 rounded hover:-translate-y-1">Reset Quiz</button>
-        <button @click="shuffleQuestions" class="bg-[#3f51b5] text-white px-6 py-2 rounded hover:-translate-y-1">Shuffle Questions</button>
+        <button @click="resetQuiz" class="bg-[#4D96FF] text-white px-6 py-2 rounded hover:-translate-y-1">Reset
+          Quiz</button>
+        <button @click="shuffleQuestions" class="bg-[#3f51b5] text-white px-6 py-2 rounded hover:-translate-y-1">Shuffle
+          Questions</button>
       </div>
     </div>
   </div>
 </template>
-

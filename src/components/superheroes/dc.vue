@@ -306,10 +306,10 @@ function shuffleQuestions() {
             </div>
 
             <div class="flex justify-center mt-4 gap-4">
-                <button @click="resetQuiz" class="bg-[#f44336] text-white px-6 py-2 rounded hover:-translate-y-1">Reset
+                <button @click="resetQuiz" class="bg-[#4D96FF] text-white px-6 py-2 rounded hover:-translate-y-1">Reset
                     Quiz</button>
                 <button @click="shuffleQuestions"
-                    class="bg-[#3f51b5] text-white px-6 py-2 rounded hover:-translate-y-1">Shuffle
+                    class="bg-[#FFD93D] text-white px-6 py-2 rounded hover:-translate-y-1">Shuffle
                     Questions</button>
             </div>
         </div>
