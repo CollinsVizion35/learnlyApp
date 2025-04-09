@@ -224,7 +224,7 @@ const questions = ref([
 
 // on swipe===================================================
 const swipeSound = ref(null)
-const swipeSoundFile = '../../../public/music/swipeAudio.mp3'
+const swipeSoundFile = new URL('../../../public/music/swipeAudio.mp3', import.meta.url).href;
 
 onMounted(() => {
     swipeSound.value = new Audio(swipeSoundFile)
@@ -241,7 +241,7 @@ onBeforeUnmount(() => {
 //on click===================================================
 
 const clickSound = ref(null)
-const clickSoundFile = '../../../public/music/clickAudio2.mp3'
+const clickSoundFile = new URL('../../../public/music/clickAudio2.mp3', import.meta.url).href;
 
 onMounted(() => {
     clickSound.value = new Audio(clickSoundFile)
