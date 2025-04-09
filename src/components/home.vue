@@ -2,9 +2,9 @@
 
 <template>
     <div
-        class=" absolute top-0 right-0 items-center justify-center  w-screen bg-[#20242A] text-white flex flex-row justify-start">
+        class=" absolute top-0 right-0 items-center h-screen  w-screen bg-[#20242A] text-white flex flex-row justify-start">
         <div
-            class="absolute top-50 left-[-15vw] z-[9999] text-white flex flex-row items-center rotate-90 w-[50%] md:my-auto md:p-8 gap-16 md:justify-around">
+            class="absolute top-70 left-[-18vw] z-[9999] text-white flex flex-row items-center rotate-90 w-[50%] md:my-auto md:p-8 gap-16 md:justify-around">
             <div class="flex flex-col items-center justify-center text-[#FBCD00]">
                 <div class=" opacity-[0.7] h-[10px] w-[10px] bg-[#FBCD00] rounded-full cursor-pointer"></div>
                 <h2 class="md:text-4xl font-semibold opacity-[0.7] text-left writing-mode-vertical"> Superheroes
