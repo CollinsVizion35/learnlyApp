@@ -2,7 +2,7 @@
 
 <template>
     <div
-        class=" absolute top-0 right-0 items-center  w-screen bg-[#20242A] text-white flex flex-row justify-start">
+        class=" absolute top-0 right-0 items-center min-h-screen  w-screen bg-[#20242A] text-white flex flex-row justify-start">
         <div
             class="fixed top-70 md:top-auto md:text-left md:justify-start md:items-start left-[-18vw] z-[9999] text-white flex flex-row md:flex-col items-center rotate-90 md:rotate-0 w-[50%] md:w-auto md:left-0 md:my-auto md:p-8 gap-16">
             <div @click="navigateToSuperheroes" class="cursor-pointer flex flex-col items-center justify-center">

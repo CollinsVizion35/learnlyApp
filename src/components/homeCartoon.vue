@@ -2,22 +2,22 @@
 
 <template>
     <div
-        class=" absolute top-0 right-0 items-center  w-screen bg-[#20242A] text-white flex flex-row justify-start">
+        class=" absolute top-0 right-0 items-center min-h-screen  w-screen bg-[#20242A] text-white flex flex-row justify-start">
         <div
-            class="fixed top-70 md:top-auto md:text-left md:justify-start md:items-start left-[-18vw] z-[9999] bg-[#20242A] opacity-[0.7] text-white flex flex-row md:flex-col items-center rotate-90 md:rotate-0 w-[50%] md:w-auto md:left-0 md:my-auto md:p-8 gap-16">
+            class="fixed top-70 md:top-auto md:text-left md:justify-start md:items-start left-[-18vw] z-[9999] text-white flex flex-row md:flex-col items-center rotate-90 md:rotate-0 w-[50%] md:w-auto md:left-0 md:my-auto md:p-8 gap-16">
             <div @click="navigateToSuperheroes" class="cursor-pointer flex flex-col items-center justify-center">
-                <div class="bg-transparent h-[10px] w-[10px] rounded-full cursor-pointer"></div>
-                <h2 class="md:text-4xl font-semibold text-left writing-mode-vertical"> Superheroes
+                <div class="bg-transparent opacity-[0.7] h-[10px] w-[10px] rounded-full cursor-pointer"></div>
+                <h2 class="md:text-4xl font-semibold opacity-[0.7] text-left writing-mode-vertical"> Superheroes
                 </h2>
             </div>
             <div @click="navigateToPrincess" class="cursor-pointer flex flex-col items-center justify-center">
-                <div class=" bg-transparent h-[10px] w-[10px] rounded-full cursor-pointer"></div>
-                <h2 class="md:text-4xl font-semibold text-left writing-mode-vertical">Princesses
+                <div class=" bg-transparent opacity-[0.7] h-[10px] w-[10px] rounded-full cursor-pointer"></div>
+                <h2 class="md:text-4xl font-semibold opacity-[0.7] text-left writing-mode-vertical">Princesses
                 </h2>
             </div>
             <div class="cursor-pointer flex flex-col items-center justify-center text-[#FBCD00]">
-                <div class="  h-[10px] w-[10px] rounded-full bg-[#FBCD00] cursor-pointer"></div>
-                <h2 class="md:text-4xl font-semibold text-left writing-mode-vertical">Cartoons</h2>
+                <div class="  opacity-[0.7] h-[10px] w-[10px] rounded-full bg-[#FBCD00] cursor-pointer"></div>
+                <h2 class="md:text-4xl font-semibold opacity-[0.7] text-left writing-mode-vertical">Cartoons</h2>
             </div>
         </div>
         <div
