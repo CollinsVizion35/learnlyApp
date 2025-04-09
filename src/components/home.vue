@@ -21,7 +21,7 @@
             </div>
         </div>
         <div
-            class="text-white mx-auto z-[999] py-4 flex flex-col gap-[20px] w-[80%] md:w-[60%] md:ml-[25%] justify-around justify-start">
+            class="text-white mx-auto z-[999] pt-1 pb-4 flex flex-col gap-[20px] w-[80%] md:w-[60%] md:ml-[25%] justify-around justify-start">
             <div
                 class="flex items-center justify-center flex-row">
                 <div class="logo text-4xl animate-pulse text-[#4D96FF]">Learnly </div>
