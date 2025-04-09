@@ -154,7 +154,7 @@ function shuffleQuestions() {
 
 <template>
     <div id="app">
-        <div class="flex flex-row h-screen w-screen bg-[#20242A] text-white">
+        <div class="flex flex-row h-screen w-screen bg-[#20232A] text-white">
             <!-- Category Sidebar -->
             <div class="flex flex-col w-[20%] my-auto p-8 gap-16 text-left">
                 <h2 class="text-4xl font-semibold opacity-70 text-[blue]">Superheroes</h2>

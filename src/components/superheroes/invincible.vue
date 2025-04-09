@@ -27,7 +27,7 @@ const questions = ref([
     question: "What is Wonder Woman's signature weapon?",
     options: ["Lasso of Truth", "Magic Hammer"],
     correctIndex: 0,
-    category: "DC Comics",
+    category: "DC Comics", 
     explanation: "The Lasso of Truth compels anyone bound by it to speak honestly. (Magic Hammer is associated with Thor from Marvel, not DC.)",
     bgColor: "#2ECC71" // Green
   },
@@ -40,11 +40,11 @@ const questions = ref([
     bgColor: "#E67E22" // Orange
   },
   {
-    question: "What is the name of Batman's butler and mentor?",
+    question: "What is my name?",
     options: ["Alfred Pennyworth", "James Gordon"],
     correctIndex: 0,
     category: "DC Comics",
-    explanation: "Alfred Pennyworth serves as Bruce Wayne's loyal butler, surrogate father, and occasional field medic. James Gordon is Gotham City's police commissioner.",
+    explanation: "I am Alfred Pennyworth and I serve as Bruce Wayne's loyal butler, surrogate father, and occasional field medic. James Gordon is Gotham City's police commissioner.",
     bgColor: "#E74C3C" // Red
   },
   {
@@ -248,7 +248,7 @@ function shuffleQuestions() {
 </script>
 
 <template>
-  <div class="min-h-screen w-full absolute top-0 right-0 overflow-hidden m-0 flex flex-row bg-[#20242A] text-white">
+  <div class="min-h-screen w-full absolute top-0 right-0 overflow-hidden m-0 flex flex-row bg-[#20232A] text-white">
     <!-- Category Sidebar -->
     <div class="md:flex flex-col w-[20%] my-auto p-8 gap-16 text-left hidden">
       <h2 class="text-4xl font-semibold opacity-70 text-[blue]">Superheroes</h2>
@@ -272,7 +272,7 @@ function shuffleQuestions() {
             :style="{ left: `${idx * 100}%` }">
             <div class="flex flex-row justify-center items-center w-full max-w-screen px-4 py-2">
               <div v-for="(option, optIdx) in question.options" :key="optIdx"
-                class="flex flex-row items-center justify-center text-xs mx-4 bg-[#37474f] text-white px-4 py-2 rounded cursor-pointer border-2 transition-all duration-300"
+                class="flex flex-row items-center justify-center text-xs mx-4 bg-[#37474f] text-white px-4 py-2 rounded cursor-pointer transition-all duration-300"
                 :class="{
                   'border-[#2196f3]': questionStates[idx].selectedOption === optIdx,
                   'bg-[#2e7d32] border-[#4caf50]': questionStates[idx].answeredCorrectly && optIdx === question.correctIndex,
@@ -294,6 +294,11 @@ function shuffleQuestions() {
                 :class="{ 'rotate-y-180': questionStates[idx].answeredCorrectly }">
 
                 <!-- Front Face -->
+                                 
+                                 <img v-if="questionStates[idx].answeredCorrectly" src="/public/img/alfred1.png" class="absolute left-10 md:left-30 top-0 h-[100px] w-[100px] rotate-y-[180deg]"/>
+                                 <img v-if="!questionStates[idx].answeredCorrectly" src="/public/img/alfred2.png" class="absolute right-10 md:Right-30 top-0 h-[100px] w-[100px]"/>
+
+
                 <div 
                   class="absolute h-[400px] w-[80%] justify-center items-center right-[10%] top-10 [backface-visibility:hidden]"
                   @touchstart="handleTouchStart"

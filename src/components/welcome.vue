@@ -1,6 +1,6 @@
 <template>
-    <!-- #20242A -->
-    <div class=" absolute top-0 right-0 flex items-center justify-center h-screen w-screen bg-[#20242A] text-white flex-row">
+    <!-- #20232A -->
+    <div class=" absolute top-0 right-0 flex items-center justify-center h-screen w-screen bg-[#20232A] text-white flex-row">
       <h1 class="logo text-4xl font-bold animate-pulse text-[#4D96FF]">Learnly </h1>
       <h1 class="logo text-4xl font-bold animate-pulse text-[#FFD93D]">App </h1>
     </div>

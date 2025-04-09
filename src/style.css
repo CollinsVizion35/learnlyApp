@@ -1,5 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Butterfly+Kids&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 @import "tailwindcss";
 
@@ -10,13 +12,13 @@
 
 :root {
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 200;
 
   margin: 0;
   padding: 0;
   /* color-scheme: light dark; */
   color: rgba(255, 255, 255, 0.87);
-  background-color: #20242A;
+  background-color: #20232A;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -50,8 +52,9 @@ body {
   width: 100vw;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  background-color: #20242A;
+  background-color: #20232A;
   color: #111111;
+  font-family: "Roboto", sans-serif;
 }
 
 h1 {

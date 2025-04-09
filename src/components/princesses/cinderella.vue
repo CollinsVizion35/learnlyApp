@@ -7,86 +7,86 @@ const score = ref(0);
 const totalAnswered = ref(0);
 
 const questions = ref([
-  {
-    question: "What is the real name of Batman?",
-    options: ["Clark Kent", "Bruce Wayne"],
-    correctIndex: 1,
-    category: "DC Comics",
-    explanation: "Batman's secret identity is Bruce Wayne, a billionaire who witnessed his parents' murder as a child, inspiring his crusade against crime. Clark Kent is Superman's alter ego.",
-    bgColor: "#4D96FF" // Blue
-  },
-  {
-    question: "Which superhero is called the 'Man of Steel'?",
-    options: ["Superman", "The Flash"],
-    correctIndex: 0,
-    category: "DC Comics",
-    explanation: "Superman is nicknamed the 'Man of Steel' due to his invulnerability and Kryptonian biology, which grants him superhuman strength under Earth's yellow sun.",
-    bgColor: "#8E44AD" // Purple
-  },
-  {
-    question: "What is Wonder Woman's signature weapon?",
-    options: ["Lasso of Truth", "Magic Hammer"],
-    correctIndex: 0,
-    category: "DC Comics",
-    explanation: "The Lasso of Truth compels anyone bound by it to speak honestly. (Magic Hammer is associated with Thor from Marvel, not DC.)",
-    bgColor: "#2ECC71" // Green
-  },
-  {
-    question: "Who is the fastest DC superhero?",
-    options: ["Green Arrow", "The Flash"],
-    correctIndex: 1,
-    category: "DC Comics",
-    explanation: "The Flash (Barry Allen or Wally West) taps into the Speed Force, making him capable of moving at light speed and even breaking time barriers.",
-    bgColor: "#E67E22" // Orange
-  },
-  {
-    question: "What is the name of Batman's butler and mentor?",
-    options: ["Alfred Pennyworth", "James Gordon"],
-    correctIndex: 0,
-    category: "DC Comics",
-    explanation: "Alfred Pennyworth serves as Bruce Wayne's loyal butler, surrogate father, and occasional field medic. James Gordon is Gotham City's police commissioner.",
-    bgColor: "#E74C3C" // Red
-  },
-  {
-    question: "Which villain is known as the 'Clown Prince of Crime'?",
-    options: ["The Joker", "Bane"],
-    correctIndex: 0,
-    category: "DC Comics",
-    explanation: "The Joker is Batman's arch-nemesis, a psychopathic criminal with a clown motif and a twisted sense of humor. Bane is a physical powerhouse who broke Batman's back.",
-    bgColor: "#3498DB" // Light Blue
-  },
-  {
-    question: "What planet is Superman originally from?",
-    options: ["Mars", "Krypton"],
-    correctIndex: 1,
-    category: "DC Comics",
-    explanation: "Superman (Kal-El) was born on Krypton, which was destroyed. His parents sent him to Earth, where he gained powers under our yellow sun.",
-    bgColor: "#1ABC9C" // Turquoise
-  },
-  {
-    question: "Which hero is nicknamed the 'Dark Knight'?",
-    options: ["Batman", "Nightwing"],
-    correctIndex: 0,
-    category: "DC Comics",
-    explanation: "Batman is called the 'Dark Knight' for his brooding vigilante persona. Nightwing is Dick Grayson (the first Robin) after he outgrew being Batman's sidekick.",
-    bgColor: "#9B59B6" // Dark Purple
-  },
-  {
-    question: "What powers Green Lantern's abilities?",
-    options: ["Power Ring", "Infinity Gauntlet"],
-    correctIndex: 0,
-    category: "DC Comics",
-    explanation: "Green Lanterns wield Power Rings that channel willpower to create hard-light constructs. (The Infinity Gauntlet is a Marvel artifact.)",
-    bgColor: "#F1C40F" // Yellow
-  },
-  {
-    question: "Who is Batman's iconic teenage sidekick?",
-    options: ["Robin", "Kid Flash"],
-    correctIndex: 0,
-    category: "DC Comics",
-    explanation: "Robin (Dick Grayson, Jason Todd, Tim Drake, or Damian Wayne) is Batman's crime-fighting partner. Kid Flash is The Flash's sidekick.",
-    bgColor: "#34495E" // Gray Blue
-  }
+    {
+        question: "What is the real name of Batman?",
+        options: ["Clark Kent", "Bruce Wayne"],
+        correctIndex: 1,
+        category: "DC Comics",
+        explanation: "Batman's secret identity is Bruce Wayne, a billionaire who witnessed his parents' murder as a child, inspiring his crusade against crime. Clark Kent is Superman's alter ego.",
+        bgColor: "#4D96FF" // Blue
+    },
+    {
+        question: "Which superhero is called the 'Man of Steel'?",
+        options: ["Superman", "The Flash"],
+        correctIndex: 0,
+        category: "DC Comics",
+        explanation: "Superman is nicknamed the 'Man of Steel' due to his invulnerability and Kryptonian biology, which grants him superhuman strength under Earth's yellow sun.",
+        bgColor: "#8E44AD" // Purple
+    },
+    {
+        question: "What is Wonder Woman's signature weapon?",
+        options: ["Lasso of Truth", "Magic Hammer"],
+        correctIndex: 0,
+        category: "DC Comics",
+        explanation: "The Lasso of Truth compels anyone bound by it to speak honestly. (Magic Hammer is associated with Thor from Marvel, not DC.)",
+        bgColor: "#2ECC71" // Green
+    },
+    {
+        question: "Who is the fastest DC superhero?",
+        options: ["Green Arrow", "The Flash"],
+        correctIndex: 1,
+        category: "DC Comics",
+        explanation: "The Flash (Barry Allen or Wally West) taps into the Speed Force, making him capable of moving at light speed and even breaking time barriers.",
+        bgColor: "#E67E22" // Orange
+    },
+    {
+        question: "What is the name of Batman's butler and mentor?",
+        options: ["Alfred Pennyworth", "James Gordon"],
+        correctIndex: 0,
+        category: "DC Comics",
+        explanation: "Alfred Pennyworth serves as Bruce Wayne's loyal butler, surrogate father, and occasional field medic. James Gordon is Gotham City's police commissioner.",
+        bgColor: "#E74C3C" // Red
+    },
+    {
+        question: "Which villain is known as the 'Clown Prince of Crime'?",
+        options: ["The Joker", "Bane"],
+        correctIndex: 0,
+        category: "DC Comics",
+        explanation: "The Joker is Batman's arch-nemesis, a psychopathic criminal with a clown motif and a twisted sense of humor. Bane is a physical powerhouse who broke Batman's back.",
+        bgColor: "#3498DB" // Light Blue
+    },
+    {
+        question: "What planet is Superman originally from?",
+        options: ["Mars", "Krypton"],
+        correctIndex: 1,
+        category: "DC Comics",
+        explanation: "Superman (Kal-El) was born on Krypton, which was destroyed. His parents sent him to Earth, where he gained powers under our yellow sun.",
+        bgColor: "#1ABC9C" // Turquoise
+    },
+    {
+        question: "Which hero is nicknamed the 'Dark Knight'?",
+        options: ["Batman", "Nightwing"],
+        correctIndex: 0,
+        category: "DC Comics",
+        explanation: "Batman is called the 'Dark Knight' for his brooding vigilante persona. Nightwing is Dick Grayson (the first Robin) after he outgrew being Batman's sidekick.",
+        bgColor: "#9B59B6" // Dark Purple
+    },
+    {
+        question: "What powers Green Lantern's abilities?",
+        options: ["Power Ring", "Infinity Gauntlet"],
+        correctIndex: 0,
+        category: "DC Comics",
+        explanation: "Green Lanterns wield Power Rings that channel willpower to create hard-light constructs. (The Infinity Gauntlet is a Marvel artifact.)",
+        bgColor: "#F1C40F" // Yellow
+    },
+    {
+        question: "Who is Batman's iconic teenage sidekick?",
+        options: ["Robin", "Kid Flash"],
+        correctIndex: 0,
+        category: "DC Comics",
+        explanation: "Robin (Dick Grayson, Jason Todd, Tim Drake, or Damian Wayne) is Batman's crime-fighting partner. Kid Flash is The Flash's sidekick.",
+        bgColor: "#34495E" // Gray Blue
+    }
 ]);
 
 
@@ -248,13 +248,15 @@ function shuffleQuestions() {
                                 :class="{ 'rotate-y-180': questionStates[idx].answeredCorrectly }">
 
                                 <!-- Front Face -->
-                                 
-                <img v-if="questionStates[idx].answeredCorrectly" src="/public/img/alfred1.png" class="absolute left-10 top-0 h-[100px] w-[100px] rotate-y-[180deg]"/>
-                <img v-if="!questionStates[idx].answeredCorrectly" src="/public/img/alfred2.png" class="absolute right-10 top-0 h-[100px] w-[100px]"/>
-                
+
+                                <img v-if="questionStates[idx].answeredCorrectly" src="/public/img/alfred1.png"
+                                    class="absolute left-10 top-0 h-[100px] w-[100px] rotate-y-[180deg]" />
+                                <img v-if="!questionStates[idx].answeredCorrectly" src="/public/img/alfred2.png"
+                                    class="absolute right-10 top-0 h-[100px] w-[100px]" />
+
                                 <div
-                                    class="absolute h-[400px] w-[80%] justify-center items-center right-[10%] top-10 [backface-visibility:hidden]">
-                                    <div class="h-[300px] w-full rounded-md text-2xl flex justify-center items-center shadow-md"
+                                    class="absolute h-[150px] w-[150px] justify-center items-center right-[10%] top-10 [backface-visibility:hidden]">
+                                    <div class="h-[150px] w-full rounded-md text-2xl flex justify-center items-center shadow-md"
                                         :style="{ backgroundColor: question.bgColor }">
                                         {{ question.question }}
                                     </div>
@@ -276,12 +278,12 @@ function shuffleQuestions() {
                                 </div>
 
                                 <!-- Back Face -->
-                                <div class="absolute h-[350px] w-[80%] lg:w-[50%] my-4 rounded-md bg-[#4D96FF] text-2xl flex flex-col justify-center items-center left-[10%] top-10 [backface-visibility:hidden] rotate-y-180 "
+                                <div class="absolute h-[150px] w-[150px] lg:w-[50%] my-4 rounded-md bg-[#4D96FF] text-2xl flex flex-col justify-center items-center left-[10%] top-10 [backface-visibility:hidden] rotate-y-180 "
                                     :style="{ backgroundColor: question.bgColor }">
                                     <!-- <div class="text-5xl mb-4">🎉</div>
                                     <h2 class="text-2xl mb-4">Correct!</h2> -->
                                     <div class="p-4 bg-[#37474f] rounded">
-                                        <div class="text-[20px] mb-4">Explanation:</div> {{ question.explanation }}
+                                        <div class="text-[20px] mb-4">Explanation:</div>
                                     </div>
                                     <button @click="goToNextQuestion" :disabled="currentIndex === questions.length - 1"
                                         class="mt-4 bg-[#2196f3] text-white px-6 py-2 rounded disabled:bg-[#cccccc] disabled:cursor-not-allowed"
