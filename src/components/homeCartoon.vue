@@ -20,7 +20,7 @@ function closeCecilModal() {
                 class="bg-[#20242A] border-amber-50 border text-white rounded-2xl p-6 w-11/12 max-w-md shadow-lg text-center z-[9999]">
                 <p class="text-2xl font-bold mb-4">Out of Bound</p>
 
-                <img src="/public/img/cecil1.png"
+                <img src="/public/img/Cecil1.png"
                     class="flex items-center justify-center mx-auto h-[100px] w-[100px] rotate-y-[180deg]" />
 
                 <p class="text-lg mb-4 p-2">Room not yet ready, come back later.</p>
