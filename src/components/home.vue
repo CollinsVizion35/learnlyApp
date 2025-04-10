@@ -91,7 +91,7 @@ function closeCecilModal() {
                 <div class="logo text-4xl animate-pulse text-[#FFD93D]">App </div>
             </div>
 
-            <div class="font-bold opacity-[0.7]">Superheroes</div>
+            <div class="font-bold opacity-[0.7] mt-24">Superheroes</div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-x-32 my-auto ml-[5vw]">
 
                 <div @click="navigateToDc"
