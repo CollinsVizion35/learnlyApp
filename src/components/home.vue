@@ -27,7 +27,7 @@ function closeCecilModal() {
 
 <template>
     <div
-        class=" absolute top-0 right-0 items-center min-h-screen mb-16 w-screen bg-[#20242A] text-white flex flex-row justify-start">
+        class=" absolute top-0 right-0 items-center min-h-screen mb-32 w-screen bg-[#20242A] text-white flex flex-row justify-start">
 
         <div v-if="showAlfredModal"
             class=" fixed inset-0 bg-transparent bg-opacity-60 flex items-center justify-center z-[9999]">
