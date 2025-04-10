@@ -12,7 +12,6 @@ const questions = ref([
         question: "What is the name of Ben Tennyson's alien device?",
         options: ["Omnitrix", "Ultimatrix"],
         correctIndex: 0,
-        category: "Ben 10",
         explanation: "The Omnitrix is a powerful device that allows Ben Tennyson to transform into various alien species by using their DNA.",
         bgColor: "#1ABC9C"
     },
@@ -20,7 +19,6 @@ const questions = ref([
         question: "Who is Ben's cousin?",
         options: ["Gwen", "Katie"],
         correctIndex: 0,
-        category: "Ben 10",
         explanation: "Gwen Tennyson is Ben's cousin, a skilled magic user and fighter who is an important ally in his adventures.",
         bgColor: "#E74C3C"
     },
@@ -28,7 +26,6 @@ const questions = ref([
         question: "What is the name of Ben's best friend who is often his sidekick?",
         options: ["Kevin Levin", "Rook Blonko"],
         correctIndex: 1,
-        category: "Ben 10",
         explanation: "Rook Blonko is Ben's partner in 'Ben 10: Omniverse,' a young and talented Plumber who assists Ben in his adventures.",
         bgColor: "#9B59B6"
     },
@@ -36,7 +33,6 @@ const questions = ref([
         question: "What is the name of the main antagonist in 'Ben 10: Alien Force'?",
         options: ["Vilgax", "Kevin Levin"],
         correctIndex: 0,
-        category: "Ben 10",
         explanation: "Vilgax is one of Ben's most dangerous foes, a ruthless alien warlord who seeks to acquire the Omnitrix for himself.",
         bgColor: "#F39C12"
     },
@@ -44,7 +40,6 @@ const questions = ref([
         question: "Which alien is Ben's most frequently used transformation?",
         options: ["Heatblast", "XLR8"],
         correctIndex: 0,
-        category: "Ben 10",
         explanation: "Heatblast is one of Ben's most frequently used aliens, a fire-based creature with the ability to control and produce fire.",
         bgColor: "#E67E22"
     },
@@ -52,7 +47,6 @@ const questions = ref([
         question: "What is the name of the hero group Ben Tennyson joins in 'Ben 10: Alien Force'?",
         options: ["The Plumbers", "The Ultimatrix Team"],
         correctIndex: 0,
-        category: "Ben 10",
         explanation: "In 'Ben 10: Alien Force,' Ben joins the Plumbers, a secret organization tasked with protecting Earth from alien threats.",
         bgColor: "#34495E"
     },
@@ -60,23 +54,20 @@ const questions = ref([
         question: "What color is Ben Tennyson's Omnitrix?",
         options: ["Green", "Red"],
         correctIndex: 0,
-        category: "Ben 10",
         explanation: "The Omnitrix is green in color and is a wrist-worn device that allows Ben to transform into various alien species.",
         bgColor: "#1ABC9C"
     },
     {
         question: "Which alien has the ability to stretch their body?",
-        options: ["Stretchy", "Elastic", "Mr. Fantastic", "Four Arms"],
+        options: ["Stretchy", "Elastic"],
         correctIndex: 0,
-        category: "Ben 10",
         explanation: "Stretchy has the ability to stretch and manipulate its limbs, making it a versatile alien for combat and exploration.",
         bgColor: "#8E44AD"
     },
     {
         question: "Which alien can Ben transform into that has the ability to absorb energy?",
-        options: ["Swampfire", "Waybig", "Kevin Levin"],
-        correctIndex: 2,
-        category: "Ben 10",
+        options: ["Waybig", "Kevin Levin"],
+        correctIndex: 1,
         explanation: "Kevin Levin can absorb and manipulate any form of energy, making him one of Ben's most powerful alien forms.",
         bgColor: "#F1C40F"
     },
@@ -84,7 +75,6 @@ const questions = ref([
         question: "What is the name of Ben's sister in the 'Ben 10' franchise?",
         options: ["Gwen", "Lucy"],
         correctIndex: 0,
-        category: "Ben 10",
         explanation: "Gwen Tennyson is Ben's cousin, a brilliant young girl who is skilled in magic and is an invaluable member of the team.",
         bgColor: "#2ECC71"
     },
@@ -92,7 +82,6 @@ const questions = ref([
         question: "Who is the leader of the alien group known as the Forever Knights?",
         options: ["Dr. Animo", "Hex"],
         correctIndex: 1,
-        category: "Ben 10",
         explanation: "Hex is the leader of the Forever Knights, a group of evil aliens who seek to collect powerful artifacts to dominate the universe.",
         bgColor: "#9B59B6"
     },
@@ -100,7 +89,6 @@ const questions = ref([
         question: "What is the name of the evil alien warlord who is constantly trying to steal the Omnitrix?",
         options: ["Vilgax", "Zs'Skayr"],
         correctIndex: 0,
-        category: "Ben 10",
         explanation: "Vilgax is a powerful alien warlord who wants to obtain the Omnitrix in order to use its power to conquer the universe.",
         bgColor: "#F39C12"
     },
@@ -108,15 +96,13 @@ const questions = ref([
         question: "Which alien has the ability to manipulate plants and fire?",
         options: ["Swampfire", "Heatblast"],
         correctIndex: 0,
-        category: "Ben 10",
         explanation: "Swampfire has the ability to control plants, create fire, and regenerate, making it a powerful alien for Ben.",
         bgColor: "#1ABC9C"
     },
     {
         question: "Which alien has the ability to transform into a giant, powerful creature known as Waybig?",
-        options: ["Ben", "Gwen", "Kevin Levin"],
+        options: ["Ben", "Gwen"],
         correctIndex: 0,
-        category: "Ben 10",
         explanation: "Waybig is a giant, powerful alien that Ben can transform into, providing immense strength and combat ability.",
         bgColor: "#E74C3C"
     },
@@ -124,7 +110,6 @@ const questions = ref([
         question: "What is the name of Ben's ally who is a Plumber and later becomes his partner?",
         options: ["Rook Blonko", "Kenny"],
         correctIndex: 0,
-        category: "Ben 10",
         explanation: "Rook Blonko is a skilled Plumber who becomes Ben's partner and assists him in his adventures in 'Ben 10: Omniverse.'",
         bgColor: "#9B59B6"
     },
@@ -132,23 +117,20 @@ const questions = ref([
         question: "Which alien has the ability to manipulate ice and cold?",
         options: ["Frostfire", "Icefire"],
         correctIndex: 0,
-        category: "Ben 10",
         explanation: "Frostfire has the ability to manipulate ice and cold, making it a powerful alien for freezing enemies and controlling the environment.",
         bgColor: "#8E44AD"
     },
     {
         question: "Which alien can turn Ben's body into pure energy?",
-        options: ["Energy", "XLR8", "Ghostfreak"],
+        options: ["Energy", "XLR8"],
         correctIndex: 0,
-        category: "Ben 10",
         explanation: "Energy is an alien form Ben can turn into, which allows him to manipulate and convert his body into pure energy.",
         bgColor: "#F39C12"
     },
     {
         question: "Who is the main villain in 'Ben 10: Omniverse'?",
-        options: ["Dr. Animo", "Khyber", "Hex"],
+        options: ["Dr. Animo", "Khyber"],
         correctIndex: 1,
-        category: "Ben 10",
         explanation: "Khyber is a dangerous hunter who becomes one of Ben's main adversaries in 'Ben 10: Omniverse,' hunting him and his allies.",
         bgColor: "#1ABC9C"
     },
@@ -156,7 +138,6 @@ const questions = ref([
         question: "What is the name of the alien that Ben becomes in order to transform into a super-fast being?",
         options: ["XLR8", "Big Chill"],
         correctIndex: 0,
-        category: "Ben 10",
         explanation: "XLR8 is an alien Ben transforms into that allows him to move at superhuman speeds, making him one of the fastest aliens in Ben's arsenal.",
         bgColor: "#8E44AD"
     },
@@ -164,7 +145,6 @@ const questions = ref([
         question: "What is the name of the alien that has the ability to become invisible?",
         options: ["Ghostfreak", "Wildvine"],
         correctIndex: 0,
-        category: "Ben 10",
         explanation: "Ghostfreak is an alien with the ability to turn invisible and phase through walls, making it a stealthy and tricky form for Ben.",
         bgColor: "#F39C12"
     },
@@ -172,7 +152,6 @@ const questions = ref([
         question: "Which alien has the power to manipulate gravity and fly?",
         options: ["Gravattack", "Jetray"],
         correctIndex: 0,
-        category: "Ben 10",
         explanation: "Gravattack has the ability to manipulate gravity and is capable of flying, making it a powerful form for Ben to control the battlefield.",
         bgColor: "#2ECC71"
     }

@@ -12,7 +12,6 @@ const questions = ref([
         question: "Who are the main protagonists of 'Arcane'?",
         options: ["Vi and Jinx", "Jinx and Caitlyn"],
         correctIndex: 0,
-        category: "Arcane",
         explanation: "Vi and Jinx are the main protagonists, with Vi being the older sister trying to protect Jinx, who becomes a chaotic force.",
         bgColor: "#1ABC9C"
     },
@@ -20,7 +19,6 @@ const questions = ref([
         question: "What city is the setting of most of 'Arcane'?",
         options: ["Piltover", "Zaun"],
         correctIndex: 0,
-        category: "Arcane",
         explanation: "Piltover is a prosperous city built above Zaun, the dangerous and polluted undercity. The series explores both areas.",
         bgColor: "#E74C3C"
     },
@@ -28,7 +26,6 @@ const questions = ref([
         question: "Who is the character that serves as the main antagonist for most of the show?",
         options: ["Silco", "Vander"],
         correctIndex: 0,
-        category: "Arcane",
         explanation: "Silco is the main antagonist in 'Arcane,' the leader of the undercity who seeks to bring chaos and independence to Zaun.",
         bgColor: "#9B59B6"
     },
@@ -36,7 +33,6 @@ const questions = ref([
         question: "What is Vi's signature weapon?",
         options: ["Gloves", "Gun"],
         correctIndex: 0,
-        category: "Arcane",
         explanation: "Vi wields large, powerful gauntlets that she uses to punch through obstacles and enemies.",
         bgColor: "#8E44AD"
     },
@@ -44,7 +40,6 @@ const questions = ref([
         question: "Who is Jinx's older sister?",
         options: ["Vi", "Caitlyn"],
         correctIndex: 0,
-        category: "Arcane",
         explanation: "Vi is Jinx's older sister, and their relationship is a central aspect of 'Arcane,' with Vi trying to bring Jinx back from her chaotic path.",
         bgColor: "#F39C12"
     },
@@ -52,7 +47,6 @@ const questions = ref([
         question: "What is the name of the undercity in 'Arcane'?",
         options: ["Zaun", "Demacia"],
         correctIndex: 0,
-        category: "Arcane",
         explanation: "Zaun is the dangerous, polluted undercity beneath Piltover, a central location in 'Arcane' where much of the conflict occurs.",
         bgColor: "#2ECC71"
     },
@@ -60,7 +54,6 @@ const questions = ref([
         question: "Who is the inventor responsible for creating the Hextech technology?",
         options: ["Heimerdinger", "Jace"],
         correctIndex: 1,
-        category: "Arcane",
         explanation: "Jace, a scientist and inventor from Piltover, is responsible for creating Hextech, a powerful form of magic-tech that plays a key role in the series.",
         bgColor: "#E67E22"
     },
@@ -68,7 +61,6 @@ const questions = ref([
         question: "What is the relationship between Caitlyn and Vi?",
         options: ["Allies", "Sisters"],
         correctIndex: 0,
-        category: "Arcane",
         explanation: "Caitlyn and Vi become allies in the fight against the criminals of Zaun, with Caitlyn being a sheriff from Piltover and Vi a vigilante.",
         bgColor: "#34495E"
     },
@@ -76,7 +68,6 @@ const questions = ref([
         question: "Who is the leader of the council in Piltover?",
         options: ["Heimerdinger", "Mel Medarda"],
         correctIndex: 1,
-        category: "Arcane",
         explanation: "Mel Medarda is a prominent figure in Piltover's council, and she plays a role in the political maneuvering of the city.",
         bgColor: "#1ABC9C"
     },
@@ -84,7 +75,6 @@ const questions = ref([
         question: "What is the name of Jinx's previous identity?",
         options: ["Powder", "Violet"],
         correctIndex: 0,
-        category: "Arcane",
         explanation: "Jinx's real name is Powder, and she goes through a transformation into Jinx after a series of tragic events.",
         bgColor: "#F39C12"
     },
@@ -92,7 +82,6 @@ const questions = ref([
         question: "Who is the leader of the enforcers in Piltover?",
         options: ["Marcus", "Caitlyn"],
         correctIndex: 0,
-        category: "Arcane",
         explanation: "Marcus is the leader of Piltover's enforcers, tasked with maintaining law and order in the city, but his morality is questionable.",
         bgColor: "#E74C3C"
     },
@@ -100,7 +89,6 @@ const questions = ref([
         question: "Which character is a former enforcer who later becomes part of the undercity rebellion?",
         options: ["Vander", "Jace"],
         correctIndex: 0,
-        category: "Arcane",
         explanation: "Vander was a former enforcer who later became the leader of the undercity rebellion in Zaun, trying to keep peace among the people.",
         bgColor: "#8E44AD"
     },
@@ -108,7 +96,6 @@ const questions = ref([
         question: "Which character is known for their advanced knowledge of magic and Hextech technology?",
         options: ["Heimerdinger", "Jace"],
         correctIndex: 0,
-        category: "Arcane",
         explanation: "Heimerdinger is an inventor and scientist who is highly knowledgeable about Hextech technology and the magical properties behind it.",
         bgColor: "#9B59B6"
     },
@@ -116,7 +103,6 @@ const questions = ref([
         question: "Who is Jinx's mentor in 'Arcane'?",
         options: ["Silco", "Vander"],
         correctIndex: 0,
-        category: "Arcane",
         explanation: "Silco becomes Jinx's mentor and father figure, though his guidance leads her down a dark and dangerous path.",
         bgColor: "#34495E"
     },
@@ -124,7 +110,6 @@ const questions = ref([
         question: "Who is Vi's close ally and friend throughout the series?",
         options: ["Caitlyn", "Vander"],
         correctIndex: 0,
-        category: "Arcane",
         explanation: "Caitlyn becomes one of Vi's closest allies and a partner in their investigation against the criminal activities in Zaun.",
         bgColor: "#F39C12"
     },
@@ -132,7 +117,6 @@ const questions = ref([
         question: "Which character is often depicted as the 'heart' of the show, trying to hold things together?",
         options: ["Vander", "Heimerdinger"],
         correctIndex: 0,
-        category: "Arcane",
         explanation: "Vander is depicted as the protector and heart of Zaun, trying to protect both the people of Zaun and his adopted family.",
         bgColor: "#1ABC9C"
     },
@@ -140,7 +124,6 @@ const questions = ref([
         question: "What causes the downfall of Powder into becoming Jinx?",
         options: ["The betrayal of her sister", "The death of her father figure"],
         correctIndex: 1,
-        category: "Arcane",
         explanation: "The loss of her father figure, Vander, and the intense betrayal she feels from her sister Vi contribute heavily to Powder's transformation into Jinx.",
         bgColor: "#E74C3C"
     },
@@ -148,7 +131,6 @@ const questions = ref([
         question: "What is the name of the magical substance that powers Hextech technology?",
         options: ["Shimmer", "Hexite"],
         correctIndex: 1,
-        category: "Arcane",
         explanation: "Hexite is the magical substance that powers Hextech, a technology capable of harnessing magic to create powerful devices.",
         bgColor: "#9B59B6"
     },
@@ -156,7 +138,6 @@ const questions = ref([
         question: "Who was the first character to discover Hextech?",
         options: ["Jace", "Heimerdinger"],
         correctIndex: 0,
-        category: "Arcane",
         explanation: "Jace was the first character to discover Hextech, creating a breakthrough in combining magic and technology.",
         bgColor: "#2ECC71"
     },
@@ -164,7 +145,6 @@ const questions = ref([
         question: "Which character undergoes a tragic transformation and becomes an infamous criminal mastermind?",
         options: ["Silco", "Marcus"],
         correctIndex: 0,
-        category: "Arcane",
         explanation: "Silco, initially a decent man, becomes a criminal mastermind in his quest for control over Zaun and the power to challenge Piltover.",
         bgColor: "#F39C12"
     },
@@ -172,7 +152,6 @@ const questions = ref([
         question: "Who is the morally conflicted enforcer in 'Arcane'?",
         options: ["Marcus", "Caitlyn"],
         correctIndex: 0,
-        category: "Arcane",
         explanation: "Marcus is the morally conflicted enforcer, torn between his duty and his loyalty to Silco, ultimately betraying his former values.",
         bgColor: "#8E44AD"
     },
@@ -180,7 +159,6 @@ const questions = ref([
         question: "Who is Vi's rival throughout the series?",
         options: ["Caitlyn", "Jinx"],
         correctIndex: 1,
-        category: "Arcane",
         explanation: "Vi's main rival is her sister, Jinx, as their contrasting personalities and conflicting goals put them at odds.",
         bgColor: "#E67E22"
     },
@@ -188,7 +166,6 @@ const questions = ref([
         question: "What is the goal of Silco throughout 'Arcane'?",
         options: ["To unite Zaun and Piltover", "To gain independence for Zaun"],
         correctIndex: 1,
-        category: "Arcane",
         explanation: "Silco seeks to gain independence for Zaun from Piltover, aiming to create a city free from Piltover's control and influence.",
         bgColor: "#1ABC9C"
     },
@@ -196,7 +173,6 @@ const questions = ref([
         question: "What is the name of Vi's gauntlet weapons?",
         options: ["Powder Punch", "Pummel Gloves"],
         correctIndex: 0,
-        category: "Arcane",
         explanation: "Vi uses gauntlets named Powder Punch, which were crafted for her to pack immense power and deliver crushing blows.",
         bgColor: "#E74C3C"
     }

@@ -11,7 +11,6 @@ const questions = ref([
         question: "What is Snow White's main physical characteristic?",
         options: ["Blue eyes", "Black hair", "Red lips", "White skin"],
         correctIndex: 1,
-        category: "Snow White",
         explanation: [
             "Snow White is known for her black hair, as depicted in her name.",
             "She has black hair, not blue eyes.",
@@ -24,7 +23,6 @@ const questions = ref([
         question: "Who is Snow White's evil stepmother?",
         options: ["Maleficent", "Ursula", "Queen Grimhilde", "Lady Tremaine"],
         correctIndex: 2,
-        category: "Snow White",
         explanation: [
             "Queen Grimhilde, also known as the Evil Queen, is Snow White's stepmother.",
             "Maleficent is the villain from Sleeping Beauty, not Snow White.",
@@ -37,7 +35,6 @@ const questions = ref([
         question: "What does the Evil Queen ask the Huntsman to do?",
         options: ["Bring Snow White's heart", "Find Snow White", "Kill Snow White", "Poison Snow White"],
         correctIndex: 0,
-        category: "Snow White",
         explanation: [
             "The Evil Queen orders the Huntsman to bring back Snow White’s heart as proof she is dead.",
             "The Huntsman does find Snow White, but that's not his first task.",
@@ -50,7 +47,6 @@ const questions = ref([
         question: "What does Snow White eat that causes her to fall into a deep sleep?",
         options: ["Poisoned apple", "Poisoned cake", "Poisoned pear", "Poisoned candy"],
         correctIndex: 0,
-        category: "Snow White",
         explanation: [
             "Snow White eats the poisoned apple given to her by the Evil Queen.",
             "There is no poisoned cake in the story.",
@@ -63,7 +59,6 @@ const questions = ref([
         question: "Who helps Snow White after she falls into the deep sleep?",
         options: ["The Seven Dwarfs", "The Fairy Godmother", "The Huntsman", "Prince Charming"],
         correctIndex: 3,
-        category: "Snow White",
         explanation: [
             "Prince Charming, or the Prince, wakes Snow White with a kiss.",
             "The Seven Dwarfs shelter Snow White but don't wake her.",
@@ -76,7 +71,6 @@ const questions = ref([
         question: "How does Snow White first meet the Seven Dwarfs?",
         options: ["They rescue her from the Queen", "She finds their cottage", "They find her in the woods", "She meets them in the palace"],
         correctIndex: 1,
-        category: "Snow White",
         explanation: [
             "Snow White finds the Seven Dwarfs' cottage when she is fleeing the Evil Queen.",
             "The dwarfs don’t directly rescue her but later protect her.",
@@ -89,7 +83,6 @@ const questions = ref([
         question: "What is the Evil Queen's most famous line?",
         options: ["Mirror, mirror on the wall", "Hocus pocus", "Abracadabra", "I am the fairest of them all"],
         correctIndex: 0,
-        category: "Snow White",
         explanation: [
             "'Mirror, mirror on the wall' is the Queen's famous line asking the magic mirror to reveal who is the fairest.",
             "Hocus pocus is associated with other fairy tales and not Snow White.",
@@ -102,7 +95,6 @@ const questions = ref([
         question: "What color is Snow White's dress?",
         options: ["Red", "Blue", "Yellow", "Green"],
         correctIndex: 1,
-        category: "Snow White",
         explanation: [
             "Snow White's iconic dress is yellow with blue, red, and yellow details.",
             "Red is part of her color scheme but not the primary color.",
@@ -115,7 +107,6 @@ const questions = ref([
         question: "What happens when Snow White eats the poisoned apple?",
         options: ["She falls into a deep sleep", "She turns into a statue", "She dies", "She grows very old"],
         correctIndex: 0,
-        category: "Snow White",
         explanation: [
             "Snow White falls into a deep sleep after eating the poisoned apple.",
             "She doesn't turn into a statue; she falls into a sleep-like state.",
@@ -128,7 +119,6 @@ const questions = ref([
         question: "What is the Evil Queen’s magical tool?",
         options: ["Magic mirror", "Crystal ball", "Wand", "Cursed stone"],
         correctIndex: 0,
-        category: "Snow White",
         explanation: [
             "The Evil Queen uses a magic mirror to know who is the fairest of them all.",
             "She doesn’t use a crystal ball.",
@@ -141,7 +131,6 @@ const questions = ref([
         question: "What are the Seven Dwarfs' names?",
         options: ["Happy, Sleepy, Doc, Dopey, Grumpy, Bashful, Sneezy", "Sleepy, Sneezy, Lucky, Doc, Grumpy, Bashful, Smiley", "Doc, Dopey, Sleepy, Happy, Jolly, Bashful, Grumpy", "Sleepy, Doc, Happy, Jolly, Bashful, Sneezy, Grumpy"],
         correctIndex: 0,
-        category: "Snow White",
         explanation: [
             "The Seven Dwarfs are named: Happy, Sleepy, Doc, Dopey, Grumpy, Bashful, and Sneezy.",
             "Some of these names are incorrect and don't appear in the movie.",
@@ -154,7 +143,6 @@ const questions = ref([
         question: "Who warns Snow White about the poisoned apple?",
         options: ["The Huntsman", "The Seven Dwarfs", "The Prince", "The Magic Mirror"],
         correctIndex: 1,
-        category: "Snow White",
         explanation: [
             "The Seven Dwarfs warn Snow White about the poisoned apple after she eats it.",
             "The Huntsman doesn’t warn her after the apple incident.",
@@ -167,7 +155,6 @@ const questions = ref([
         question: "How does the Evil Queen die?",
         options: ["She falls off a cliff", "She is crushed by a falling tree", "She dies from the poison", "She is crushed by a boulder"],
         correctIndex: 0,
-        category: "Snow White",
         explanation: [
             "The Evil Queen falls off a cliff after being chased by the dwarfs.",
             "She doesn't die from poison.",
@@ -179,7 +166,6 @@ const questions = ref([
         question: "What kind of animal is often associated with Snow White?",
         options: ["Birds", "Deer", "Rats", "Bunnies"],
         correctIndex: 0,
-        category: "Snow White",
         explanation: [
             "Birds are often seen helping Snow White in the forest.",
             "Deer are in the forest but don’t play a major role with Snow White.",
@@ -192,7 +178,6 @@ const questions = ref([
         question: "Who is Snow White's true love?",
         options: ["Prince Charming", "The Huntsman", "Prince Florian", "The Prince"],
         correctIndex: 3,
-        category: "Snow White",
         explanation: [
             "Snow White's true love is the Prince, also known as Prince Florian.",
             "Prince Charming is from Cinderella, not Snow White.",

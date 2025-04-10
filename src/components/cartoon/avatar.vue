@@ -12,7 +12,6 @@ const questions = ref([
         question: "Who is the last Airbender?",
         options: ["Aang", "Zuko"],
         correctIndex: 0,
-        category: "Avatar: The Last Airbender",
         explanation: "Aang is the last Airbender and the Avatar, tasked with maintaining balance in the world by mastering all four elements.",
         bgColor: "#3498DB"
     },
@@ -20,7 +19,6 @@ const questions = ref([
         question: "What is the name of Aang's flying bison?",
         options: ["Appa", "Momo"],
         correctIndex: 0,
-        category: "Avatar: The Last Airbender",
         explanation: "Appa is Aang's loyal flying bison and best friend, who travels with Aang on his journey to restore balance.",
         bgColor: "#E74C3C"
     },
@@ -28,7 +26,6 @@ const questions = ref([
         question: "Who is Aang's main antagonist throughout the series?",
         options: ["Fire Lord Ozai", "Azula"],
         correctIndex: 0,
-        category: "Avatar: The Last Airbender",
         explanation: "Fire Lord Ozai is the main antagonist, the ruler of the Fire Nation, and Aang's primary enemy in the struggle for balance.",
         bgColor: "#9B59B6"
     },
@@ -36,7 +33,6 @@ const questions = ref([
         question: "What is the name of Zuko's uncle?",
         options: ["Iroh", "Sokka"],
         correctIndex: 0,
-        category: "Avatar: The Last Airbender",
         explanation: "Iroh is Zuko's uncle, a retired Fire Nation general and wise mentor who plays a key role in Zuko's redemption.",
         bgColor: "#1ABC9C"
     },
@@ -44,7 +40,6 @@ const questions = ref([
         question: "Which element does Katara master?",
         options: ["Water", "Fire"],
         correctIndex: 0,
-        category: "Avatar: The Last Airbender",
         explanation: "Katara is a skilled Waterbender, and she becomes Aang's mentor in mastering Waterbending.",
         bgColor: "#2ECC71"
     },
@@ -52,7 +47,6 @@ const questions = ref([
         question: "What animal is Momo?",
         options: ["Flying lemur", "Monkey"],
         correctIndex: 0,
-        category: "Avatar: The Last Airbender",
         explanation: "Momo is a flying lemur, a small creature that is a loyal companion to Aang and his friends.",
         bgColor: "#F39C12"
     },
@@ -60,7 +54,6 @@ const questions = ref([
         question: "What is the name of the Earth Kingdom city where Aang and his friends meet Toph?",
         options: ["Omashu", "Ba Sing Se"],
         correctIndex: 1,
-        category: "Avatar: The Last Airbender",
         explanation: "Ba Sing Se is the largest city in the Earth Kingdom and the setting for several key episodes where Aang and his group meet Toph.",
         bgColor: "#F1C40F"
     },
@@ -68,7 +61,6 @@ const questions = ref([
         question: "What is Toph Beifong's special ability as a Earthbender?",
         options: ["Seismic sense", "Metal bending"],
         correctIndex: 0,
-        category: "Avatar: The Last Airbender",
         explanation: "Toph has the ability to sense vibrations in the ground, allowing her to 'see' through her sense of touch.",
         bgColor: "#8E44AD"
     },
@@ -76,7 +68,6 @@ const questions = ref([
         question: "Who is the ruler of the Fire Nation at the beginning of the series?",
         options: ["Fire Lord Ozai", "Fire Lord Azulon"],
         correctIndex: 0,
-        category: "Avatar: The Last Airbender",
         explanation: "Fire Lord Ozai is the ruthless ruler of the Fire Nation and the primary antagonist throughout most of the series.",
         bgColor: "#E67E22"
     },
@@ -84,7 +75,6 @@ const questions = ref([
         question: "What is the name of Aang's previous Avatar incarnation who mastered all four elements?",
         options: ["Roku", "Kyoshi"],
         correctIndex: 0,
-        category: "Avatar: The Last Airbender",
         explanation: "Avatar Roku was Aang's predecessor, a Firebender who worked to maintain balance before Aang's time.",
         bgColor: "#9B59B6"
     },
@@ -92,7 +82,6 @@ const questions = ref([
         question: "What type of bending does Zuko specialize in?",
         options: ["Firebending", "Earthbending"],
         correctIndex: 0,
-        category: "Avatar: The Last Airbender",
         explanation: "Zuko is a skilled Firebender, originally taught by his father, Fire Lord Ozai, and later by his uncle, Iroh.",
         bgColor: "#C0392B"
     },
@@ -100,7 +89,6 @@ const questions = ref([
         question: "What is the name of Aang's flying companion?",
         options: ["Appa", "Momo"],
         correctIndex: 0,
-        category: "Avatar: The Last Airbender",
         explanation: "Appa is Aang's flying bison and companion, who plays a vital role in helping the group travel across the world.",
         bgColor: "#34495E"
     },
@@ -108,7 +96,6 @@ const questions = ref([
         question: "Which Avatar is known for being a warrior and is famous for her skills in Earthbending?",
         options: ["Avatar Kyoshi", "Avatar Korra"],
         correctIndex: 0,
-        category: "Avatar: The Last Airbender",
         explanation: "Avatar Kyoshi was a powerful Earthbender and a warrior who founded the Kyoshi Warriors, a group of skilled female fighters.",
         bgColor: "#16A085"
     },
@@ -116,7 +103,6 @@ const questions = ref([
         question: "What is the name of the Fire Nation princess who is Zuko's sister?",
         options: ["Azula", "Mai"],
         correctIndex: 0,
-        category: "Avatar: The Last Airbender",
         explanation: "Azula is Zuko's sister, a firebender prodigy who is ruthlessly ambitious and serves as one of Aang's most dangerous enemies.",
         bgColor: "#F1C40F"
     },
@@ -124,7 +110,6 @@ const questions = ref([
         question: "What is the name of the waterbending technique that Katara teaches Aang?",
         options: ["The Water Whip", "The Bloodbending"],
         correctIndex: 0,
-        category: "Avatar: The Last Airbender",
         explanation: "Katara teaches Aang the Water Whip, a technique that allows waterbenders to control water with precision and accuracy.",
         bgColor: "#2ECC71"
     },
@@ -132,7 +117,6 @@ const questions = ref([
         question: "What is the name of the creature that can bend all four elements and is said to be the original Avatar?",
         options: ["Lion Turtle", "Dragon of the West"],
         correctIndex: 0,
-        category: "Avatar: The Last Airbender",
         explanation: "The Lion Turtle is a creature that gives Aang the ability to bend all four elements at once and is tied to the original Avatar.",
         bgColor: "#8E44AD"
     },
@@ -140,7 +124,6 @@ const questions = ref([
         question: "Who is the leader of the Earth Kingdom city of Omashu?",
         options: ["King Bumi", "Toph Beifong"],
         correctIndex: 0,
-        category: "Avatar: The Last Airbender",
         explanation: "King Bumi is the eccentric and powerful ruler of Omashu, a city in the Earth Kingdom.",
         bgColor: "#E67E22"
     },
@@ -148,7 +131,6 @@ const questions = ref([
         question: "What is the name of Zuko's childhood friend who is also a Fire Nation circus gymnast?",
         options: ["Mai", "Ty Lee"],
         correctIndex: 1,
-        category: "Avatar: The Last Airbender",
         explanation: "Ty Lee is a gymnast and a childhood friend of Zuko, who later becomes an ally of Azula.",
         bgColor: "#16A085"
     },
@@ -156,7 +138,6 @@ const questions = ref([
         question: "What is the power of the Avatar State?",
         options: ["Enhanced strength", "The ability to bend all elements"],
         correctIndex: 1,
-        category: "Avatar: The Last Airbender",
         explanation: "The Avatar State grants the Avatar immense power, enabling them to bend all elements at once, often used in times of great need.",
         bgColor: "#1ABC9C"
     },
@@ -164,7 +145,6 @@ const questions = ref([
         question: "What is the name of the group that follows Aang to help him defeat the Fire Nation?",
         options: ["The Avatar's Team", "Team Avatar"],
         correctIndex: 1,
-        category: "Avatar: The Last Airbender",
         explanation: "Team Avatar is the name given to Aang and his companions, including Katara, Sokka, Zuko, and Toph, who travel together on their mission to stop the Fire Nation.",
         bgColor: "#9B59B6"
     },
@@ -172,7 +152,6 @@ const questions = ref([
         question: "Who is the Fire Nation general who becomes an ally of Team Avatar?",
         options: ["Iroh", "Zhao"],
         correctIndex: 0,
-        category: "Avatar: The Last Airbender",
         explanation: "Iroh, a retired general of the Fire Nation, becomes an ally of Team Avatar and a mentor to Zuko, helping him find his true path.",
         bgColor: "#F39C12"
     },
@@ -180,7 +159,6 @@ const questions = ref([
         question: "What is the name of the avatar before Aang?",
         options: ["Roku", "Kyoshi"],
         correctIndex: 0,
-        category: "Avatar: The Last Airbender",
         explanation: "Avatar Roku was the previous Avatar before Aang, a Firebender who tried to maintain balance before his death.",
         bgColor: "#F1C40F"
     },
@@ -188,7 +166,6 @@ const questions = ref([
         question: "What is the name of the Fire Nation ship that is used to hunt down the Avatar?",
         options: ["The Fire Nation Warship", "The Fire Nation Cruiser"],
         correctIndex: 0,
-        category: "Avatar: The Last Airbender",
         explanation: "The Fire Nation Warship is the main ship used by the Fire Nation to hunt down the Avatar and pursue their conquest of the world.",
         bgColor: "#E74C3C"
     },

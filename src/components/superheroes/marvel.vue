@@ -12,7 +12,6 @@ const questions = ref([
         question: "What is the real name of Spider-Man?",
         options: ["Peter Parker", "Bruce Wayne"],
         correctIndex: 0,
-        category: "Marvel Comics",
         explanation: "Peter Parker is the alter ego of Spider-Man, a high school student who gained his powers from a radioactive spider bite.",
         bgColor: "#3498DB"
     },
@@ -20,7 +19,6 @@ const questions = ref([
         question: "Who is the God of Thunder in Marvel Comics?",
         options: ["Thor", "Loki"],
         correctIndex: 0,
-        category: "Marvel Comics",
         explanation: "Thor is the Norse God of Thunder and one of the founding members of the Avengers.",
         bgColor: "#E67E22"
     },
@@ -28,7 +26,6 @@ const questions = ref([
         question: "What is the real name of Iron Man?",
         options: ["Tony Stark", "Bruce Banner"],
         correctIndex: 0,
-        category: "Marvel Comics",
         explanation: "Tony Stark is the genius billionaire inventor who created the Iron Man suit after being kidnapped and forced to build weapons.",
         bgColor: "#F39C12"
     },
@@ -36,7 +33,6 @@ const questions = ref([
         question: "Who is the leader of the X-Men?",
         options: ["Cyclops", "Wolverine"],
         correctIndex: 0,
-        category: "Marvel Comics",
         explanation: "Cyclops (Scott Summers) is the leader of the X-Men, known for his optic blasts and strategic thinking.",
         bgColor: "#1ABC9C"
     },
@@ -44,7 +40,6 @@ const questions = ref([
         question: "What is Captain America's shield made of?",
         options: ["Vibranium", "Adamantium"],
         correctIndex: 0,
-        category: "Marvel Comics",
         explanation: "Captain America's shield is made of Vibranium, an indestructible metal from the African country of Wakanda.",
         bgColor: "#E74C3C"
     },
@@ -52,7 +47,6 @@ const questions = ref([
         question: "Who is the Hulk's alter ego?",
         options: ["Bruce Banner", "Tony Stark"],
         correctIndex: 0,
-        category: "Marvel Comics",
         explanation: "Bruce Banner is a scientist who transforms into the Hulk when he experiences extreme emotional stress or anger.",
         bgColor: "#2ECC71"
     },
@@ -60,7 +54,6 @@ const questions = ref([
         question: "What is the name of Black Panther’s home country?",
         options: ["Wakanda", "Genovia"],
         correctIndex: 0,
-        category: "Marvel Comics",
         explanation: "Wakanda is a secretive and technologically advanced African nation and the home of the Black Panther.",
         bgColor: "#8E44AD"
     },
@@ -68,7 +61,6 @@ const questions = ref([
         question: "What is the name of the Winter Soldier before he became a villain?",
         options: ["Bucky Barnes", "Peter Quill"],
         correctIndex: 0,
-        category: "Marvel Comics",
         explanation: "Bucky Barnes, Steve Rogers' childhood friend, was brainwashed and turned into the Winter Soldier before being rescued by the Avengers.",
         bgColor: "#9B59B6"
     },
@@ -76,7 +68,6 @@ const questions = ref([
         question: "Who is the arch-nemesis of the X-Men?",
         options: ["Magneto", "Doctor Doom"],
         correctIndex: 0,
-        category: "Marvel Comics",
         explanation: "Magneto is a powerful mutant with control over magnetic fields, and he often opposes the X-Men's goals.",
         bgColor: "#34495E"
     },
@@ -84,7 +75,6 @@ const questions = ref([
         question: "Which superhero team is Wolverine a part of?",
         options: ["X-Men", "Fantastic Four"],
         correctIndex: 0,
-        category: "Marvel Comics",
         explanation: "Wolverine, also known as Logan, is a key member of the X-Men with enhanced senses, regenerative healing, and retractable claws.",
         bgColor: "#F1C40F"
     },
@@ -92,7 +82,6 @@ const questions = ref([
         question: "What is the real name of the Black Widow?",
         options: ["Natasha Romanoff", "Carol Danvers"],
         correctIndex: 0,
-        category: "Marvel Comics",
         explanation: "Natasha Romanoff, aka Black Widow, is a highly skilled spy and former assassin, working with the Avengers.",
         bgColor: "#BDC3C7"
     },
@@ -100,7 +89,6 @@ const questions = ref([
         question: "What superhero is known for his hammer, Mjolnir?",
         options: ["Thor", "Iron Man"],
         correctIndex: 0,
-        category: "Marvel Comics",
         explanation: "Thor wields the enchanted hammer Mjolnir, which can only be lifted by those deemed worthy.",
         bgColor: "#F39C12"
     },
@@ -108,7 +96,6 @@ const questions = ref([
         question: "Who is the leader of the Avengers?",
         options: ["Captain America", "Iron Man"],
         correctIndex: 0,
-        category: "Marvel Comics",
         explanation: "Captain America is often considered the leader of the Avengers, guiding them with his strong sense of justice.",
         bgColor: "#E67E22"
     },
@@ -116,7 +103,6 @@ const questions = ref([
         question: "What is the name of the powerful gem that Thanos seeks in the Marvel Cinematic Universe?",
         options: ["Infinity Stones", "Cosmic Cubes"],
         correctIndex: 0,
-        category: "Marvel Comics",
         explanation: "Thanos seeks the six Infinity Stones, which grant him god-like powers when combined in the Infinity Gauntlet.",
         bgColor: "#C0392B"
     },
@@ -124,7 +110,6 @@ const questions = ref([
         question: "Who is the villain in the 'Guardians of the Galaxy' movie?",
         options: ["Ronin", "Loki"],
         correctIndex: 0,
-        category: "Marvel Comics",
         explanation: "Ronin the Accuser is the main antagonist in the first 'Guardians of the Galaxy' movie.",
         bgColor: "#8E44AD"
     },
@@ -132,7 +117,6 @@ const questions = ref([
         question: "What is the name of Thor’s brother?",
         options: ["Loki", "Hela"],
         correctIndex: 0,
-        category: "Marvel Comics",
         explanation: "Loki is Thor's adopted brother, often acting as a villain due to his mischievous and chaotic nature.",
         bgColor: "#1F618D"
     },
@@ -140,7 +124,6 @@ const questions = ref([
         question: "What superhero has the alias 'The Merc with a Mouth'?",
         options: ["Deadpool", "Venom"],
         correctIndex: 0,
-        category: "Marvel Comics",
         explanation: "Deadpool, aka Wade Wilson, is known for his regenerative healing factor and his tendency to break the fourth wall.",
         bgColor: "#9B59B6"
     },
@@ -148,7 +131,6 @@ const questions = ref([
         question: "What is the name of the villain who is always after the X-Men’s Jean Grey?",
         options: ["Magneto", "Apocalypse"],
         correctIndex: 1,
-        category: "Marvel Comics",
         explanation: "Apocalypse is one of the X-Men’s oldest and most powerful enemies, often targeting Jean Grey due to her immense power.",
         bgColor: "#16A085"
     },
@@ -156,7 +138,6 @@ const questions = ref([
         question: "What is Doctor Strange's primary source of power?",
         options: ["Magic", "Technology"],
         correctIndex: 0,
-        category: "Marvel Comics",
         explanation: "Doctor Strange draws his powers from magical sources, using the mystic arts to protect Earth from supernatural threats.",
         bgColor: "#2ECC71"
     },
@@ -164,7 +145,6 @@ const questions = ref([
         question: "What is the real name of Black Panther?",
         options: ["T'Challa", "M'Baku"],
         correctIndex: 0,
-        category: "Marvel Comics",
         explanation: "T'Challa is the king of Wakanda and the alter ego of Black Panther, a skilled fighter with enhanced agility and senses.",
         bgColor: "#C0392B"
     },
@@ -172,7 +152,6 @@ const questions = ref([
         question: "What is the name of the famous talking raccoon in the 'Guardians of the Galaxy'?",
         options: ["Rocket", "Groot"],
         correctIndex: 0,
-        category: "Marvel Comics",
         explanation: "Rocket is a genetically modified raccoon with advanced intelligence and exceptional combat skills.",
         bgColor: "#8E44AD"
     },
@@ -180,7 +159,6 @@ const questions = ref([
         question: "What is the alter ego of the superhero Moon Knight?",
         options: ["Marc Spector", "Steven Grant"],
         correctIndex: 0,
-        category: "Marvel Comics",
         explanation: "Marc Spector is the alter ego of Moon Knight, a mercenary turned superhero with multiple identities.",
         bgColor: "#F1C40F"
     },
@@ -188,7 +166,6 @@ const questions = ref([
         question: "Who is the Scarlet Witch's twin brother?",
         options: ["Vision", "Pietro Maximoff"],
         correctIndex: 1,
-        category: "Marvel Comics",
         explanation: "Pietro Maximoff, also known as Quicksilver, is the twin brother of Wanda Maximoff (Scarlet Witch).",
         bgColor: "#F39C12"
     },
@@ -196,7 +173,6 @@ const questions = ref([
         question: "What team is Cyclops a member of?",
         options: ["X-Men", "Avengers"],
         correctIndex: 0,
-        category: "Marvel Comics",
         explanation: "Cyclops is a founding member of the X-Men, leading the team in the fight for mutant rights.",
         bgColor: "#16A085"
     },
@@ -204,7 +180,6 @@ const questions = ref([
         question: "Who is the villain in the 'Avengers: Infinity War' movie?",
         options: ["Thanos", "Ultron"],
         correctIndex: 0,
-        category: "Marvel Comics",
         explanation: "Thanos is the primary antagonist in 'Avengers: Infinity War,' aiming to collect all Infinity Stones to erase half of all life in the universe.",
         bgColor: "#8E44AD"
     },
@@ -212,7 +187,6 @@ const questions = ref([
         question: "Who is the arch-nemesis of Daredevil?",
         options: ["Kingpin", "Joker"],
         correctIndex: 0,
-        category: "Marvel Comics",
         explanation: "Kingpin (Wilson Fisk) is the crime lord who is Daredevil's primary antagonist.",
         bgColor: "#9B59B6"
     }

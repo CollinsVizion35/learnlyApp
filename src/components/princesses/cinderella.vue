@@ -11,7 +11,6 @@ const questions = ref([
         question: "What does Cinderella leave behind at the royal ball?",
         options: ["Necklace", "Glass slipper", "Crown", "Bracelet"],
         correctIndex: 1,
-        category: "Cinderella",
         explanation: [
             "A necklace was not part of Cinderella's magical outfit.",
             "Cinderella accidentally leaves behind her glass slipper while fleeing the palace before midnight.",
@@ -24,7 +23,6 @@ const questions = ref([
         question: "Who helps Cinderella get ready for the ball?",
         options: ["Her stepsisters", "Her father", "A fairy godmother", "The prince"],
         correctIndex: 2,
-        category: "Cinderella",
         explanation: [
             "Her stepsisters were cruel and never helped her.",
             "Cinderella's father was not present in the story.",
@@ -37,7 +35,6 @@ const questions = ref([
         question: "What turns into a carriage for Cinderella?",
         options: ["A watermelon", "A pear", "A pumpkin", "A coconut"],
         correctIndex: 2,
-        category: "Cinderella",
         explanation: [
             "A watermelon was not used in the story.",
             "A pear doesn’t appear in the tale.",
@@ -50,7 +47,6 @@ const questions = ref([
         question: "What time must Cinderella leave the ball?",
         options: ["11 PM", "1 AM", "Midnight", "10 PM"],
         correctIndex: 2,
-        category: "Cinderella",
         explanation: [
             "She was told to leave before midnight, not 11 PM.",
             "The magic ends at midnight, not 1 AM.",
@@ -63,7 +59,6 @@ const questions = ref([
         question: "What is the name of Cinderella's stepmother?",
         options: ["Lady Tremaine", "Ursula", "Maleficent", "Gothel"],
         correctIndex: 0,
-        category: "Cinderella",
         explanation: [
             "Lady Tremaine is the correct name of Cinderella’s stepmother.",
             "Ursula is the villain from The Little Mermaid.",
@@ -76,7 +71,6 @@ const questions = ref([
         question: "How many stepsisters does Cinderella have?",
         options: ["One", "Three", "Two", "Four"],
         correctIndex: 2,
-        category: "Cinderella",
         explanation: [
             "She has more than one stepsister.",
             "She only has two stepsisters, not three.",
@@ -89,7 +83,6 @@ const questions = ref([
         question: "What animals help Cinderella with her chores?",
         options: ["Cats and dogs", "Mice and birds", "Frogs and turtles", "Rabbits and foxes"],
         correctIndex: 1,
-        category: "Cinderella",
         explanation: [
             "Cats and dogs are not featured as helpers in the story.",
             "Mice and birds are Cinderella’s loyal animal friends.",
@@ -102,7 +95,6 @@ const questions = ref([
         question: "Who tries to stop Cinderella from trying on the glass slipper?",
         options: ["The prince", "Her fairy godmother", "Lady Tremaine", "A palace guard"],
         correctIndex: 2,
-        category: "Cinderella",
         explanation: [
             "The prince is actively trying to find her.",
             "Her fairy godmother supports her, not stops her.",
@@ -115,7 +107,6 @@ const questions = ref([
         question: "What does the prince use to find Cinderella?",
         options: ["A crown", "A photograph", "A ring", "A glass slipper"],
         correctIndex: 3,
-        category: "Cinderella",
         explanation: [
             "A crown is symbolic but not used to find her.",
             "There were no photographs in Cinderella's time.",
@@ -128,7 +119,6 @@ const questions = ref([
         question: "What lesson does Cinderella's story teach?",
         options: ["Greed leads to power", "Revenge is sweet", "Kindness and patience are rewarded", "Beauty is everything"],
         correctIndex: 2,
-        category: "Cinderella",
         explanation: [
             "Greed is shown as a negative trait in the story.",
             "Cinderella never seeks revenge on her stepfamily.",

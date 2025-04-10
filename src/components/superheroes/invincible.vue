@@ -12,7 +12,6 @@ const questions = ref([
         question: "What is the real name of Invincible?",
         options: ["Mark Grayson", "Adam Eve"],
         correctIndex: 0,
-        category: "Invincible Comics",
         explanation: "Mark Grayson is the alter ego of Invincible, a young superhero with powers inherited from his Viltrumite father, Omni-Man.",
         bgColor: "#3498DB"
     },
@@ -20,7 +19,6 @@ const questions = ref([
         question: "Who is Invincible's father?",
         options: ["Omni-Man", "The Immortal"],
         correctIndex: 0,
-        category: "Invincible Comics",
         explanation: "Omni-Man (Nolan Grayson) is Invincible's father and a powerful Viltrumite warrior, who initially pretends to protect Earth.",
         bgColor: "#E67E22"
     },
@@ -28,7 +26,6 @@ const questions = ref([
         question: "What superhero team is Invincible a part of?",
         options: ["The Guardians of the Globe", "Teen Team"],
         correctIndex: 0,
-        category: "Invincible Comics",
         explanation: "Invincible is a member of the Guardians of the Globe, Earth's premier superhero team, although his role is often conflicted.",
         bgColor: "#F39C12"
     },
@@ -36,7 +33,6 @@ const questions = ref([
         question: "What is the main power of Invincible?",
         options: ["Super strength", "Flight and invulnerability"],
         correctIndex: 1,
-        category: "Invincible Comics",
         explanation: "Invincible has flight, invulnerability, and superhuman strength, making him one of the most powerful superheroes on Earth.",
         bgColor: "#2ECC71"
     },
@@ -44,7 +40,6 @@ const questions = ref([
         question: "Who is the villain that Invincible often battles?",
         options: ["Viltrumites", "Lizard League"],
         correctIndex: 0,
-        category: "Invincible Comics",
         explanation: "The Viltrumites, including Invincible's father Omni-Man, are a dangerous alien race that seeks to dominate the universe.",
         bgColor: "#8E44AD"
     },
@@ -52,7 +47,6 @@ const questions = ref([
         question: "What is the real name of Adam Eve?",
         options: ["Rex Sloan", "Eve Wilkins"],
         correctIndex: 1,
-        category: "Invincible Comics",
         explanation: "Adam Eve, whose real name is Samantha Eve Wilkins, has the ability to manipulate matter and energy to create anything she imagines.",
         bgColor: "#9B59B6"
     },
@@ -60,7 +54,6 @@ const questions = ref([
         question: "What is the name of Invincible's mother?",
         options: ["Debbie Grayson", "Amanda Waller"],
         correctIndex: 0,
-        category: "Invincible Comics",
         explanation: "Debbie Grayson is Mark's mother, and she becomes increasingly aware of her husband's true intentions and his dangerous relationship with the Viltrumites.",
         bgColor: "#E74C3C"
     },
@@ -68,7 +61,6 @@ const questions = ref([
         question: "Who is Invincible's best friend?",
         options: ["Rex Sloan", "William Clockwell"],
         correctIndex: 1,
-        category: "Invincible Comics",
         explanation: "William Clockwell is Invincible's best friend, who remains unaware of Mark's true identity as Invincible for a long time.",
         bgColor: "#34495E"
     },
@@ -76,7 +68,6 @@ const questions = ref([
         question: "What is the name of the planet Invincible's father, Omni-Man, is originally from?",
         options: ["Viltrum", "Mars"],
         correctIndex: 0,
-        category: "Invincible Comics",
         explanation: "Omni-Man (Nolan Grayson) is originally from the planet Viltrum, a planet of powerful warriors who seek to conquer other worlds.",
         bgColor: "#1ABC9C"
     },
@@ -84,7 +75,6 @@ const questions = ref([
         question: "What is Invincible's major weakness?",
         options: ["Lack of experience", "Vulnerability to certain metals"],
         correctIndex: 0,
-        category: "Invincible Comics",
         explanation: "Invincible's main weakness is his lack of experience and his youthful naivety, often causing him to make mistakes during battles.",
         bgColor: "#F1C40F"
     },
@@ -92,7 +82,6 @@ const questions = ref([
         question: "Who is the leader of the Viltrumite Empire?",
         options: ["Omni-Man", "Grand Regent Thragg"],
         correctIndex: 1,
-        category: "Invincible Comics",
         explanation: "Grand Regent Thragg is the leader of the Viltrumite Empire, a brutal and authoritarian regime seeking to dominate the universe.",
         bgColor: "#16A085"
     },
@@ -100,7 +89,6 @@ const questions = ref([
         question: "What is the name of Invincible's superhero suit?",
         options: ["Invincible Armor", "Mark's Costume"],
         correctIndex: 0,
-        category: "Invincible Comics",
         explanation: "Invincible wears a suit made of special materials that help protect him during his battles against powerful enemies.",
         bgColor: "#9B59B6"
     },
@@ -108,7 +96,6 @@ const questions = ref([
         question: "Who is the first villain that Invincible faces in the comics?",
         options: ["Mauler Twins", "Omni-Man"],
         correctIndex: 0,
-        category: "Invincible Comics",
         explanation: "The Mauler Twins are the first major villains Invincible faces in his early career. They are a pair of brilliant but insane scientists.",
         bgColor: "#8E44AD"
     },
@@ -116,7 +103,6 @@ const questions = ref([
         question: "Which superhero dies in the first major battle in Invincible?",
         options: ["Immortal", "Martian Manhunter"],
         correctIndex: 0,
-        category: "Invincible Comics",
         explanation: "The Immortal, a member of the Guardians of the Globe, is killed by Omni-Man during the team's first battle, making it clear that the Viltrumites are a serious threat.",
         bgColor: "#F39C12"
     },
@@ -124,7 +110,6 @@ const questions = ref([
         question: "Who is the Invincible villain that can regenerate himself?",
         options: ["Robot", "Rex Sloan"],
         correctIndex: 0,
-        category: "Invincible Comics",
         explanation: "Robot, a member of the Teen Team, has the ability to regenerate his body and is later revealed to have dark intentions.",
         bgColor: "#2ECC71"
     },
@@ -132,7 +117,6 @@ const questions = ref([
         question: "Who is Invincible's main love interest?",
         options: ["Amber Bennett", "Adam Eve"],
         correctIndex: 0,
-        category: "Invincible Comics",
         explanation: "Amber Bennett is Mark's main love interest, and their relationship is challenged by Mark's secret life as Invincible.",
         bgColor: "#E74C3C"
     },
@@ -140,7 +124,6 @@ const questions = ref([
         question: "What happens to Omni-Man at the end of his battle with Invincible?",
         options: ["He retreats to Viltrum", "He dies"],
         correctIndex: 0,
-        category: "Invincible Comics",
         explanation: "After an intense battle with Invincible, Omni-Man decides to retreat to Viltrum, abandoning Earth and his son Mark.",
         bgColor: "#9B59B6"
     },
@@ -148,7 +131,6 @@ const questions = ref([
         question: "Who is the daughter of Omni-Man and member of the Teen Team?",
         options: ["Atom Eve", "Duplicate"],
         correctIndex: 0,
-        category: "Invincible Comics",
         explanation: "Atom Eve, whose real name is Samantha Eve Wilkins, is a powerful member of the Teen Team who can manipulate matter at a molecular level.",
         bgColor: "#34495E"
     },
@@ -156,7 +138,6 @@ const questions = ref([
         question: "Who is the primary enemy of Invincible in the later parts of the series?",
         options: ["Robot", "Viltrumites"],
         correctIndex: 1,
-        category: "Invincible Comics",
         explanation: "The Viltrumites become Invincible's primary enemies as they aim to conquer Earth and the rest of the universe.",
         bgColor: "#F1C40F"
     },
@@ -164,7 +145,6 @@ const questions = ref([
         question: "What is the name of the villainous character who can manipulate time?",
         options: ["The Lizard League", "Chrono"],
         correctIndex: 1,
-        category: "Invincible Comics",
         explanation: "Chrono is a time-manipulating villain who challenges Invincible with his ability to control time.",
         bgColor: "#8E44AD"
     },
@@ -172,7 +152,6 @@ const questions = ref([
         question: "Which hero does Invincible team up with to fight against Viltrumites?",
         options: ["The Immortal", "Atom Eve"],
         correctIndex: 1,
-        category: "Invincible Comics",
         explanation: "Atom Eve becomes one of Invincible's most trusted allies and works closely with him to fight the Viltrumites and their plans.",
         bgColor: "#9B59B6"
     },
@@ -180,7 +159,6 @@ const questions = ref([
         question: "What is the name of the superhero who is the leader of the Guardians of the Globe after Omni-Man leaves?",
         options: ["Immortal", "War Woman"],
         correctIndex: 1,
-        category: "Invincible Comics",
         explanation: "War Woman is a founding member of the Guardians of the Globe and leads the team after the Immortal's death.",
         bgColor: "#F39C12"
     },
@@ -188,7 +166,6 @@ const questions = ref([
         question: "Who is Invincible's arch-nemesis in the first few arcs?",
         options: ["Omni-Man", "Mauler Twins"],
         correctIndex: 0,
-        category: "Invincible Comics",
         explanation: "Omni-Man is initially portrayed as Invincible's greatest threat, though the conflict between father and son adds emotional complexity.",
         bgColor: "#C0392B"
     },

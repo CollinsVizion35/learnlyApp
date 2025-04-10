@@ -11,7 +11,6 @@ const questions = ref([
         question: "What is the name of Aladdin's monkey?",
         options: ["Abu", "Jafar", "Genie", "Sultan"],
         correctIndex: 0,
-        category: "Aladdin",
         explanation: [
             "Abu is Aladdin’s loyal pet monkey.",
             "Jafar is the villain in the story, not Aladdin's pet.",
@@ -24,7 +23,6 @@ const questions = ref([
         question: "Who is Aladdin's love interest?",
         options: ["Jasmine", "Ariel", "Belle", "Cinderella"],
         correctIndex: 0,
-        category: "Aladdin",
         explanation: [
             "Jasmine is Aladdin’s princess and love interest.",
             "Ariel is the mermaid from The Little Mermaid.",
@@ -37,7 +35,6 @@ const questions = ref([
         question: "What is the magic word to release the Genie from the lamp?",
         options: ["Please", "Open Sesame", "Genie, you're free", "I wish"],
         correctIndex: 3,
-        category: "Aladdin",
         explanation: [
             "Please isn't the magic word to release the Genie.",
             "Open Sesame is the phrase for entering the cave of wonders.",
@@ -50,7 +47,6 @@ const questions = ref([
         question: "What is the name of the city where Aladdin lives?",
         options: ["Agrabah", "Atlantis", "Paris", "Cairo"],
         correctIndex: 0,
-        category: "Aladdin",
         explanation: [
             "Agrabah is the fictional city where Aladdin lives.",
             "Atlantis is a mythical city, unrelated to Aladdin.",
@@ -63,7 +59,6 @@ const questions = ref([
         question: "What is the name of Aladdin's pet tiger?",
         options: ["Rajah", "Simba", "Shere Khan", "Timon"],
         correctIndex: 0,
-        category: "Aladdin",
         explanation: [
             "Rajah is Princess Jasmine’s pet tiger, who is loyal to her.",
             "Simba is the lion from The Lion King.",
@@ -76,7 +71,6 @@ const questions = ref([
         question: "Who is the main antagonist in Aladdin?",
         options: ["Jafar", "Scar", "Maleficent", "Ursula"],
         correctIndex: 0,
-        category: "Aladdin",
         explanation: [
             "Jafar is the villain in Aladdin.",
             "Scar is the villain from The Lion King.",
@@ -89,7 +83,6 @@ const questions = ref([
         question: "What is the name of Aladdin's magic carpet?",
         options: ["Magic Carpet", "Flying Carpet", "Wonder Carpet", "Carpet"],
         correctIndex: 0,
-        category: "Aladdin",
         explanation: [
             "The magic carpet is simply called 'Magic Carpet'.",
             "Flying Carpet is a general term but not the name.",
@@ -102,7 +95,6 @@ const questions = ref([
         question: "What is the magical ability of the Genie?",
         options: ["Shape-shifting", "Flying", "Granting wishes", "Invisibility"],
         correctIndex: 2,
-        category: "Aladdin",
         explanation: [
             "Shape-shifting is one of the Genie's abilities, but granting wishes is his main power.",
             "Flying is something Aladdin and the magic carpet do.",
@@ -115,7 +107,6 @@ const questions = ref([
         question: "How does Aladdin first meet Princess Jasmine?",
         options: ["At the palace", "On the streets", "At the market", "In the cave"],
         correctIndex: 1,
-        category: "Aladdin",
         explanation: [
             "Aladdin first meets Jasmine when she is disguised as a commoner in the streets.",
             "The palace is where they have a later encounter.",
@@ -128,7 +119,6 @@ const questions = ref([
         question: "What animal does Jafar transform into?",
         options: ["Snake", "Eagle", "Lion", "Tiger"],
         correctIndex: 0,
-        category: "Aladdin",
         explanation: [
             "Jafar transforms into a snake during the climax of the movie.",
             "Jafar doesn't turn into an eagle.",
@@ -140,7 +130,6 @@ const questions = ref([
         question: "Who is Aladdin's best friend?",
         options: ["The Genie", "Abu", "Jasmine", "The Sultan"],
         correctIndex: 1,
-        category: "Aladdin",
         explanation: [
             "The Genie is a close friend but not Aladdin’s best friend.",
             "Abu, the monkey, is Aladdin’s best and most loyal companion.",
@@ -153,7 +142,6 @@ const questions = ref([
         question: "What does the Genie offer to Aladdin at the beginning?",
         options: ["Three wishes", "A flying carpet", "A golden crown", "A magical sword"],
         correctIndex: 0,
-        category: "Aladdin",
         explanation: [
             "The Genie offers Aladdin three wishes when released from the lamp.",
             "The flying carpet is another magical gift, but not the first offer.",
@@ -166,7 +154,6 @@ const questions = ref([
         question: "Who does Jafar use to help him take control of Agrabah?",
         options: ["Abu", "The Sultan", "Aladdin", "Iago"],
         correctIndex: 3,
-        category: "Aladdin",
         explanation: [
             "Abu is Aladdin's monkey, not Jafar’s ally.",
             "The Sultan is a ruler, not a tool for Jafar's schemes.",
@@ -179,7 +166,6 @@ const questions = ref([
         question: "What does Aladdin wish for to become a prince?",
         options: ["A palace", "A magic carpet", "A crown", "A royal attire"],
         correctIndex: 0,
-        category: "Aladdin",
         explanation: [
             "Aladdin wishes for a grand palace to impress Jasmine and appear as a prince.",
             "The magic carpet is not what makes him a prince.",
@@ -192,7 +178,6 @@ const questions = ref([
         question: "Who warns Aladdin about the Cave of Wonders?",
         options: ["Jasmine", "The Genie", "The Sultan", "A merchant"],
         correctIndex: 1,
-        category: "Aladdin",
         explanation: [
             "The Genie gives Aladdin advice about the Cave of Wonders.",
             "Jasmine doesn't warn Aladdin about the cave.",
@@ -205,7 +190,6 @@ const questions = ref([
         question: "What does Aladdin use to impress Princess Jasmine?",
         options: ["A flying carpet", "His charm", "A magic mirror", "A parade"],
         correctIndex: 0,
-        category: "Aladdin",
         explanation: [
             "Aladdin impresses Jasmine by taking her on a magic carpet ride.",
             "His charm alone is not enough to impress her.",
@@ -218,7 +202,6 @@ const questions = ref([
         question: "What does Jafar disguise himself as to trick Jasmine?",
         options: ["An old woman", "A prince", "A sorcerer", "A royal advisor"],
         correctIndex: 2,
-        category: "Aladdin",
         explanation: [
             "Jafar disguises himself as a sorcerer to deceive everyone.",
             "He doesn't disguise himself as an old woman.",
@@ -231,7 +214,6 @@ const questions = ref([
         question: "What is the final wish that Aladdin makes?",
         options: ["For wealth", "For the Genie to be free", "To become a prince", "For Jasmine’s love"],
         correctIndex: 1,
-        category: "Aladdin",
         explanation: [
             "Aladdin wishes for the Genie to be free, fulfilling his promise to his friend.",
             "Aladdin doesn’t wish for wealth; he already has it.",
