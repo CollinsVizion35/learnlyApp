@@ -1,8 +1,36 @@
 <!-- -->
+<script setup>
+import { ref, onMounted } from 'vue'
+const showCecilModal = ref(false)
+
+function closeCecilModal() {
+    showCecilModal.value = false
+}
+</script>
 
 <template>
     <div
         class=" absolute top-0 right-0 items-center min-h-screen  w-screen bg-[#20242A] text-white flex flex-row justify-start">
+
+
+
+        <div v-if="showCecilModal"
+            class=" fixed inset-0 bg-transparent bg-opacity-60 flex items-center justify-center z-[99999]">
+            <div
+                class="bg-[#20242A] border-amber-50 border text-white rounded-2xl p-6 w-11/12 max-w-md shadow-lg text-center z-[9999]">
+                <p class="text-2xl font-bold mb-4">Out of Bound</p>
+
+                <img src="/public/img/cecil1.png"
+                    class="flex items-center justify-center mx-auto h-[100px] w-[100px] rotate-y-[180deg]" />
+
+                <p class="text-lg mb-4 p-2">Room not yet ready, come back later.</p>
+                <button @click="closeCecilModal"
+                    class="bg-[#FFD93D] text-[#20242A] font-semibold px-6 py-2 rounded-md hover:bg-gray-200 transition">
+                    Okay
+                </button>
+            </div>
+        </div>
+
         <div
             class="fixed top-70 md:top-auto md:text-left md:justify-start md:items-start left-[-18vw] z-[9999] text-white flex flex-row md:flex-col items-center rotate-90 md:rotate-0 w-[50%] md:w-auto md:left-0 md:my-auto md:p-8 gap-16">
             <div @click="navigateToSuperheroes" class="cursor-pointer flex flex-col items-center justify-center">
@@ -34,7 +62,7 @@
                 <div @click="navigateToAvatar"
                     class="bg-[#9E3629] animate-pulse flex flex-row relative rounded-md w-[80vw] justify-end md:w-[30vw] justify-between cursor-pointer p-4 shadow-[0_10px_20px_rgba(0,0,0,0.3)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.4)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                     <img src="/img/aang.png" class="h-[200px] w-[200px] absolute bottom-0 left-[-15%] z-[99]" />
-                    <div class="w-[40vw] ml-32 md:w-[15vw] z-[999]">
+                    <div class="w-[40vw] ml-32 md:w-[15vw] z-[99]">
                         <div class="absolute top-0 right-0 flex flex-row gap-sm justify-end mx-8 items-center">
                             <font-awesome-icon icon="fa-solid fa-bookmark" style="color: #edeff2;" />
                         </div>
@@ -55,7 +83,7 @@
                 <div @click="navigateToBen10"
                     class="bg-[#567744] animate-pulse flex flex-row relative rounded-md w-[80vw] justify-end md:w-[30vw] justify-between cursor-pointer p-4 shadow-[0_10px_20px_rgba(0,0,0,0.3)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.4)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                     <img src="/img/Ben10.png" class="h-[200px] w-[200px] absolute bottom-0 left-[-15%] z-[99]" />
-                    <div class="w-[40vw] ml-32 md:w-[15vw] z-[999]">
+                    <div class="w-[40vw] ml-32 md:w-[15vw] z-[99]">
                         <div class="absolute top-0 right-0 flex flex-row gap-sm justify-end mx-8 items-center">
                             <font-awesome-icon icon="fa-solid fa-bookmark" style="color: #edeff2;" />
                         </div>
@@ -76,7 +104,7 @@
                 <div @click="navigateToArcane"
                     class="bg-[#261321] animate-pulse flex flex-row relative rounded-md w-[80vw] justify-end md:w-[30vw] justify-between cursor-pointer p-4 shadow-[0_10px_20px_rgba(0,0,0,0.3)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.4)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]">
                     <img src="/img/jinx.png" class="h-[200px] w-[200px] absolute bottom-0 left-[-15%] z-[99]" />
-                    <div class="w-[40vw] ml-32 md:w-[15vw] z-[999]">
+                    <div class="w-[40vw] ml-32 md:w-[15vw] z-[99]">
                         <div class="absolute top-0 right-0 flex flex-row gap-sm justify-end mx-8 items-center">
                             <font-awesome-icon icon="fa-solid fa-bookmark" style="color: #edeff2;" />
                         </div>
@@ -97,7 +125,18 @@
 
             </div>
         </div>
-        
+
+    </div>
+
+    <div class="fixed bottom-2 left-0 right-0 p-4 flex flex-row md:hidden w-[80vw] mx-auto bg-[#3C4147] rounded-2xl items-center justify-evenly z-[9999]
+shadow-2xl transform rotate-x-6 perspective-1000">
+        <div class="flex flex-col gap-3 relative items-center justify-center"><font-awesome-icon
+                icon="fa-solid fa-gamepad" class="text-[#FFD93D]" />
+            <div class="absolute bottom-[-100%] w-[50px] h-[5px] bg-[#FFD93D]"></div>
+        </div>
+        <font-awesome-icon icon="fa-solid fa-heart" class="text-white opacity-[0.5]" @click="showCecilModal = true" />
+        <font-awesome-icon icon="fa-solid fa-user" class="text-white opacity-[0.5]" @click="showCecilModal = true" />
+        <font-awesome-icon icon="fa-solid fa-gear" class="text-white opacity-[0.5]" @click="showCecilModal = true" />
     </div>
 </template>
 

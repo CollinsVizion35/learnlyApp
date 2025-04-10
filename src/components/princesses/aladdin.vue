@@ -502,7 +502,7 @@ onBeforeUnmount(() => {
                 <div class="text-right font-medium text-white">Score: {{ score }}/{{ totalAnswered }}</div>
             </div>
 
-            <div class=" relative overflow-hidden h-[75vh] w-full rounded-[12px]">
+            <div class=" relative overflow-hidden h-[75vh] md:h-[80vh] w-full rounded-[12px]">
                 <div class=" relative w-full h-full transition-transform duration-500 ease-in-out"
                     :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
                     <div v-for="(question, idx) in questions" :key="idx" class="absolute w-full h-full box-border"
@@ -529,7 +529,7 @@ onBeforeUnmount(() => {
                                         <div v-for="(option, optIdx) in question.options" class="mb-4" :key="optIdx"
                                             @click="selectOption(idx, optIdx)">
 
-                                            <div class="h-[150px] w-full rounded-md text-[16px] font-medium flex justify-center items-center shadow-md p-2"
+                                            <div class="h-[150px] w-full rounded-md text-[16px] font-medium flex justify-center items-center shadow-md p-2 cursor-pointer"
                                                 :style="{ backgroundColor: question.bgColor }">
                                                 <span>{{ option }}</span>
                                             </div>

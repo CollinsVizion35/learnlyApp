@@ -618,7 +618,7 @@ onBeforeUnmount(() => {
                                 </div>
 
                                  <!-- Back, the answers-->
-                                <div class="absolute h-[350px] w-[80%] lg:w-[50%] my-4 rounded-md bg-[#4D96FF] text-2xl flex flex-col justify-center items-center left-[10%] top-10 [backface-visibility:hidden] rotate-y-180"
+                                <div class="absolute h-[350px] w-[80%] my-4 rounded-md bg-[#4D96FF] text-2xl flex flex-col justify-center items-center left-[10%] top-10 [backface-visibility:hidden] rotate-y-180"
                                     :style="{ backgroundColor: question.bgColor }">
                                     <div class=" p-4 bg-[#37474f] rounded">
                                         <div class="text-[32px] mb-4">Correct</div> {{ question.explanation }}

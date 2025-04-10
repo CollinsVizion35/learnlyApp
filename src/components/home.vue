@@ -2,7 +2,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 
-const showModal = ref(false)
+const showAlfredModal = ref(false)
 
 onMounted(() => {
     const hasVisited = localStorage.getItem('hasVisited')
@@ -12,8 +12,16 @@ onMounted(() => {
     }
 })
 
-function closeModal() {
-    showModal.value = false
+function closeAlfredModal() {
+    showAlfredModal.value = false
+}
+
+
+
+const showCecilModal = ref(false)
+
+function closeCecilModal() {
+    showCecilModal.value = false
 }
 </script>
 
@@ -21,7 +29,7 @@ function closeModal() {
     <div
         class=" absolute top-0 right-0 items-center min-h-screen  w-screen bg-[#20242A] text-white flex flex-row justify-start">
 
-        <div v-if="showModal"
+        <div v-if="showAlfredModal"
             class=" fixed inset-0 bg-transparent bg-opacity-60 flex items-center justify-center z-[9999]">
             <div
                 class="bg-[#20242A] border-amber-50 border text-white rounded-2xl p-6 w-11/12 max-w-md shadow-lg text-center z-[9999]">
@@ -31,8 +39,26 @@ function closeModal() {
                     class="flex items-center justify-center mx-auto h-[100px] w-[100px] rotate-y-[180deg]" />
 
                 <p class="text-lg mb-4 p-2">I am Alfred Pennyworth and I and my friends would be taking you on some easy
-                    quizzes</p>
-                <button @click="closeModal"
+                    quizzes.</p>
+                <button @click="closeAlfredModal"
+                    class="bg-[#FFD93D] text-[#20242A] font-semibold px-6 py-2 rounded-md hover:bg-gray-200 transition">
+                    Okay
+                </button>
+            </div>
+        </div>
+
+        
+        <div v-if="showCecilModal"
+            class=" fixed inset-0 bg-transparent bg-opacity-60 flex items-center justify-center z-[99999]">
+            <div
+                class="bg-[#20242A] border-amber-50 border text-white rounded-2xl p-6 w-11/12 max-w-md shadow-lg text-center z-[9999]">
+                <p class="text-2xl font-bold mb-4">Out of Bound</p>
+
+                <img src="/public/img/cecil1.png"
+                    class="flex items-center justify-center mx-auto h-[100px] w-[100px] rotate-y-[180deg]" />
+
+                <p class="text-lg mb-4 p-2">Room not yet ready, come back later.</p>
+                <button @click="closeCecilModal"
                     class="bg-[#FFD93D] text-[#20242A] font-semibold px-6 py-2 rounded-md hover:bg-gray-200 transition">
                     Okay
                 </button>
@@ -41,7 +67,7 @@ function closeModal() {
 
 
         <div
-            class="fixed top-70 md:top-auto md:text-left md:justify-start md:items-start left-[-18vw] z-[999] text-white flex flex-row md:flex-col items-center rotate-90 md:rotate-0 w-[50%] md:w-auto md:left-0 md:my-auto md:p-8 gap-16">
+            class="fixed top-70 md:top-auto md:text-left md:justify-start md:items-start left-[-18vw] z-[9999] text-white flex flex-row md:flex-col items-center rotate-90 md:rotate-0 w-[50%] md:w-auto md:left-0 md:my-auto md:p-8 gap-16">
             <div class="cursor-pointer flex flex-col items-center justify-center text-[#FBCD00]">
                 <div class=" opacity-[0.7] h-[10px] w-[10px] bg-[#FBCD00] rounded-full cursor-pointer"></div>
                 <h2 class="md:text-4xl font-semibold opacity-[0.7] text-left writing-mode-vertical"> Superheroes
@@ -135,6 +161,17 @@ function closeModal() {
             </div>
         </div>
 
+    </div>
+
+    <div class="fixed bottom-2 left-0 right-0 p-4 flex flex-row md:hidden w-[80vw] mx-auto bg-[#3C4147] rounded-2xl items-center justify-evenly z-[9999]
+    shadow-2xl transform rotate-x-6 perspective-1000">
+        <div class="flex flex-col gap-3 relative items-center justify-center"><font-awesome-icon
+                icon="fa-solid fa-gamepad" class="text-[#FFD93D]" />
+            <div class="absolute bottom-[-100%] w-[50px] h-[5px] bg-[#FFD93D]"></div>
+        </div>
+        <font-awesome-icon icon="fa-solid fa-heart" class="text-white opacity-[0.5]"  @click="showCecilModal = true"/>
+        <font-awesome-icon icon="fa-solid fa-user" class="text-white opacity-[0.5]"  @click="showCecilModal = true"/>
+        <font-awesome-icon icon="fa-solid fa-gear" class="text-white opacity-[0.5]"  @click="showCecilModal = true"/>
     </div>
 </template>
 
